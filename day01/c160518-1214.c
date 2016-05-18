@@ -2,7 +2,7 @@
 
 int main()
 {
-	char x[10]="xxxx";//字串
+	char x[10]="xxxx";
 	printf("%s",x);
-    return 0;
+	return 0;
 }
