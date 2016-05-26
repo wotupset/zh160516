@@ -1,0 +1,5 @@
+c:\users\study\documents\visual studio 2012\Projects\Zoo\Zoo\bin\Debug\Zoo.dll
+c:\users\study\documents\visual studio 2012\Projects\Zoo\Zoo\bin\Debug\Zoo.pdb
+c:\users\study\documents\visual studio 2012\Projects\Zoo\Zoo\obj\Debug\Zoo.csprojResolveAssemblyReference.cache
+c:\users\study\documents\visual studio 2012\Projects\Zoo\Zoo\obj\Debug\Zoo.dll
+c:\users\study\documents\visual studio 2012\Projects\Zoo\Zoo\obj\Debug\Zoo.pdb
