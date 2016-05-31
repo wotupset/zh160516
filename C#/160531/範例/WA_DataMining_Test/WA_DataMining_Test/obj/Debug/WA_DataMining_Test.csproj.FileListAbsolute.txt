@@ -1,0 +1,12 @@
+c:\users\study\documents\visual studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\bin\Debug\WA_DataMining_Test.exe.config
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\bin\Debug\WA_DataMining_Test.exe
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\bin\Debug\WA_DataMining_Test.pdb
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.csprojResolveAssemblyReference.cache
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.Form1.resources
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.Properties.Resources.resources
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.csproj.GenerateResource.Cache
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.exe
+C:\Users\study\Documents\Visual Studio 2012\Projects\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.pdb
+D:\範例\WA_DataMining_Test\WA_DataMining_Test\bin\Debug\WA_DataMining_Test.exe.config
+D:\範例\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.exe
+D:\範例\WA_DataMining_Test\WA_DataMining_Test\obj\Debug\WA_DataMining_Test.pdb

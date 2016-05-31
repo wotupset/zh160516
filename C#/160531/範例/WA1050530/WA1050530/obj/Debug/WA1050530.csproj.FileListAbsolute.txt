@@ -1,0 +1,9 @@
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\bin\Debug\WA1050530.exe
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\bin\Debug\WA1050530.pdb
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\obj\Debug\WA1050530.csprojResolveAssemblyReference.cache
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\obj\Debug\WA1050530.Form1.resources
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\obj\Debug\WA1050530.Properties.Resources.resources
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\obj\Debug\WA1050530.csproj.GenerateResource.Cache
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\obj\Debug\WA1050530.exe
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\obj\Debug\WA1050530.pdb
+c:\users\study\documents\visual studio 2012\Projects\WA1050530\WA1050530\bin\Debug\WA1050530.exe.config
