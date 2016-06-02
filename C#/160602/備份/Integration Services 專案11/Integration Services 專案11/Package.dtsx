@@ -1,0 +1,1917 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/20/2016 2:51:54 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="MB-207-16"
+  DTS:CreatorName="MB-207-16\study"
+  DTS:DTSID="{00F360B3-2E70-4FEB-B80D-3F4F40E8D765}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1028"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{3262C74B-C472-44DD-B554-572839659CBD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MB-207-16.DataMining範例]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{418E9D9D-F2E7-409B-B6B8-6642CD90E32D}"
+      DTS:ObjectName="MB-207-16.DataMining範例">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=MB-207-16;Initial Catalog=DataMining範例;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{1DFB8AF3-107F-45EA-BC25-DE23F67D8DD6}"
+      DTS:ObjectName="參數">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\資料流程工作"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="資料流程工作"
+      DTS:DTSID="{805E7209-1B8A-448E-B9A1-826AFE087514}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="資料流程工作"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\資料流程工作\OLE DB 來源"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB 來源;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;7"
+              description="OLE DB 來源"
+              name="OLE DB 來源"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="命令逾時之前的秒數。值為 0 表示無限逾時。"
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="指定用於開啟資料列集之資料庫物件的名稱。"
+                  name="OpenRowset">[dbo].[CAR_INSURANCE]</property>
+                <property
+                  dataType="System.String"
+                  description="指定包含用於開啟資料列集之資料庫物件名稱的變數。"
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="要執行的 SQL 命令。"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="包含要執行之 SQL 命令的變數。"
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="指定無法從資料來源取得字碼頁資訊時，要使用的資料行字碼頁。"
+                  name="DefaultCodePage">950</property>
+                <property
+                  dataType="System.Boolean"
+                  description="描述字元資料時，強制使用 DefaultCodePage 屬性值。"
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="指定用於存取資料庫的模式。"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="SQL 命令中的參數和變數之間的對應。"
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\資料流程工作\OLE DB 來源.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MB-207-16.DataMining範例]"
+                  connectionManagerRefId="Package.ConnectionManagers[MB-207-16.DataMining範例]"
+                  description="用於存取資料庫的 OLE DB 執行階段連接。"
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出]"
+                  name="OLE DB 來源輸出">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CUSTOMER_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[SEX]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[SEX]"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[SEX]"
+                      name="SEX"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[AGE]"
+                      dataType="i2"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[AGE]"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[AGE]"
+                      name="AGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[MARRIAGE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[MARRIAGE]"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[MARRIAGE]"
+                      name="MARRIAGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[JOB]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[JOB]"
+                      length="8"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[JOB]"
+                      name="JOB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[INCOME]"
+                      dataType="i4"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[INCOME]"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[INCOME]"
+                      name="INCOME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CHILD_CNT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CHILD_CNT]"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CHILD_CNT]"
+                      name="CHILD_CNT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[REGION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[REGION]"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[REGION]"
+                      name="REGION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[DISTANCE]"
+                      dataType="r4"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[DISTANCE]"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[DISTANCE]"
+                      name="DISTANCE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CAR_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_TYPE]"
+                      length="11"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CAR_TYPE]"
+                      name="CAR_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CAR_AGE]"
+                      dataType="r4"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_AGE]"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CAR_AGE]"
+                      name="CAR_AGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[PARKING_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[PARKING_TYPE]"
+                      length="10"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[PARKING_TYPE]"
+                      name="PARKING_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CLAIM_CNT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CLAIM_CNT]"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CLAIM_CNT]"
+                      name="CLAIM_CNT"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CUSTOMER_ID]"
+                      dataType="i2"
+                      name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[SEX]"
+                      dataType="wstr"
+                      length="4"
+                      name="SEX" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[AGE]"
+                      dataType="i2"
+                      name="AGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[MARRIAGE]"
+                      dataType="wstr"
+                      length="4"
+                      name="MARRIAGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[JOB]"
+                      dataType="wstr"
+                      length="8"
+                      name="JOB" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[INCOME]"
+                      dataType="i4"
+                      name="INCOME" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CHILD_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      name="CHILD_CNT" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[REGION]"
+                      dataType="wstr"
+                      length="4"
+                      name="REGION" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[DISTANCE]"
+                      dataType="r4"
+                      name="DISTANCE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_TYPE]"
+                      dataType="wstr"
+                      length="11"
+                      name="CAR_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_AGE]"
+                      dataType="r4"
+                      name="CAR_AGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[PARKING_TYPE]"
+                      dataType="wstr"
+                      length="10"
+                      name="PARKING_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].ExternalColumns[CLAIM_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      name="CLAIM_CNT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出]"
+                  isErrorOut="true"
+                  name="OLE DB 來源錯誤輸出">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CUSTOMER_ID]"
+                      dataType="i2"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[SEX]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[SEX]"
+                      name="SEX" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[AGE]"
+                      dataType="i2"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[AGE]"
+                      name="AGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[MARRIAGE]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[MARRIAGE]"
+                      name="MARRIAGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[JOB]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[JOB]"
+                      name="JOB" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[INCOME]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[INCOME]"
+                      name="INCOME" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CHILD_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CHILD_CNT]"
+                      name="CHILD_CNT" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[REGION]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[REGION]"
+                      name="REGION" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[DISTANCE]"
+                      dataType="r4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[DISTANCE]"
+                      name="DISTANCE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_TYPE]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_TYPE]"
+                      name="CAR_TYPE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_AGE]"
+                      dataType="r4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_AGE]"
+                      name="CAR_AGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[PARKING_TYPE]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[PARKING_TYPE]"
+                      name="PARKING_TYPE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CLAIM_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[CLAIM_CNT]"
+                      name="CLAIM_CNT" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\資料流程工作\OLE DB 來源 1"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB 來源;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;7"
+              description="OLE DB 來源"
+              name="OLE DB 來源 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="命令逾時之前的秒數。值為 0 表示無限逾時。"
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="指定用於開啟資料列集之資料庫物件的名稱。"
+                  name="OpenRowset">[dbo].[CAR_INSURANCE]</property>
+                <property
+                  dataType="System.String"
+                  description="指定包含用於開啟資料列集之資料庫物件名稱的變數。"
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="要執行的 SQL 命令。"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="包含要執行之 SQL 命令的變數。"
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="指定無法從資料來源取得字碼頁資訊時，要使用的資料行字碼頁。"
+                  name="DefaultCodePage">950</property>
+                <property
+                  dataType="System.Boolean"
+                  description="描述字元資料時，強制使用 DefaultCodePage 屬性值。"
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="指定用於存取資料庫的模式。"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="SQL 命令中的參數和變數之間的對應。"
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\資料流程工作\OLE DB 來源 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MB-207-16.DataMining範例]"
+                  connectionManagerRefId="Package.ConnectionManagers[MB-207-16.DataMining範例]"
+                  description="用於存取資料庫的 OLE DB 執行階段連接。"
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出]"
+                  name="OLE DB 來源輸出">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CUSTOMER_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[SEX]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[SEX]"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[SEX]"
+                      name="SEX"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[AGE]"
+                      dataType="i2"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[AGE]"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[AGE]"
+                      name="AGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[MARRIAGE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[MARRIAGE]"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[MARRIAGE]"
+                      name="MARRIAGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[JOB]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[JOB]"
+                      length="8"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[JOB]"
+                      name="JOB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[INCOME]"
+                      dataType="i4"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[INCOME]"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[INCOME]"
+                      name="INCOME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CHILD_CNT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CHILD_CNT]"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CHILD_CNT]"
+                      name="CHILD_CNT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[REGION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[REGION]"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[REGION]"
+                      name="REGION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[DISTANCE]"
+                      dataType="r4"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[DISTANCE]"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[DISTANCE]"
+                      name="DISTANCE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CAR_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_TYPE]"
+                      length="11"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CAR_TYPE]"
+                      name="CAR_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CAR_AGE]"
+                      dataType="r4"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_AGE]"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CAR_AGE]"
+                      name="CAR_AGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[PARKING_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[PARKING_TYPE]"
+                      length="10"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[PARKING_TYPE]"
+                      name="PARKING_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CLAIM_CNT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="轉換"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CLAIM_CNT]"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CLAIM_CNT]"
+                      name="CLAIM_CNT"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CUSTOMER_ID]"
+                      dataType="i2"
+                      name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[SEX]"
+                      dataType="wstr"
+                      length="4"
+                      name="SEX" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[AGE]"
+                      dataType="i2"
+                      name="AGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[MARRIAGE]"
+                      dataType="wstr"
+                      length="4"
+                      name="MARRIAGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[JOB]"
+                      dataType="wstr"
+                      length="8"
+                      name="JOB" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[INCOME]"
+                      dataType="i4"
+                      name="INCOME" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CHILD_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      name="CHILD_CNT" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[REGION]"
+                      dataType="wstr"
+                      length="4"
+                      name="REGION" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[DISTANCE]"
+                      dataType="r4"
+                      name="DISTANCE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_TYPE]"
+                      dataType="wstr"
+                      length="11"
+                      name="CAR_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CAR_AGE]"
+                      dataType="r4"
+                      name="CAR_AGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[PARKING_TYPE]"
+                      dataType="wstr"
+                      length="10"
+                      name="PARKING_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].ExternalColumns[CLAIM_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      name="CLAIM_CNT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出]"
+                  isErrorOut="true"
+                  name="OLE DB 來源錯誤輸出">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CUSTOMER_ID]"
+                      dataType="i2"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[SEX]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[SEX]"
+                      name="SEX" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[AGE]"
+                      dataType="i2"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[AGE]"
+                      name="AGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[MARRIAGE]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[MARRIAGE]"
+                      name="MARRIAGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[JOB]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[JOB]"
+                      name="JOB" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[INCOME]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[INCOME]"
+                      name="INCOME" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CHILD_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CHILD_CNT]"
+                      name="CHILD_CNT" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[REGION]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[REGION]"
+                      name="REGION" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[DISTANCE]"
+                      dataType="r4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[DISTANCE]"
+                      name="DISTANCE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_TYPE]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_TYPE]"
+                      name="CAR_TYPE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_AGE]"
+                      dataType="r4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CAR_AGE]"
+                      name="CAR_AGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[PARKING_TYPE]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[PARKING_TYPE]"
+                      name="PARKING_TYPE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CLAIM_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[CLAIM_CNT]"
+                      name="CLAIM_CNT" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源錯誤輸出].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\資料流程工作\OLE DB 目的地"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB 目的地;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;4"
+              description="OLE DB 目的地"
+              name="OLE DB 目的地"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="命令逾時之前的秒數。值為 0 表示無限逾時。"
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="指定用於開啟資料列集之資料庫物件的名稱。"
+                  name="OpenRowset">[dbo].[保險表]</property>
+                <property
+                  dataType="System.String"
+                  description="指定包含用於開啟資料列集之資料庫物件名稱的變數。"
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="要執行的 SQL 命令。"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="指定無法從資料來源取得字碼頁資訊時，要使用的資料行字碼頁。"
+                  name="DefaultCodePage">950</property>
+                <property
+                  dataType="System.Boolean"
+                  description="描述字元資料時，強制使用 DefaultCodePage 屬性值。"
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="指定用於存取資料庫的模式。"
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="指出提供給識別欄位的值是否複製到目的地。如果為 False，則會在目的地自動產生識別欄位的值。只有在開啟快速載入時才會套用。"
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="指出包含 Null 之資料行的 Null 是否會插入目的地。若是 False，則包含 Null 的資料行的預設值會插入目的地。唯有開啟快速載入時才適用。"
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="指定快速載入使用的選項。只有開啟快速載入時才會套用。"
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="指定在資料插入期間發出認可的時間。值為 0 指定在資料插入結束時發出一次認可。只有開啟快速載入時才會套用。"
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\資料流程工作\OLE DB 目的地.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MB-207-16.DataMining範例]"
+                  connectionManagerRefId="Package.ConnectionManagers[MB-207-16.DataMining範例]"
+                  description="用於存取資料庫的 OLE DB 執行階段連接。"
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入]"
+                  errorOrTruncationOperation="插入"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB 目的地輸入">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[CUSTOMER_ID]"
+                      cachedDataType="i2"
+                      cachedName="CUSTOMER_ID"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CUSTOMER_ID]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[SEX]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="SEX"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[SEX]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[SEX]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[AGE]"
+                      cachedDataType="i2"
+                      cachedName="AGE"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[AGE]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[AGE]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[MARRIAGE]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="MARRIAGE"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[MARRIAGE]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[MARRIAGE]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[JOB]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="JOB"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[JOB]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[JOB]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[INCOME]"
+                      cachedDataType="i4"
+                      cachedName="INCOME"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[INCOME]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[INCOME]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[CHILD_CNT]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CHILD_CNT"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CHILD_CNT]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CHILD_CNT]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[REGION]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="REGION"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[REGION]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[REGION]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[DISTANCE]"
+                      cachedDataType="r4"
+                      cachedName="DISTANCE"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[DISTANCE]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[DISTANCE]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[CAR_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="CAR_TYPE"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CAR_TYPE]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_TYPE]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[CAR_AGE]"
+                      cachedDataType="r4"
+                      cachedName="CAR_AGE"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CAR_AGE]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_AGE]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[PARKING_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PARKING_TYPE"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[PARKING_TYPE]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[PARKING_TYPE]" />
+                    <inputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[CLAIM_CNT]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CLAIM_CNT"
+                      externalMetadataColumnId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CLAIM_CNT]"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CLAIM_CNT]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CUSTOMER_ID]"
+                      dataType="i2"
+                      name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[SEX]"
+                      dataType="wstr"
+                      length="4"
+                      name="SEX" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[AGE]"
+                      dataType="i2"
+                      name="AGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[MARRIAGE]"
+                      dataType="wstr"
+                      length="4"
+                      name="MARRIAGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[JOB]"
+                      dataType="wstr"
+                      length="8"
+                      name="JOB" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[INCOME]"
+                      dataType="i4"
+                      name="INCOME" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CHILD_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      name="CHILD_CNT" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[REGION]"
+                      dataType="wstr"
+                      length="4"
+                      name="REGION" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[DISTANCE]"
+                      dataType="r4"
+                      name="DISTANCE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CAR_TYPE]"
+                      dataType="wstr"
+                      length="11"
+                      name="CAR_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CAR_AGE]"
+                      dataType="r4"
+                      name="CAR_AGE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[PARKING_TYPE]"
+                      dataType="wstr"
+                      length="10"
+                      name="PARKING_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[CLAIM_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      name="CLAIM_CNT" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\資料流程工作\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB 目的地錯誤輸出"
+                  synchronousInputId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\資料流程工作\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\資料流程工作\條件式分割"
+              componentClassID="{7F88F654-4E20-4D14-84F4-AF9C925D3087}"
+              contactInfo="條件式分割;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;0"
+              description="依據資料內容將資料列路由到不同的輸出。使用條件 (SSIS 運算式) 指定要路由哪些資料列。例如，從準備要載入的記錄區隔需要清除的記錄，或是僅路由記錄的子集。"
+              name="條件式分割"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\資料流程工作\條件式分割.Inputs[條件式分割輸入]"
+                  description="輸入至條件式分割轉換"
+                  name="條件式分割輸入">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\資料流程工作\條件式分割.Inputs[條件式分割輸入].Columns[AGE]"
+                      cachedDataType="i2"
+                      cachedName="AGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[AGE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\資料流程工作\條件式分割.Outputs[大小寫 1]"
+                  description="條件式分割轉換的輸出 1"
+                  errorOrTruncationOperation="計算"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="大小寫 1"
+                  synchronousInputId="Package\資料流程工作\條件式分割.Inputs[條件式分割輸入]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="指定運算式。這個運算式版本使用歷程識別碼，而非資料行名稱。"
+                      name="Expression">#{Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[AGE]} &lt; 50</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="指定運算式的易記版本。這個運算式版本使用資料行名稱。"
+                      expressionType="Notify"
+                      name="FriendlyExpression">AGE &lt; 50</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定轉換評估的條件在條件清單中的位置。評估順序是從最低到最高值。"
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\資料流程工作\條件式分割.Outputs[條件式分割預設輸出]"
+                  description="條件式分割轉換的預設輸出"
+                  exclusionGroup="1"
+                  name="條件式分割預設輸出"
+                  synchronousInputId="Package\資料流程工作\條件式分割.Inputs[條件式分割輸入]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\資料流程工作\條件式分割.Outputs[條件式分割錯誤輸出]"
+                  description="條件式分割轉換的錯誤輸出"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="條件式分割錯誤輸出"
+                  synchronousInputId="Package\資料流程工作\條件式分割.Inputs[條件式分割輸入]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\條件式分割.Outputs[條件式分割錯誤輸出].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\條件式分割.Outputs[條件式分割錯誤輸出].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\資料流程工作\條件式分割.Outputs[條件式分割錯誤輸出].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\條件式分割.Outputs[條件式分割錯誤輸出].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\資料流程工作\條件式分割 1"
+              componentClassID="{7F88F654-4E20-4D14-84F4-AF9C925D3087}"
+              contactInfo="條件式分割;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;0"
+              description="依據資料內容將資料列路由到不同的輸出。使用條件 (SSIS 運算式) 指定要路由哪些資料列。例如，從準備要載入的記錄區隔需要清除的記錄，或是僅路由記錄的子集。"
+              name="條件式分割 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\資料流程工作\條件式分割 1.Inputs[條件式分割輸入]"
+                  description="輸入至條件式分割轉換"
+                  name="條件式分割輸入">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\資料流程工作\條件式分割 1.Inputs[條件式分割輸入].Columns[AGE]"
+                      cachedDataType="i2"
+                      cachedName="AGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[AGE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\資料流程工作\條件式分割 1.Outputs[大小寫 1]"
+                  description="條件式分割轉換的輸出 1"
+                  errorOrTruncationOperation="計算"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="大小寫 1"
+                  synchronousInputId="Package\資料流程工作\條件式分割 1.Inputs[條件式分割輸入]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="指定運算式。這個運算式版本使用歷程識別碼，而非資料行名稱。"
+                      name="Expression">#{Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[AGE]} &lt;= 50</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="指定運算式的易記版本。這個運算式版本使用資料行名稱。"
+                      expressionType="Notify"
+                      name="FriendlyExpression">AGE &lt;= 50</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定轉換評估的條件在條件清單中的位置。評估順序是從最低到最高值。"
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\資料流程工作\條件式分割 1.Outputs[條件式分割預設輸出]"
+                  description="條件式分割轉換的預設輸出"
+                  exclusionGroup="1"
+                  name="條件式分割預設輸出"
+                  synchronousInputId="Package\資料流程工作\條件式分割 1.Inputs[條件式分割輸入]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\資料流程工作\條件式分割 1.Outputs[條件式分割錯誤輸出]"
+                  description="條件式分割轉換的錯誤輸出"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="條件式分割錯誤輸出"
+                  synchronousInputId="Package\資料流程工作\條件式分割 1.Inputs[條件式分割輸入]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\條件式分割 1.Outputs[條件式分割錯誤輸出].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\條件式分割 1.Outputs[條件式分割錯誤輸出].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\資料流程工作\條件式分割 1.Outputs[條件式分割錯誤輸出].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\條件式分割 1.Outputs[條件式分割錯誤輸出].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\資料流程工作\聯集全部"
+              componentClassID="{B594E9A8-4351-4939-891C-CFE1AB93E925}"
+              contactInfo="聯集全部;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;1"
+              description="結合來自多個資料流程的資料列，但不排序。例如，於改正錯誤後將資料列新增回資料流程。如果不一定需要排序，建議使用合併 (Merge) 轉換。"
+              name="聯集全部"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1]"
+                  name="聯集全部 輸入 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[CUSTOMER_ID]"
+                      cachedDataType="i2"
+                      cachedName="CUSTOMER_ID"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CUSTOMER_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CUSTOMER_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[SEX]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="SEX"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[SEX]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[SEX]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[AGE]"
+                      cachedDataType="i2"
+                      cachedName="AGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[AGE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[AGE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[MARRIAGE]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="MARRIAGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[MARRIAGE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[MARRIAGE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[JOB]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="JOB"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[JOB]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[JOB]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[INCOME]"
+                      cachedDataType="i4"
+                      cachedName="INCOME"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[INCOME]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[INCOME]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[CHILD_CNT]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CHILD_CNT"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CHILD_CNT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CHILD_CNT]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[REGION]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="REGION"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[REGION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[REGION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[DISTANCE]"
+                      cachedDataType="r4"
+                      cachedName="DISTANCE"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[DISTANCE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[DISTANCE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[CAR_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="CAR_TYPE"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CAR_TYPE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_TYPE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[CAR_AGE]"
+                      cachedDataType="r4"
+                      cachedName="CAR_AGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CAR_AGE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_AGE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[PARKING_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PARKING_TYPE"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[PARKING_TYPE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[PARKING_TYPE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1].Columns[CLAIM_CNT]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CLAIM_CNT"
+                      lineageId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出].Columns[CLAIM_CNT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CLAIM_CNT]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1]"
+                  hasSideEffects="true"
+                  name="聯集全部輸入 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[CUSTOMER_ID]"
+                      cachedDataType="i2"
+                      cachedName="CUSTOMER_ID"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CUSTOMER_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CUSTOMER_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[SEX]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="SEX"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[SEX]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[SEX]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[AGE]"
+                      cachedDataType="i2"
+                      cachedName="AGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[AGE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[AGE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[MARRIAGE]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="MARRIAGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[MARRIAGE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[MARRIAGE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[JOB]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="JOB"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[JOB]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[JOB]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[INCOME]"
+                      cachedDataType="i4"
+                      cachedName="INCOME"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[INCOME]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[INCOME]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[CHILD_CNT]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CHILD_CNT"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CHILD_CNT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CHILD_CNT]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[REGION]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="REGION"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[REGION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[REGION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[DISTANCE]"
+                      cachedDataType="r4"
+                      cachedName="DISTANCE"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[DISTANCE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[DISTANCE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[CAR_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="CAR_TYPE"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CAR_TYPE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_TYPE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[CAR_AGE]"
+                      cachedDataType="r4"
+                      cachedName="CAR_AGE"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CAR_AGE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_AGE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[PARKING_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PARKING_TYPE"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[PARKING_TYPE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[PARKING_TYPE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1].Columns[CLAIM_CNT]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CLAIM_CNT"
+                      lineageId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出].Columns[CLAIM_CNT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="輸出資料行歷程識別碼"
+                          name="OutputColumnLineageID">#{Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CLAIM_CNT]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 2]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="聯集全部輸入 2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1]"
+                  name="聯集全部 輸出 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CUSTOMER_ID]"
+                      dataType="i2"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[SEX]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[SEX]"
+                      name="SEX" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[AGE]"
+                      dataType="i2"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[AGE]"
+                      name="AGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[MARRIAGE]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[MARRIAGE]"
+                      name="MARRIAGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[JOB]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[JOB]"
+                      name="JOB" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[INCOME]"
+                      dataType="i4"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[INCOME]"
+                      name="INCOME" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CHILD_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CHILD_CNT]"
+                      name="CHILD_CNT" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[REGION]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[REGION]"
+                      name="REGION" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[DISTANCE]"
+                      dataType="r4"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[DISTANCE]"
+                      name="DISTANCE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_TYPE]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_TYPE]"
+                      name="CAR_TYPE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_AGE]"
+                      dataType="r4"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CAR_AGE]"
+                      name="CAR_AGE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[PARKING_TYPE]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[PARKING_TYPE]"
+                      name="PARKING_TYPE" />
+                    <outputColumn
+                      refId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CLAIM_CNT]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1].Columns[CLAIM_CNT]"
+                      name="CLAIM_CNT" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\資料流程工作.Paths[OLE DB 來源輸出]"
+              endId="Package\資料流程工作\條件式分割.Inputs[條件式分割輸入]"
+              name="OLE DB 來源輸出"
+              startId="Package\資料流程工作\OLE DB 來源.Outputs[OLE DB 來源輸出]" />
+            <path
+              refId="Package\資料流程工作.Paths[OLE DB 來源輸出1]"
+              endId="Package\資料流程工作\條件式分割 1.Inputs[條件式分割輸入]"
+              name="OLE DB 來源輸出"
+              startId="Package\資料流程工作\OLE DB 來源 1.Outputs[OLE DB 來源輸出]" />
+            <path
+              refId="Package\資料流程工作.Paths[條件式分割預設輸出]"
+              endId="Package\資料流程工作\聯集全部.Inputs[聯集全部 輸入 1]"
+              name="條件式分割預設輸出"
+              startId="Package\資料流程工作\條件式分割.Outputs[條件式分割預設輸出]" />
+            <path
+              refId="Package\資料流程工作.Paths[條件式分割預設輸出1]"
+              endId="Package\資料流程工作\聯集全部.Inputs[聯集全部輸入 1]"
+              name="條件式分割預設輸出"
+              startId="Package\資料流程工作\條件式分割 1.Outputs[條件式分割預設輸出]" />
+            <path
+              refId="Package\資料流程工作.Paths[聯集全部 輸出 1]"
+              endId="Package\資料流程工作\OLE DB 目的地.Inputs[OLE DB 目的地輸入]"
+              name="聯集全部 輸出 1"
+              startId="Package\資料流程工作\聯集全部.Outputs[聯集全部 輸出 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--此 CDATA 區段包含封裝的配置資訊。此區段包括諸如 (x,y) 座標、寬度和長度等資訊。-->
+<!--如果您手動編輯此區段但出錯，則可加以刪除。 -->
+<!--封裝仍可正常載入，但先前的配置資訊會遺失，而設計師將在設計介面上自動重新排列元素。-->
+<Objects
+  Version="sql11">
+  <!--下面每個節點將包含不會影響執行階段行為的屬性。-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\資料流程工作"
+          TopLeft="174.166659745905,104.928566067803" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\資料流程工作">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\資料流程工作\OLE DB 來源"
+          TopLeft="139.9999944369,38.999998007502" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\資料流程工作\OLE DB 來源 1"
+          TopLeft="369.166651997302,39.928569388633" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\資料流程工作\條件式分割"
+          TopLeft="153.333327240414,139.28570716965" />
+        <EdgeLayout
+          Id="Package\資料流程工作.Paths[OLE DB 來源輸出]"
+          TopLeft="218.916660838657,80.999998007502">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.2857091621479"
+              Start="0,0"
+              End="0,50.7857091621479">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.7857091621479" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\資料流程工作\條件式分割 1"
+          TopLeft="372.49998519818,138.357135788519" />
+        <EdgeLayout
+          Id="Package\資料流程工作.Paths[OLE DB 來源輸出1]"
+          TopLeft="448.083318597741,81.928569388633">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.4285663998859"
+              Start="0,0"
+              End="0,48.9285663998859">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.9285663998859" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="127,42"
+          Id="Package\資料流程工作\聯集全部"
+          TopLeft="265.833322770066,250.71427290537" />
+        <EdgeLayout
+          Id="Package\資料流程工作.Paths[條件式分割預設輸出]"
+          TopLeft="222.833327240414,181.28570716965">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.499995529652,69.4285657357199"
+              Start="0,0"
+              End="106.499995529652,61.9285657357199">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.71428286786" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.71428286786"
+                    Point2="0,34.71428286786"
+                    Point3="4,34.71428286786" />
+                  <mssgle:LineSegment
+                    End="102.499995529652,34.71428286786" />
+                  <mssgle:CubicBezierSegment
+                    Point1="102.499995529652,34.71428286786"
+                    Point2="106.499995529652,34.71428286786"
+                    Point3="106.499995529652,38.71428286786" />
+                  <mssgle:LineSegment
+                    End="106.499995529652,61.9285657357199" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.15575948357593,39.71428286786,90.1884765625,10.9892578125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\資料流程工作.Paths[條件式分割預設輸出1]"
+          TopLeft="446.99998519818,180.357135788519">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-97.8333290947809,70.3571371168509"
+              Start="0,0"
+              End="-97.8333290947809,62.8571371168509">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.6890656944327" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.6890656944327"
+                    Point2="0,41.6890656944327"
+                    Point3="-4,41.6890656944327" />
+                  <mssgle:LineSegment
+                    End="-93.8333290947809,41.6890656944327" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-93.8333290947809,41.6890656944327"
+                    Point2="-97.8333290947809,41.6890656944327"
+                    Point3="-97.8333290947809,45.6890656944327" />
+                  <mssgle:LineSegment
+                    End="-97.8333290947809,62.8571371168509" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-94.0109028286405,46.6890656944327,90.1884765625,10.9892578125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162,42"
+          Id="Package\資料流程工作\OLE DB 目的地"
+          TopLeft="219.999991257986,363.999981403352" />
+        <EdgeLayout
+          Id="Package\資料流程工作.Paths[聯集全部 輸出 1]"
+          TopLeft="329.333322770066,292.71427290537">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-28.3333315120804,71.2857084979819"
+              Start="0,0"
+              End="-28.3333315120804,63.7857084979819">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.642854248991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.642854248991"
+                    Point2="0,35.642854248991"
+                    Point3="-4,35.642854248991" />
+                  <mssgle:LineSegment
+                    End="-24.3333315120804,35.642854248991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.3333315120804,35.642854248991"
+                    Point2="-28.3333315120804,35.642854248991"
+                    Point3="-28.3333315120804,39.642854248991" />
+                  <mssgle:LineSegment
+                    End="-28.3333315120804,63.7857084979819" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\資料流程工作\OLE DB 來源">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\資料流程工作\OLE DB 來源 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\資料流程工作\OLE DB 目的地">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

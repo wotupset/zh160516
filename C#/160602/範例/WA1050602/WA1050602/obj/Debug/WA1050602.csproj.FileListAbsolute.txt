@@ -1,0 +1,13 @@
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\bin\Debug\WA1050602.exe.config
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\bin\Debug\WA1050602.exe
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\bin\Debug\WA1050602.pdb
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\obj\Debug\WA1050602.Form1.resources
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\obj\Debug\WA1050602.Properties.Resources.resources
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\obj\Debug\WA1050602.csproj.GenerateResource.Cache
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\obj\Debug\WA1050602.exe
+c:\users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\obj\Debug\WA1050602.pdb
+C:\Users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\obj\Debug\WA1050602.csprojResolveAssemblyReference.cache
+C:\Users\study\documents\visual studio 2012\Projects\WA1050602\WA1050602\obj\Debug\WA1050602.Form2.resources
+D:\160602\範例\WA1050602\WA1050602\bin\Debug\WA1050602.exe.config
+D:\160602\範例\WA1050602\WA1050602\obj\Debug\WA1050602.exe
+D:\160602\範例\WA1050602\WA1050602\obj\Debug\WA1050602.pdb

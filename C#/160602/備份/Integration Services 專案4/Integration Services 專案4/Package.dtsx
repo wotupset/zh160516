@@ -1,0 +1,439 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/25/2016 3:36:38 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="MB-206-"
+  DTS:CreatorName="MB-206-\study"
+  DTS:DTSID="{DAD702CE-CBED-4627-9F7C-5B56F25BDD75}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1028"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{E78078ED-04D4-42E4-8B45-E9527D4596E8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cc]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{A15CE52A-D191-4480-82A6-056EDE6CCC08}"
+      DTS:ObjectName="cc">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="3"
+          DTS:ConnectionString="c:\cc" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.新新]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C2678F87-55D9-4F64-AB50-0ED5CCAA9168}"
+      DTS:ObjectName="localhost.新新">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=新新;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[來源中價位]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{19D8C3A6-FC48-442F-BB22-7F3C9CF9EFC1}"
+      DTS:ObjectName="來源中價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\BackBack\中價位.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[來源低價位]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{1DAD899A-06F7-4329-9CB8-4CD9E2CA074F}"
+      DTS:ObjectName="來源低價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\BackBack\低價位.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[來源高價位]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{90FDB565-7E48-4016-B314-ED6A434CF6D0}"
+      DTS:ObjectName="來源高價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\BackBack\高價位u.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[建立CC]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{C6DD5E10-DF7E-472C-91F6-C436937A520E}"
+      DTS:ObjectName="建立CC">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="3"
+          DTS:ConnectionString="C:\CC" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[目的中價位]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{B8BAC92E-0DBC-47DD-AACA-B8866AE926F5}"
+      DTS:ObjectName="目的中價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="c:\cc\中價位.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[目的低價位]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{4B892E99-D5D0-4768-A960-F0C3740304DB}"
+      DTS:ObjectName="目的低價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="c:\cc\低價位.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[目的高價位]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{5953DEF6-15B6-497A-98A6-317F2EE6C8A2}"
+      DTS:ObjectName="目的高價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="c:\cc\高價位.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\時序容器"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="時序容器"
+      DTS:DTSID="{D9F408DE-2225-4E5C-BBC2-9E5C811C7C99}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="時序容器">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\時序容器\檔案系統工作"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="檔案系統工作"
+          DTS:DTSID="{6FD05B19-56AC-454C-97E1-E358389DDB48}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="檔案系統工作"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskSourcePath="{1DAD899A-06F7-4329-9CB8-4CD9E2CA074F}"
+              TaskDestinationPath="{4B892E99-D5D0-4768-A960-F0C3740304DB}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\時序容器\檔案系統工作 1"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="檔案系統工作"
+          DTS:DTSID="{9DB86F55-C78D-4F88-867E-FF1BB5FF89CF}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="檔案系統工作 1"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskSourcePath="{19D8C3A6-FC48-442F-BB22-7F3C9CF9EFC1}"
+              TaskDestinationPath="{B8BAC92E-0DBC-47DD-AACA-B8866AE926F5}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\時序容器\檔案系統工作 2"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="檔案系統工作"
+          DTS:DTSID="{6BEA1857-A8A2-4783-B3E9-C7D1E4252220}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="檔案系統工作 2"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskSourcePath="{90FDB565-7E48-4016-B314-ED6A434CF6D0}"
+              TaskDestinationPath="{5953DEF6-15B6-497A-98A6-317F2EE6C8A2}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\時序容器 1"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="時序容器"
+      DTS:DTSID="{559254D0-86C4-400F-B662-59A48F97A847}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="時序容器 1">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\時序容器 1\大量插入工作"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="大量插入工作"
+          DTS:DTSID="{091F4F3F-460B-4C23-882C-268E2E109D8E}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="大量插入工作"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <BulkInsertTask:BulkInsertTaskData
+              BulkInsertTask:SourceConnectionName="{4B892E99-D5D0-4768-A960-F0C3740304DB}"
+              BulkInsertTask:DestinationConnectionName="{C2678F87-55D9-4F64-AB50-0ED5CCAA9168}"
+              BulkInsertTask:DataFileType="DTSBulkInsert_DataFileType_WideChar"
+              BulkInsertTask:DestinationTableName="[dbo].[新_北風產品]"
+              BulkInsertTask:FieldTerminator="Comma {,}" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\時序容器 1\大量插入工作 1"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="大量插入工作"
+          DTS:DTSID="{C6EE7687-1166-4736-A904-16F29E7019B5}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="大量插入工作 1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <BulkInsertTask:BulkInsertTaskData
+              BulkInsertTask:SourceConnectionName="{B8BAC92E-0DBC-47DD-AACA-B8866AE926F5}"
+              BulkInsertTask:DestinationConnectionName="{C2678F87-55D9-4F64-AB50-0ED5CCAA9168}"
+              BulkInsertTask:DataFileType="DTSBulkInsert_DataFileType_WideChar"
+              BulkInsertTask:DestinationTableName="[dbo].[新_北風產品]"
+              BulkInsertTask:FieldTerminator="Comma {,}" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\時序容器 1\大量插入工作 2"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="大量插入工作"
+          DTS:DTSID="{F8473072-DA46-4263-8D91-64EBA5ED1A2E}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="大量插入工作 2"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <BulkInsertTask:BulkInsertTaskData
+              BulkInsertTask:SourceConnectionName="{5953DEF6-15B6-497A-98A6-317F2EE6C8A2}"
+              BulkInsertTask:DestinationConnectionName="{C2678F87-55D9-4F64-AB50-0ED5CCAA9168}"
+              BulkInsertTask:DataFileType="DTSBulkInsert_DataFileType_WideChar"
+              BulkInsertTask:DestinationTableName="[dbo].[新_北風產品]"
+              BulkInsertTask:FieldTerminator="Comma {,}" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\檔案系統工作"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="檔案系統工作"
+      DTS:DTSID="{1706039D-C7F1-4594-B17A-A6278C6A491E}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="檔案系統工作"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="CreateDirectory"
+          TaskSourcePath="{C6DD5E10-DF7E-472C-91F6-C436937A520E}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\檔案系統工作 1"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="檔案系統工作"
+      DTS:DTSID="{0F6CA6C0-C56F-478E-B744-435B7F6A8C51}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="檔案系統工作 1"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="DeleteDirectory"
+          TaskSourcePath="{A15CE52A-D191-4480-82A6-056EDE6CCC08}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[條件約束]"
+      DTS:CreationName=""
+      DTS:DTSID="{513D2B87-B352-4A6A-A13E-8843E58FD265}"
+      DTS:From="Package\檔案系統工作"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="條件約束"
+      DTS:To="Package\時序容器" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[條件約束 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{39B53FC0-6584-45AB-8B5F-2F848BC83936}"
+      DTS:From="Package\時序容器"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="條件約束 1"
+      DTS:To="Package\時序容器 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[條件約束 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{4EE7B958-C93D-4040-8349-99CA8A09301C}"
+      DTS:From="Package\時序容器 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="條件約束 2"
+      DTS:To="Package\檔案系統工作 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--此 CDATA 區段包含封裝的配置資訊。此區段包括諸如 (x,y) 座標、寬度和長度等資訊。-->
+<!--如果您手動編輯此區段但出錯，則可加以刪除。 -->
+<!--封裝仍可正常載入，但先前的配置資訊會遺失，而設計師將在設計介面上自動重新排列元素。-->
+<Objects
+  Version="sql11">
+  <!--下面每個節點將包含不會影響執行階段行為的屬性。-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\檔案系統工作"
+          TopLeft="308.333321081268,69.642853584825" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\時序容器\檔案系統工作 1"
+          TopLeft="223.666655474239,28.8571301431079" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\時序容器\檔案系統工作 2"
+          TopLeft="415.333314524757,23.2857018563219" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\時序容器\檔案系統工作"
+          TopLeft="24.4999967217447,28.8571301431078" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="636,103"
+          Size="636,146"
+          Id="Package\時序容器"
+          TopLeft="62.4999975164732,164.357134460187" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\時序容器 1\大量插入工作"
+          TopLeft="28.6666630241608,22.7856935542468" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\時序容器 1\大量插入工作 1"
+          TopLeft="221.333321875997,17.5714076976398" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\時序容器 1\大量插入工作 2"
+          TopLeft="442.166646434202,26.8571215089498" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="631,101"
+          Size="631,144"
+          Id="Package\時序容器 1"
+          TopLeft="66.6666640175714,348.214267924125" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[條件約束]"
+          TopLeft="382.166659298871,111.642853584825">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.7142808753619"
+              Start="0,0"
+              End="0,45.2142808753619">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.2142808753619" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[條件約束 1]"
+          TopLeft="381.333330767022,310.357134460187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.857133463938"
+              Start="0,0"
+              End="0,30.357133463938">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.357133463938" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="161,42"
+          Id="Package\檔案系統工作 1"
+          TopLeft="301.666654679511,543.214257961635" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[條件約束 2]"
+          TopLeft="382.166659348541,492.214267924125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.9999900375099"
+              Start="0,0"
+              End="0,43.4999900375099">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.4999900375099" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,165 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6a17ef23-75b4-4ce4-93cf-fa2b0d6a6bed" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>中文北風</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>供應商</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="77f53d08-bac8-4608-aa12-eea54bb0e179">
+          <ID>供應商</ID>
+          <Name>供應商</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="83a70f45-a251-42ed-b989-ba4c102aedb0">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_供應商</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>客戶</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="77617fe2-fa7c-434a-b2f1-b16e9834ddc6">
+          <ID>客戶</ID>
+          <Name>客戶</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9f9287c7-a24d-47b0-9157-91f17cc70777">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_客戶</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>訂貨主檔</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2fa5519e-5add-443a-afa8-6afa92602dce">
+          <ID>訂貨主檔</ID>
+          <Name>訂貨主檔</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="3a2e0768-693e-4774-a57e-c47ea0e31ab1">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_訂貨主檔</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>員工</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9f08b08c-aaad-493c-ab6a-7027668ab2c5">
+          <ID>員工</ID>
+          <Name>員工</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="bdabf5a5-e82d-4728-9cc0-dd83d40684e2">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_員工</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>產品資料</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f1f4a9e4-23ff-467f-b161-2373661f880b">
+          <ID>產品資料</ID>
+          <Name>產品資料</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="54b68172-bd89-43cb-8e2d-1ba74cb0d957">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_產品資料</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>產品類別</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ce97b853-ab06-49e0-a9fe-4b3ee771de94">
+          <ID>產品類別</ID>
+          <Name>產品類別</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="56dcf0f7-6b09-422b-8a08-175eb0bec1dd">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_產品類別</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>訂貨明細</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="83d13974-9147-4db1-8af1-6643af2fb44e">
+          <ID>訂貨明細</ID>
+          <Name>訂貨明細</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="12dffdf1-604e-4d9d-8d96-9d991a96cd19">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_訂貨明細</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>貨運公司</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="5faacacf-0ff4-405d-a5a0-7260571fdb45">
+          <ID>貨運公司</ID>
+          <Name>貨運公司</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ae6efe1c-33d0-40ed-866f-f5d8f5bf267d">
+            <DataSourceViewID>中文北風</DataSourceViewID>
+            <TableID>dbo_貨運公司</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

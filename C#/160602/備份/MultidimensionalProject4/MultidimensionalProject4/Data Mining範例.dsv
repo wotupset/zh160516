@@ -1,0 +1,172 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="648dfc8e-77cb-43c7-8d93-74d69ef532e3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Data Mining範例</ID>
+  <Name>Data Mining範例</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9138" scrolltop="-6733" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="30030" y="17489" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="010000009001905f0100144d6963726f736f66742053616e73205365726966" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Ticket_Master" left="6238" top="5477" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_Ticket_Master" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="TRX_DETAIL" left="808" top="-1746" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5265" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="0008000091140000f40d0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_TRX_DETAIL" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="940" top="1526" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="6098" height="4451" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[TRX_DETAIL-Ticket_Master]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="0" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="6638" y="5477" />
+                    <point x="6638" y="4525" />
+                    <point x="1240" y="4525" />
+                    <point x="1240" y="1826" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-9138</DiagramViewPortLeft>
+            <DiagramViewPortTop>-6733</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Data Mining範例</DataSourceID>
+  <Schema>
+    <xs:schema id="Data_x0020_Mining範例" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Data_x0020_Mining範例" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="3f18ae19-2a96-4c0c-83e2-6bf94ee31938">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Ticket_Master" msprop:design-time-name="cf866b11-8621-4d60-9370-6c6a135948a7" msprop:FriendlyName="Ticket_Master" msprop:DbSchemaName="dbo" msprop:DbTableName="Ticket_Master" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TRX_NO" msprop:design-time-name="751bed3b-f1df-4409-86df-5dd914ec0335" msprop:DbColumnName="TRX_NO" msprop:FriendlyName="TRX_NO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Customer_id" msprop:design-time-name="4ac469a1-dfa5-4437-8169-a053293bcfce" msprop:DbColumnName="Customer_id" msprop:FriendlyName="Customer_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="SEX" msprop:design-time-name="7c889b1b-4aac-4d7b-9c6d-649cf9da49bd" msprop:DbColumnName="SEX" msprop:FriendlyName="SEX" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_TRX_DETAIL" msprop:design-time-name="8545781b-ec23-4de9-bfd4-2b1ebc6701f0" msprop:FriendlyName="TRX_DETAIL" msprop:DbSchemaName="dbo" msprop:DbTableName="TRX_DETAIL" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TRX_NO" msprop:design-time-name="1f26e108-45af-4381-8244-3b0b91bb2328" msprop:DbColumnName="TRX_NO" msprop:FriendlyName="TRX_NO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TRX_DTE" msprop:design-time-name="7ec17148-0cf5-4c33-ba22-0992be2701df" msprop:DbColumnName="TRX_DTE" msprop:FriendlyName="TRX_DTE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="PRODUCT_CATEGORY_DESC" msprop:design-time-name="63bec83f-df05-4009-9b83-ea7f061f0d81" msprop:DbColumnName="PRODUCT_CATEGORY_DESC" msprop:FriendlyName="PRODUCT_CATEGORY_DESC" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UNIT_PRICE" msprop:design-time-name="3cd0770b-0262-49df-9a4f-d846ce5272b6" msprop:DbColumnName="UNIT_PRICE" msprop:FriendlyName="UNIT_PRICE" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="TRX_QTY" msprop:design-time-name="ff2837f1-419e-4a3d-837e-fcae6dd1ab47" msprop:DbColumnName="TRX_QTY" msprop:FriendlyName="TRX_QTY" type="xs:int" minOccurs="0" />
+                  <xs:element name="TRX_SEQ" msprop:design-time-name="f6844103-e4f6-41d9-a92b-80904b57da71" msprop:DbColumnName="TRX_SEQ" msprop:FriendlyName="TRX_SEQ" type="xs:long" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Ticket_Master" />
+          <xs:field xpath="TRX_NO" />
+        </xs:unique>
+        <xs:unique name="dbo_TRX_DETAIL_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_TRX_DETAIL" />
+          <xs:field xpath="TRX_NO" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="TRX_DETAIL-Ticket_Master" msdata:parent="dbo_Ticket_Master" msdata:child="dbo_TRX_DETAIL" msdata:parentkey="TRX_NO" msdata:childkey="TRX_NO" msprop:IsLogical="True" msprop:Description="" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <Data_x0020_Mining範例 xmlns="" />
+  </Schema>
+</DataSourceView>

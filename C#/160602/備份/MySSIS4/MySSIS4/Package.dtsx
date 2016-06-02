@@ -1,0 +1,2647 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/25/2016 9:22:01 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="MB-206-"
+  DTS:CreatorName="MB-206-\study"
+  DTS:DelayValidation="True"
+  DTS:DTSID="{D9A8C395-7047-46E8-942F-6B835C3D436C}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1028"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{8EEA91B2-624A-46ED-92E6-94BC2571390D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.新新]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{574F0CDF-1D5B-421F-88F1-02E1C7EAF935}"
+      DTS:ObjectName="localhost.新新">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=新新;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[中價位]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{33382E41-1B7B-4410-BE2A-FEB5025C0735}"
+      DTS:ObjectName="中價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1028"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="950"
+          DTS:ConnectionString="C:\BackBack\中價位.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 0"
+              DTS:DTSID="{BBE4D366-106D-4356-86BE-65985DDF13C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 1"
+              DTS:DTSID="{8CD4A43D-8A31-4B7E-8B5B-0ED2A3C84047}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 2"
+              DTS:DTSID="{FA4C9A81-92E4-4F4E-A17B-9AF11A221C02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 3"
+              DTS:DTSID="{AA0A42CF-998E-412E-A394-AEEBDD80CC47}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 4"
+              DTS:DTSID="{22DE46E8-D254-4588-A312-0DC616CDF9ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 5"
+              DTS:DTSID="{C3CE2C7F-672F-40F2-9A8D-EDEC64191A82}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 6"
+              DTS:DTSID="{FCE6EEF1-1E23-4FEF-A40B-50AA2753351E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[低價位]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DCD3FEE9-5E0E-42B4-98B6-ECCC85FFBC94}"
+      DTS:ObjectName="低價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1028"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="950"
+          DTS:ConnectionString="C:\BackBack\低價位.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 0"
+              DTS:DTSID="{05915771-D913-4730-A9D0-7AB9603019BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 1"
+              DTS:DTSID="{E8F3D2E7-B746-4C7F-AB05-23F2B848F313}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 2"
+              DTS:DTSID="{111CDB48-2AD2-4613-8ABC-AADE3246E742}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 3"
+              DTS:DTSID="{28353A4C-A0D9-4E37-816F-FA84EF345E8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 4"
+              DTS:DTSID="{522A9495-B9C2-46B3-A223-600597B5FD7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 5"
+              DTS:DTSID="{40F31473-B584-46C9-B7C2-FFA3A4839062}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 6"
+              DTS:DTSID="{22C649F5-8613-45ED-BC39-6116A2894AFB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[高價位]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{070A5EED-F5CB-462E-922E-9CCEBD506B91}"
+      DTS:ObjectName="高價位">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1028"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="950"
+          DTS:ConnectionString="C:\BackBack\高價位.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 0"
+              DTS:DTSID="{F692FE15-769A-46C8-B3EB-FBD3F70B00A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 1"
+              DTS:DTSID="{317D8E52-17C7-4BA0-A12D-6A443A7F1589}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 2"
+              DTS:DTSID="{DE1B71D8-F8DF-4C60-B846-7B4155293AEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 3"
+              DTS:DTSID="{89CCA67D-622E-4D46-A2B8-7CC04C0A6EE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 4"
+              DTS:DTSID="{8ED9EAE3-C102-4BBB-93C3-D18E76218A29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 5"
+              DTS:DTSID="{6237A4BB-095A-4C52-8FA0-A889A137DAA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 6"
+              DTS:DTSID="{9B0EE5BE-5564-47B5-8C4E-3EA8B685B885}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[高架會U]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B7A24D38-A05F-406F-A4DE-A1B41C79A70A}"
+      DTS:ObjectName="高架會U">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1028"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="950"
+          DTS:ConnectionString="C:\BackBack\高價位u.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 0"
+              DTS:DTSID="{8D98FE60-7F3B-4907-B67E-3C9F7190824C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 1"
+              DTS:DTSID="{0BD57731-EEA9-4070-A50B-1D23C99E5918}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 2"
+              DTS:DTSID="{9283C0A1-B4C7-440E-93ED-281081C17A18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 3"
+              DTS:DTSID="{04ECBF1F-6E34-47D8-98F8-28C62CC12811}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 4"
+              DTS:DTSID="{98687851-CEE0-41D7-B87C-1F2192A3431A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 5"
+              DTS:DTSID="{6737C2E6-BC19-4017-A3AF-D61C8EF48268}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="資料行 6"
+              DTS:DTSID="{9B42EE55-F471-4697-8031-3C47332F4E25}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\執行 SQL 工作"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="執行 SQL 工作"
+      DTS:DTSID="{29c081f9-8948-4cdd-ba4d-0eb5014a05dc}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="執行 SQL 工作"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{574F0CDF-1D5B-421F-88F1-02E1C7EAF935}"
+          SQLTask:SqlStatementSource="if (SELECT count(*) from sys.tables where name = '新_北風產品') = 0&#xA; BEGIN&#xA;  CREATE TABLE 新_北風產品 &#xA;  (&#xA;   產品編號 NVARCHAR(10),&#xA;   產品名稱 NVARCHAR(10),&#xA;   供應商編號 INT,&#xA;   類別編號 INT,&#xA;   單位數量 NVARCHAR(10),&#xA;   單價 smallmoney,&#xA;   庫存量 INT&#xA;  )&#xA; END&#xA;ELSE&#xA; TRUNCATE TABLE 新_北風產品 &#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\指令碼工作"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="指令碼工作"
+      DTS:DTSID="{370D03D8-27E6-435B-B390-80A504DE6234}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="指令碼工作"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_db718023a8654dcd8754cb1dc2489937"
+          VSTAMajorVersion="3"
+          VSTAMinorVersion="0"
+          Language="CSharp">
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="ST_db718023a8654dcd8754cb1dc2489937.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{669987a1-59a9-4a5a-aff6-d92d8b904bcf}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_db718023a8654dcd8754cb1dc2489937</RootNamespace>
+    <AssemblyName>ST_db718023a8654dcd8754cb1dc2489937</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+         <Generator>ResXFileCodeGenerator</Generator>
+         <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+             <AutoGen>True</AutoGen>
+         <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+         <Generator>SettingsSingleFileGenerator</Generator>
+         <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+         <AutoGen>True</AutoGen>
+         <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+         <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask"
+                           HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}"
+                           ApplicationType="usd"
+                           Language="cs"
+                           TemplatesPath=""
+                           DebugInfoExeName="#HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\10.0\InstallDir#\devenv.exe"
+                           DebugInfoCommandLine=""
+                           DebugInfoWorkingDir=""
+                           IconImageList=""/>
+        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex="">
+        </Host>
+        <ProjectClient>
+            <HostIdentifier>SSIS_ST110</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_db718023a8654dcd8754cb1dc2489937.Properties.Settings.get_Default():ST_db718023a8654dcd8754cb1dc2489937.Properties.Sett" +
+    "ings")]
+
+namespace ST_db718023a8654dcd8754cb1dc2489937.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+#endregion
+
+namespace ST_db718023a8654dcd8754cb1dc2489937
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+		/// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+		public void Main()
+		{
+			// TODO: Add your code here
+
+			Dts.TaskResult = (int)ScriptResults.Success;
+            MessageBox.Show("Success");
+		}
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+	}
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_db718023a8654dcd8754cb1dc2489937</msb:CodeName>
+		<msb:DisplayName>ST_db718023a8654dcd8754cb1dc2489937</msb:DisplayName>
+		<msb:ProjectId>{C1EE7518-F419-4A42-B960-6615884CA604}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_db718023a8654dcd8754cb1dc2489937.csproj"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ScriptMain.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_db718023a8654dcd8754cb1dc2489937")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_db718023a8654dcd8754cb1dc2489937")]
+[assembly: AssemblyCopyright("Copyright @  2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_db718023a8654dcd8754cb1dc2489937.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_db718023a8654dcd8754cb1dc2489937.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_db718023a8654dcd8754cb1dc2489937.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_db718023a8654dcd8754cb1dc2489937.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_db718023a8654dcd8754cb1dc2489937.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_db718023a8654dcd8754cb1dc2489937.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGl1HVcAAAAAAAAAAOAAAiELAQsAAA4AAAAIAAAAAAAATi0A
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAPgsAABTAAAAAEAAAAgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAVA0AAAAgAAAADgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAAgEAAAAQAAAAAYAAAAQAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAFgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAw
+LQAAAAAAAEgAAAACAAUAmCEAAGALAAABAAAAAAAAAOAgAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKA4AAAoqEzACAC0AAAABAAARfgEAAAQtIHIBAABw0AIA
+AAIoDwAACm8QAAAKcxEAAAoKBoABAAAEfgEAAAQqGn4CAAAEKh4CgAIAAAQqGn4DAAAEKi5zBgAA
+BoADAAAEKh4CKBQAAAoqYgIoFgAAChZvFwAACnJzAABwKBgAAAomKh4CKBkAAAoqAAAAALQAAADO
+yu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZl
+cnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5
+MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFE
+UEFEULQAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAACsAwAAI34AABgEAABk
+BQAAI1N0cmluZ3MAAAAAfAkAAIQAAAAjVVMAAAoAABAAAAAjR1VJRAAAABAKAABQAQAAI0Jsb2IA
+AAAAAAAAAgAAAVcdogEJAwAAAPolMwAWAAABAAAAHQAAAAUAAAAGAAAACQAAAAEAAAAZAAAAAgAA
+AA8AAAABAAAAAgAAAAMAAAAEAAAAAQAAAAQAAAABAAAAAQAAAAAACgABAAAAAAAGAMEAugAKAN0A
+yAAOAD0BFAEGAFkBugAGAG8BXgEGAKABiwEGAFcCPQIGAIICcAIGAJkCcAIGALYCcAIGANUCcAIG
+AO4CcAIGAAcDcAIGACIDcAIGAD0DcAIGAFYDcAIGAI8DbwMGAK8DbwMGAOADzQMGAP0DugAGAAIE
+ugAGACYEcAIKAFIEPAQKAGsEPAQGAIAEbwMOAKIEFAEOAMQEFAESAAIF7QQSAA0F7QQAAAAAAQAA
+AAAAAQABAAAAEAAyADwABQABAAEAAAEQAGsAPAAJAAMABQABABAAdAB/AA0ABAAIAAMBAACjAAAA
+EQAEAAoAEQB/ARMAEQCsARcAEQD2ATkABgYfAkcAVoAnAkoAVoAvAkoAUCAAAAAAgxi8ARsAAQBY
+IAAAAACTCMIBHwABAJEgAAAAAJMI1gEkAAEAmCAAAAAAkwjiASkAAQCgIAAAAACWCAYCPQACALMg
+AAAAAIYYvAEbAAIApyAAAAAAkRibBIkAAgC7IAAAAACGABoCGwACANQgAAAAAIYYvAEbAAIAAAAB
+ADcCOQC8AVgAQQC8AVgASQC8AVgAUQC8AVgAWQC8AVgAYQC8AVgAaQC8AVgAcQC8AVgAeQC8AVgA
+gQC8AVgAiQC8AV0AkQC8ARsAmQC8ARsACQC8ARsAoQAUBGIAoQAvBGkAKQC8AW4AuQC8AXoAyQC8
+ARsAEQC8ARsA0QC8ARsAGQDWBI0A2QDeBF0A4QAaBZIAGQC8ARsACAAUAE4ACAAYAFMAKQCTAIAA
+LgAbAAkBLgAjAAkBLgBjAC8BLgALAJgALgATAOAALgAzAOAALgArAAkBLgA7AA8BLgBDAAkBLgBb
+ACYBQwBrAFMASQCTAIAAYQCbAFMAgwCrAFMAdQACAAEAAwADAAAAbwEvAAAA7gE0AAAAEgJCAAIA
+AgADAAIAAwAFAAEABAAFAAIABQAHAASAAAABAAAARxf0QwAAAAAAAH8AAAAEAAAAAAAAAAAAAAAB
+ALEAAAAAAAQAAAAAAAAAAAAAAAEAugAAAAAACwAAAAAAAAAAAAAACgD1AAAAAAAEAAAAAAAAAAAA
+AAABAO0EAAAAAAAAAAABAAAAHwUAAAUABAAAAAAAADxNb2R1bGU+AFNUX2RiNzE4MDIzYTg2NTRk
+Y2Q4NzU0Y2IxZGMyNDg5OTM3LmRsbABSZXNvdXJjZXMAU1RfZGI3MTgwMjNhODY1NGRjZDg3NTRj
+YjFkYzI0ODk5MzcuUHJvcGVydGllcwBTZXR0aW5ncwBTY3JpcHRNYWluAFNUX2RiNzE4MDIzYTg2
+NTRkY2Q4NzU0Y2IxZGMyNDg5OTM3AFNjcmlwdFJlc3VsdHMAbXNjb3JsaWIAU3lzdGVtAE9iamVj
+dABTeXN0ZW0uQ29uZmlndXJhdGlvbgBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBNaWNyb3NvZnQu
+U3FsU2VydmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2NyaXB0
+VGFzawBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UARW51bQBTeXN0ZW0uUmVzb3VyY2VzAFJl
+c291cmNlTWFuYWdlcgByZXNvdXJjZU1hbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBDdWx0dXJlSW5m
+bwByZXNvdXJjZUN1bHR1cmUALmN0b3IAZ2V0X1Jlc291cmNlTWFuYWdlcgBnZXRfQ3VsdHVyZQBz
+ZXRfQ3VsdHVyZQBDdWx0dXJlAGRlZmF1bHRJbnN0YW5jZQBnZXRfRGVmYXVsdABEZWZhdWx0AE1h
+aW4AdmFsdWVfXwBTdWNjZXNzAEZhaWx1cmUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmlu
+ZwBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAU3lzdGVtLlJlZmxlY3Rpb24AQXNzZW1ibHlUaXRs
+ZUF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJh
+dGlvbkF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0
+cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmli
+dXRlAEFzc2VtYmx5Q3VsdHVyZUF0dHJpYnV0ZQBBc3NlbWJseVZlcnNpb25BdHRyaWJ1dGUAU3lz
+dGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmli
+dXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFN5c3RlbS5EaWFnbm9zdGljcwBEZWJ1
+Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAFR5cGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZy
+b21IYW5kbGUAQXNzZW1ibHkAZ2V0X0Fzc2VtYmx5AFN5c3RlbS5Db21wb25lbnRNb2RlbABFZGl0
+b3JCcm93c2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0
+ZWRBdHRyaWJ1dGUALmNjdG9yAFNTSVNTY3JpcHRUYXNrRW50cnlQb2ludEF0dHJpYnV0ZQBTY3Jp
+cHRPYmplY3RNb2RlbABnZXRfRHRzAHNldF9UYXNrUmVzdWx0AFN5c3RlbS5XaW5kb3dzLkZvcm1z
+AE1lc3NhZ2VCb3gARGlhbG9nUmVzdWx0AFNob3cAU1RfZGI3MTgwMjNhODY1NGRjZDg3NTRjYjFk
+YzI0ODk5MzcuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAAAAAHFTAFQAXwBkAGIANwAx
+ADgAMAAyADMAYQA4ADYANQA0AGQAYwBkADgANwA1ADQAYwBiADEAZABjADIANAA4ADkAOQAzADcA
+LgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAA9TAHUAYwBjAGUAcwBz
+AAAAonmowcO4pkiMvt+L/NNOGgAIt3pcVhk04IkIiYRdzYCAzJEDBhIVAwYSGQMgAAEEAAASFQQA
+ABIZBQABARIZBAgAEhUECAASGQMGEgwEAAASDAQIABIMAgYIAwYRFAQAAAAABAEAAAAEIAEBDgQg
+AQEIBgABElERVQQgABJZBiACAQ4SWQQHARIVBSABARFhCAEAAgAAAAAAAwAAAQQgABJtBQABEXUO
+RwEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC4wAQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRAu
+TkVUIEZyYW1ld29yayA0KAEAI1NUX2RiNzE4MDIzYTg2NTRkY2Q4NzU0Y2IxZGMyNDg5OTM3AAAF
+AQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMTYAAAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2Vw
+dGlvblRocm93cwEAACAtAAAAAAAAAAAAAD4tAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLQAA
+AAAAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAA
+AAAASAAAAFhAAACwAwAAAAAAAAAAAACwAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYA
+TwAAAAAAvQTv/gAAAQAAAAEA9ENHFwAAAQD0Q0cXPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAA
+AEQAAAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkA
+bwBuAAAAAAAAALAEEAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAA7AIAAAEAMAAw
+ADAAMAAwADQAYgAwAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMA
+VABfAGQAYgA3ADEAOAAwADIAMwBhADgANgA1ADQAZABjAGQAOAA3ADUANABjAGIAMQBkAGMAMgA0
+ADgAOQA5ADMANwAAAEAADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgA1ADkA
+NQA5AC4AMQA3ADMAOQA2AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAVABf
+AGQAYgA3ADEAOAAwADIAMwBhADgANgA1ADQAZABjAGQAOAA3ADUANABjAGIAMQBkAGMAMgA0ADgA
+OQA5ADMANwAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBv
+AHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMQA2AAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYA
+aQBsAGUAbgBhAG0AZQAAAFMAVABfAGQAYgA3ADEAOAAwADIAMwBhADgANgA1ADQAZABjAGQAOAA3
+ADUANABjAGIAMQBkAGMAMgA0ADgAOQA5ADMANwAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMA
+dABOAGEAbQBlAAAAAABTAFQAXwBkAGIANwAxADgAMAAyADMAYQA4ADYANQA0AGQAYwBkADgANwA1
+ADQAYwBiADEAZABjADIANAA4ADkAOQAzADcAAABEAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMA
+aQBvAG4AAAAxAC4AMAAuADUAOQA1ADkALgAxADcAMwA5ADYAAAAAAEgADwABAEEAcwBzAGUAbQBi
+AGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADUAOQA1ADkALgAxADcAMwA5ADYAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAUD0A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+        </ScriptProject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\時序容器"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="時序容器"
+      DTS:DTSID="{601B912E-4A91-4750-900D-5BEB0663A126}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="時序容器"
+      DTS:TransactionOption="2">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\時序容器\中價位"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:DelayValidation="True"
+          DTS:Description="資料流程工作"
+          DTS:DTSID="{7B8FEEC1-F3D8-4596-BC2B-8A36C8DB2614}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="中價位"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\時序容器\中價位\OLE DB 目的地"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  contactInfo="OLE DB 目的地;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB 目的地"
+                  name="OLE DB 目的地"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="命令逾時之前的秒數。值為 0 表示無限逾時。"
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="指定用於開啟資料列集之資料庫物件的名稱。"
+                      name="OpenRowset">[dbo].[新_北風產品]</property>
+                    <property
+                      dataType="System.String"
+                      description="指定包含用於開啟資料列集之資料庫物件名稱的變數。"
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="要執行的 SQL 命令。"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定無法從資料來源取得字碼頁資訊時，要使用的資料行字碼頁。"
+                      name="DefaultCodePage">950</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="描述字元資料時，強制使用 DefaultCodePage 屬性值。"
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定用於存取資料庫的模式。"
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="指出提供給識別欄位的值是否複製到目的地。如果為 False，則會在目的地自動產生識別欄位的值。只有在開啟快速載入時才會套用。"
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="指出包含 Null 之資料行的 Null 是否會插入目的地。若是 False，則包含 Null 的資料行的預設值會插入目的地。唯有開啟快速載入時才適用。"
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="指定快速載入使用的選項。只有開啟快速載入時才會套用。"
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定在資料插入期間發出認可的時間。值為 0 指定在資料插入結束時發出一次認可。只有開啟快速載入時才會套用。"
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\時序容器\中價位\OLE DB 目的地.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.新新]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.新新]"
+                      description="用於存取資料庫的 OLE DB 執行階段連接。"
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入]"
+                      errorOrTruncationOperation="插入"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB 目的地輸入">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 0]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 0"
+                          externalMetadataColumnId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品編號]"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 0]" />
+                        <inputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 1]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 1"
+                          externalMetadataColumnId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品名稱]"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 1]" />
+                        <inputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 2]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 2"
+                          externalMetadataColumnId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[供應商編號]"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 2]" />
+                        <inputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 3]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 3"
+                          externalMetadataColumnId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[類別編號]"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 3]" />
+                        <inputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 4]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 4"
+                          externalMetadataColumnId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單位數量]"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 4]" />
+                        <inputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 5]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 5"
+                          externalMetadataColumnId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單價]"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 5]" />
+                        <inputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 6]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 6"
+                          externalMetadataColumnId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[庫存量]"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 6]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品編號]"
+                          dataType="i4"
+                          name="產品編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品名稱]"
+                          dataType="wstr"
+                          length="10"
+                          name="產品名稱" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[供應商編號]"
+                          dataType="i4"
+                          name="供應商編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[類別編號]"
+                          dataType="i4"
+                          name="類別編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單位數量]"
+                          dataType="wstr"
+                          length="10"
+                          name="單位數量" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單價]"
+                          dataType="cy"
+                          name="單價" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[庫存量]"
+                          dataType="i4"
+                          name="庫存量" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\時序容器\中價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB 目的地錯誤輸出"
+                      synchronousInputId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\中價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\時序容器\中價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\中價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\時序容器\中價位\一般檔案來源 1"
+                  componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+                  contactInfo="一般檔案來源;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;1"
+                  description="一般檔案來源"
+                  localeId="1028"
+                  name="一般檔案來源 1"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="指定零長度資料行是否當成 Null 處理。"
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="指定包含檔案名稱之輸出資料行的名稱。如果未指定名稱，將不會產生包含檔案名稱的輸出資料行。"
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\時序容器\中價位\一般檔案來源 1.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[中價位]"
+                      connectionManagerRefId="Package.ConnectionManagers[中價位]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出]"
+                      name="一般檔案來源輸出">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 0]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 0]"
+                          length="50"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 0]"
+                          name="資料行 0"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 1]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 1]"
+                          length="50"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 1]"
+                          name="資料行 1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 2]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 2]"
+                          length="50"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 2]"
+                          name="資料行 2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 3]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 3]"
+                          length="50"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 3]"
+                          name="資料行 3"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 4]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 4]"
+                          length="50"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 4]"
+                          name="資料行 4"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 5]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 5]"
+                          length="50"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 5]"
+                          name="資料行 5"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 6]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 6]"
+                          length="50"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 6]"
+                          name="資料行 6"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 0]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 0" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 1]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 1" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 2]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 2" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 3]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 3" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 4]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 4" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 5]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 5" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 6]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 6" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出]"
+                      isErrorOut="true"
+                      name="一般檔案來源錯誤輸出">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[一般檔案來源錯誤輸出資料行]"
+                          dataType="nText"
+                          description="一般檔案來源錯誤輸出資料行"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[一般檔案來源錯誤輸出資料行]"
+                          name="一般檔案來源錯誤輸出資料行" />
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\時序容器\中價位.Paths[一般檔案來源輸出]"
+                  endId="Package\時序容器\中價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入]"
+                  name="一般檔案來源輸出"
+                  startId="Package\時序容器\中價位\一般檔案來源 1.Outputs[一般檔案來源輸出]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\時序容器\低價位"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:DelayValidation="True"
+          DTS:Description="資料流程工作"
+          DTS:DTSID="{e0441b0f-fac7-48dc-aafa-ad135eace3b2}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="低價位"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\時序容器\低價位\OLE DB 目的地 1"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  contactInfo="OLE DB 目的地;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB 目的地"
+                  name="OLE DB 目的地 1"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="命令逾時之前的秒數。值為 0 表示無限逾時。"
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="指定用於開啟資料列集之資料庫物件的名稱。"
+                      name="OpenRowset">[dbo].[新_北風產品]</property>
+                    <property
+                      dataType="System.String"
+                      description="指定包含用於開啟資料列集之資料庫物件名稱的變數。"
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="要執行的 SQL 命令。"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定無法從資料來源取得字碼頁資訊時，要使用的資料行字碼頁。"
+                      name="DefaultCodePage">950</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="描述字元資料時，強制使用 DefaultCodePage 屬性值。"
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定用於存取資料庫的模式。"
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="指出提供給識別欄位的值是否複製到目的地。如果為 False，則會在目的地自動產生識別欄位的值。只有在開啟快速載入時才會套用。"
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="指出包含 Null 之資料行的 Null 是否會插入目的地。若是 False，則包含 Null 的資料行的預設值會插入目的地。唯有開啟快速載入時才適用。"
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="指定快速載入使用的選項。只有開啟快速載入時才會套用。"
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定在資料插入期間發出認可的時間。值為 0 指定在資料插入結束時發出一次認可。只有開啟快速載入時才會套用。"
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\時序容器\低價位\OLE DB 目的地 1.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.新新]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.新新]"
+                      description="用於存取資料庫的 OLE DB 執行階段連接。"
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入]"
+                      errorOrTruncationOperation="插入"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB 目的地輸入">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].Columns[資料行 0]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 0"
+                          externalMetadataColumnId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[產品編號]"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 0]" />
+                        <inputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].Columns[資料行 1]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 1"
+                          externalMetadataColumnId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[產品名稱]"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 1]" />
+                        <inputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].Columns[資料行 2]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 2"
+                          externalMetadataColumnId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[供應商編號]"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 2]" />
+                        <inputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].Columns[資料行 3]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 3"
+                          externalMetadataColumnId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[類別編號]"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 3]" />
+                        <inputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].Columns[資料行 4]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 4"
+                          externalMetadataColumnId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[單位數量]"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 4]" />
+                        <inputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].Columns[資料行 5]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 5"
+                          externalMetadataColumnId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[單價]"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 5]" />
+                        <inputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].Columns[資料行 6]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 6"
+                          externalMetadataColumnId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[庫存量]"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 6]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[產品編號]"
+                          dataType="i4"
+                          name="產品編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[產品名稱]"
+                          dataType="wstr"
+                          length="10"
+                          name="產品名稱" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[供應商編號]"
+                          dataType="i4"
+                          name="供應商編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[類別編號]"
+                          dataType="i4"
+                          name="類別編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[單位數量]"
+                          dataType="wstr"
+                          length="10"
+                          name="單位數量" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[單價]"
+                          dataType="cy"
+                          name="單價" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入].ExternalColumns[庫存量]"
+                          dataType="i4"
+                          name="庫存量" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\時序容器\低價位\OLE DB 目的地 1.Outputs[OLE DB 目的地錯誤輸出]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB 目的地錯誤輸出"
+                      synchronousInputId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\低價位\OLE DB 目的地 1.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\時序容器\低價位\OLE DB 目的地 1.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\低價位\OLE DB 目的地 1.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\時序容器\低價位\一般檔案來源"
+                  componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+                  contactInfo="一般檔案來源;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;1"
+                  description="一般檔案來源"
+                  localeId="1028"
+                  name="一般檔案來源"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="指定零長度資料行是否當成 Null 處理。"
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="指定包含檔案名稱之輸出資料行的名稱。如果未指定名稱，將不會產生包含檔案名稱的輸出資料行。"
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\時序容器\低價位\一般檔案來源.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[低價位]"
+                      connectionManagerRefId="Package.ConnectionManagers[低價位]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出]"
+                      name="一般檔案來源輸出">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 0]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 0]"
+                          length="50"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 0]"
+                          name="資料行 0"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 1]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 1]"
+                          length="50"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 1]"
+                          name="資料行 1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 2]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 2]"
+                          length="50"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 2]"
+                          name="資料行 2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 3]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 3]"
+                          length="50"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 3]"
+                          name="資料行 3"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 4]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 4]"
+                          length="50"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 4]"
+                          name="資料行 4"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 5]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 5]"
+                          length="50"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 5]"
+                          name="資料行 5"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 6]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 6]"
+                          length="50"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].Columns[資料行 6]"
+                          name="資料行 6"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 0]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 0" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 1]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 1" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 2]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 2" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 3]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 3" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 4]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 4" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 5]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 5" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出].ExternalColumns[資料行 6]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 6" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源錯誤輸出]"
+                      isErrorOut="true"
+                      name="一般檔案來源錯誤輸出">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源錯誤輸出].Columns[一般檔案來源錯誤輸出資料行]"
+                          dataType="nText"
+                          description="一般檔案來源錯誤輸出資料行"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源錯誤輸出].Columns[一般檔案來源錯誤輸出資料行]"
+                          name="一般檔案來源錯誤輸出資料行" />
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源錯誤輸出].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源錯誤輸出].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源錯誤輸出].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源錯誤輸出].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\時序容器\低價位.Paths[一般檔案來源輸出]"
+                  endId="Package\時序容器\低價位\OLE DB 目的地 1.Inputs[OLE DB 目的地輸入]"
+                  name="一般檔案來源輸出"
+                  startId="Package\時序容器\低價位\一般檔案來源.Outputs[一般檔案來源輸出]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\時序容器\高價位"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:DelayValidation="True"
+          DTS:Description="資料流程工作"
+          DTS:DTSID="{FF00FDCA-4C9A-4500-8E27-5E0BF29A61AB}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="高價位"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\時序容器\高價位\OLE DB 目的地"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  contactInfo="OLE DB 目的地;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB 目的地"
+                  name="OLE DB 目的地"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="命令逾時之前的秒數。值為 0 表示無限逾時。"
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="指定用於開啟資料列集之資料庫物件的名稱。"
+                      name="OpenRowset">[dbo].[新_北風產品]</property>
+                    <property
+                      dataType="System.String"
+                      description="指定包含用於開啟資料列集之資料庫物件名稱的變數。"
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="要執行的 SQL 命令。"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定無法從資料來源取得字碼頁資訊時，要使用的資料行字碼頁。"
+                      name="DefaultCodePage">950</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="描述字元資料時，強制使用 DefaultCodePage 屬性值。"
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定用於存取資料庫的模式。"
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="指出提供給識別欄位的值是否複製到目的地。如果為 False，則會在目的地自動產生識別欄位的值。只有在開啟快速載入時才會套用。"
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="指出包含 Null 之資料行的 Null 是否會插入目的地。若是 False，則包含 Null 的資料行的預設值會插入目的地。唯有開啟快速載入時才適用。"
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="指定快速載入使用的選項。只有開啟快速載入時才會套用。"
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="指定在資料插入期間發出認可的時間。值為 0 指定在資料插入結束時發出一次認可。只有開啟快速載入時才會套用。"
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\時序容器\高價位\OLE DB 目的地.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.新新]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.新新]"
+                      description="用於存取資料庫的 OLE DB 執行階段連接。"
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入]"
+                      errorOrTruncationOperation="插入"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB 目的地輸入">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 0]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 0"
+                          externalMetadataColumnId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品編號]"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 0]" />
+                        <inputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 1]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 1"
+                          externalMetadataColumnId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品名稱]"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 1]" />
+                        <inputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 2]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 2"
+                          externalMetadataColumnId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[供應商編號]"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 2]" />
+                        <inputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 3]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 3"
+                          externalMetadataColumnId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[類別編號]"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 3]" />
+                        <inputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 4]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 4"
+                          externalMetadataColumnId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單位數量]"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 4]" />
+                        <inputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 5]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 5"
+                          externalMetadataColumnId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單價]"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 5]" />
+                        <inputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].Columns[資料行 6]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="資料行 6"
+                          externalMetadataColumnId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[庫存量]"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 6]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品編號]"
+                          dataType="wstr"
+                          length="10"
+                          name="產品編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[產品名稱]"
+                          dataType="wstr"
+                          length="10"
+                          name="產品名稱" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[供應商編號]"
+                          dataType="i4"
+                          name="供應商編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[類別編號]"
+                          dataType="i4"
+                          name="類別編號" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單位數量]"
+                          dataType="wstr"
+                          length="10"
+                          name="單位數量" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[單價]"
+                          dataType="cy"
+                          name="單價" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入].ExternalColumns[庫存量]"
+                          dataType="i4"
+                          name="庫存量" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\時序容器\高價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB 目的地錯誤輸出"
+                      synchronousInputId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\高價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\時序容器\高價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\高價位\OLE DB 目的地.Outputs[OLE DB 目的地錯誤輸出].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\時序容器\高價位\一般檔案來源 1"
+                  componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+                  contactInfo="一般檔案來源;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; 著作權所有，並保留一切權利; http://www.microsoft.com/sql/support;1"
+                  description="一般檔案來源"
+                  localeId="1028"
+                  name="一般檔案來源 1"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="指定零長度資料行是否當成 Null 處理。"
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="指定包含檔案名稱之輸出資料行的名稱。如果未指定名稱，將不會產生包含檔案名稱的輸出資料行。"
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\時序容器\高價位\一般檔案來源 1.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[高架會U]"
+                      connectionManagerRefId="Package.ConnectionManagers[高架會U]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出]"
+                      name="一般檔案來源輸出">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 0]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 0]"
+                          length="50"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 0]"
+                          name="資料行 0"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 1]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 1]"
+                          length="50"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 1]"
+                          name="資料行 1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 2]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 2]"
+                          length="50"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 2]"
+                          name="資料行 2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 3]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 3]"
+                          length="50"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 3]"
+                          name="資料行 3"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 4]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 4]"
+                          length="50"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 4]"
+                          name="資料行 4"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 5]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 5]"
+                          length="50"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 5]"
+                          name="資料行 5"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 6]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="轉換"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 6]"
+                          length="50"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].Columns[資料行 6]"
+                          name="資料行 6"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料行是否使用更快、地區設定中立的剖析常式。"
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="指出資料是否為二進位格式。"
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 0]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 0" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 1]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 1" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 2]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 2" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 3]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 3" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 4]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 4" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 5]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 5" />
+                        <externalMetadataColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出].ExternalColumns[資料行 6]"
+                          dataType="wstr"
+                          length="50"
+                          name="資料行 6" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出]"
+                      isErrorOut="true"
+                      name="一般檔案來源錯誤輸出">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[一般檔案來源錯誤輸出資料行]"
+                          dataType="nText"
+                          description="一般檔案來源錯誤輸出資料行"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[一般檔案來源錯誤輸出資料行]"
+                          name="一般檔案來源錯誤輸出資料行" />
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源錯誤輸出].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\時序容器\高價位.Paths[一般檔案來源輸出]"
+                  endId="Package\時序容器\高價位\OLE DB 目的地.Inputs[OLE DB 目的地輸入]"
+                  name="一般檔案來源輸出"
+                  startId="Package\時序容器\高價位\一般檔案來源 1.Outputs[一般檔案來源輸出]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[條件約束]"
+      DTS:CreationName=""
+      DTS:DTSID="{E9C53CA1-D57A-4A6D-AB0D-2C4B50ECB3DA}"
+      DTS:From="Package\執行 SQL 工作"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="條件約束"
+      DTS:To="Package\時序容器" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[條件約束 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6FBC5F0B-EC72-4D0F-BB77-F9ADC50570DC}"
+      DTS:From="Package\時序容器"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="條件約束 1"
+      DTS:To="Package\指令碼工作" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--此 CDATA 區段包含封裝的配置資訊。此區段包括諸如 (x,y) 座標、寬度和長度等資訊。-->
+<!--如果您手動編輯此區段但出錯，則可加以刪除。 -->
+<!--封裝仍可正常載入，但先前的配置資訊會遺失，而設計師將在設計介面上自動重新排列元素。-->
+<Objects
+  Version="sql11">
+  <!--下面每個節點將包含不會影響執行階段行為的屬性。-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\執行 SQL 工作"
+          TopLeft="266.666658454471,60" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\指令碼工作"
+          TopLeft="275.833322372702,446.642834324011" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\時序容器\低價位"
+          TopLeft="5.5,7.35713645268498" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\時序容器\中價位"
+          TopLeft="226.33332217402,8.64284760733088" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\時序容器\高價位"
+          TopLeft="446.333313432005,4.92856208280685" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="566,93"
+          Size="566,136"
+          Id="Package\時序容器"
+          TopLeft="62.4999975164734,167.785717796306" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[條件約束]"
+          TopLeft="345.333327985472,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.7857177963061"
+              Start="0,0"
+              End="0,58.2857177963061">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.2857177963061" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[條件約束 1]"
+          TopLeft="345.416659944588,303.785717796306">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,142.857116527705"
+              Start="0,0"
+              End="0,135.357116527705">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,135.357116527705" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\時序容器\低價位">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\時序容器\低價位\OLE DB 目的地 1"
+          TopLeft="88.3333298232822,376.071409358055" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\時序容器\低價位\一般檔案來源"
+          TopLeft="99.9999960263571,64.99999667917" />
+        <EdgeLayout
+          Id="Package\時序容器\低價位.Paths[一般檔案來源輸出]"
+          TopLeft="174.91666292482,106.99999667917">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,269.071412678885"
+              Start="0,0"
+              End="0,261.571412678885">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,261.571412678885" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\時序容器\低價位\OLE DB 目的地 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\時序容器\中價位">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162,42"
+          Id="Package\時序容器\中價位\OLE DB 目的地"
+          TopLeft="61.666666600439,365.499984392099" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\時序容器\中價位\一般檔案來源 1"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package\時序容器\中價位.Paths[一般檔案來源輸出]"
+          TopLeft="141.583333300219,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,263.499984392099"
+              Start="0,0"
+              End="0,255.999984392099">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,255.999984392099" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\時序容器\高價位">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="161,42"
+          Id="Package\時序容器\高價位\一般檔案來源 1"
+          TopLeft="57,63" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\時序容器\高價位\OLE DB 目的地"
+          TopLeft="66,283" />
+        <EdgeLayout
+          Id="Package\時序容器\高價位.Paths[一般檔案來源輸出]"
+          TopLeft="137.5,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.5,178"
+              Start="0,0"
+              End="9.5,170.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,85"
+                    Point2="0,89"
+                    Point3="4,89" />
+                  <mssgle:LineSegment
+                    End="5.5,89" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.5,89"
+                    Point2="9.5,89"
+                    Point3="9.5,93" />
+                  <mssgle:LineSegment
+                    End="9.5,170.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\時序容器\中價位\OLE DB 目的地">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\時序容器\高價位\OLE DB 目的地">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

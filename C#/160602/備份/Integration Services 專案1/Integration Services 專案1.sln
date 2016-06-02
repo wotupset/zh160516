@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Integration Services 專案1", "Integration Services 專案1\Integration Services 專案1.dtproj", "{B6855E6B-0815-41D6-8B36-CF05C71EDC45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6855E6B-0815-41D6-8B36-CF05C71EDC45}.Development|Default.ActiveCfg = Development
+		{B6855E6B-0815-41D6-8B36-CF05C71EDC45}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

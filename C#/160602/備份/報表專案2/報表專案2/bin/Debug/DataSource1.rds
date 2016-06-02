@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DataSource1">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=MB-207-16;Initial Catalog=中文北風</ConnectString>
+    <Prompt>指定資料來源 DataSource1 的使用者名稱和密碼</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>da1d60d9-502d-4df3-b3a6-81440b61925d</DataSourceID>
+</RptDataSource>

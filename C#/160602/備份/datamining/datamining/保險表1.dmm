@@ -1,0 +1,431 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0ba3f640-c493-4543-b8db-129d9cb0b29f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>保險表1</ID>
+  <Name>保險表1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_保險表</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12614" scrolltop="-5503" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="28654" y="16007" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001905f0100144d6963726f736f66742053616e73205365726966" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="保險表" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3387" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800003b0d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_保險表" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-12614</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5503</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6bce0dbc-7e96-49d0-a8ca-029298225457">
+    <DataSourceViewID>Data Mining範例 1</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4baeae9a-e489-4b7a-8582-6ec2a3cf69fe">
+      <ID>AGE</ID>
+      <Name>AGE</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="94c73bd1-689b-4127-ae3c-0651224be2ab">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bf6598b4-4bd5-4a32-ba97-814dba487e05">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>AGE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="177e20f6-8691-452e-bccf-de773eb4f68b">
+      <ID>CAR TYPE</ID>
+      <Name>CAR TYPE</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d352f2be-608d-4319-82f3-b16fe25dbfc1">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dc1e9a7e-619e-47b6-a222-b3ef45ee46c4">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>CAR_TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3dcd9c0f-9437-44d7-8237-35276ee9c52c">
+      <ID>CHILD CNT</ID>
+      <Name>CHILD CNT</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a3d13d2e-1ca4-4011-9405-30e18f4957bd">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="82242967-e07f-4610-ac0d-4d636e88faf3">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>CHILD_CNT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fd7c0ea7-9d4d-4fff-b4fd-affd56f0ac91">
+      <ID>CLAIM CNT</ID>
+      <Name>CLAIM CNT</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dc9d061e-6f6f-4515-9005-d3ab1e75a447">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d1fec6c3-14e9-4ff0-bd1f-0475318c8ce1">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>CLAIM_CNT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="61b42591-07df-4435-b67c-67ed81239421">
+      <ID>CUSTOMER ID</ID>
+      <Name>CUSTOMER ID</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="738c34b7-2c0b-405b-92b5-1fd223f4bab3">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3308f06-c35d-40bd-b416-1e0a91afa6cd">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>CUSTOMER_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c67fb9a8-c117-4063-98b5-e55e05d94aeb">
+      <ID>JOB</ID>
+      <Name>JOB</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="684a1359-67d3-48fe-b869-f1a02aebafda">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91cfbe97-032f-4c6c-9ff5-d1b22dc69038">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>JOB</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cd44635c-8f2f-4193-85bb-c15d90fcb6fa">
+      <ID>MARRIAGE</ID>
+      <Name>MARRIAGE</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d30e5b25-9639-43cf-a45b-ea1adff7229e">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e9bf882b-e685-41e8-9af6-ea5a2ab04731">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>MARRIAGE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a4a49ff6-84db-4543-a942-81204925065f">
+      <ID>PARKING TYPE</ID>
+      <Name>PARKING TYPE</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e1e74e9c-37a2-4dc3-8df4-7daa09135d35">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5694dc8b-aa86-4752-ba52-0059a0bf872e">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>PARKING_TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="79684437-b4b4-430c-9892-6702afa5b781">
+      <ID>REGION</ID>
+      <Name>REGION</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="25345180-7498-4982-bd9c-ba7f86eafa4d">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d08c957d-29c3-47e0-9999-e32a94e68e9d">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>REGION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f2e3bc1c-e1be-4063-9c90-567cd689021c">
+      <ID>SEX</ID>
+      <Name>SEX</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="75f9def7-4582-40bb-91a0-5e6bf3b6b685">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4a025b01-3e69-4f0d-8555-b4fbde03f6fa">
+            <TableID>dbo_保險表</TableID>
+            <ColumnID>SEX</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="e65c7165-483f-41fa-a6a8-0b1d061dbc15">
+      <ID>保險表1</ID>
+      <Name>保險表1</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="af58bc02-8bd8-4635-826f-648bbacf460c">
+          <ID>AGE</ID>
+          <Name>AGE</Name>
+          <SourceColumnID>AGE</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="5ebc594c-595c-442d-a7c7-724fa79ba2fa">
+          <ID>CAR TYPE</ID>
+          <Name>CAR TYPE</Name>
+          <SourceColumnID>CAR TYPE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7158144b-bf7d-491b-993e-f9f556ad91bc">
+          <ID>CHILD CNT</ID>
+          <Name>CHILD CNT</Name>
+          <SourceColumnID>CHILD CNT</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f80b4c81-b7bc-4210-adf1-96ca1767d319">
+          <ID>CLAIM CNT</ID>
+          <Name>CLAIM CNT</Name>
+          <SourceColumnID>CLAIM CNT</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="bb5a7baf-218c-4933-937e-5cad2feafed3">
+          <ID>CUSTOMER ID</ID>
+          <Name>CUSTOMER ID</Name>
+          <SourceColumnID>CUSTOMER ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="4ea8e33c-5f75-4527-973a-131ecf9edfbd">
+          <ID>JOB</ID>
+          <Name>JOB</Name>
+          <SourceColumnID>JOB</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a236e0c1-93e2-4c9b-b21f-7c3ea252786f">
+          <ID>MARRIAGE</ID>
+          <Name>MARRIAGE</Name>
+          <SourceColumnID>MARRIAGE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9e77bd1c-9ff0-465e-8545-d7e4496d7fff">
+          <ID>PARKING TYPE</ID>
+          <Name>PARKING TYPE</Name>
+          <SourceColumnID>PARKING TYPE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f98230ae-7756-4f53-ac43-026fd28b1900">
+          <ID>REGION</ID>
+          <Name>REGION</Name>
+          <SourceColumnID>REGION</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8b971ddf-147e-420b-a6be-76bd1679f440">
+          <ID>SEX</ID>
+          <Name>SEX</Name>
+          <SourceColumnID>SEX</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="574f457f-27df-454e-8c15-257d5d4795df">
+      <ID>bb</ID>
+      <Name>bb</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="b594c23c-fa6e-43e4-b932-690083fec0d1">
+          <ID>CAR TYPE</ID>
+          <Name>CAR TYPE</Name>
+          <SourceColumnID>CAR TYPE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="190ef6bd-59cb-4038-8af3-555da9b2a4ef">
+          <ID>CHILD CNT</ID>
+          <Name>CHILD CNT</Name>
+          <SourceColumnID>CHILD CNT</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b595d81b-50bf-4b10-94be-94bcd33036e5">
+          <ID>CLAIM CNT</ID>
+          <Name>CLAIM CNT</Name>
+          <SourceColumnID>CLAIM CNT</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="53e49bad-7569-4a23-9f12-fa7cf9f99388">
+          <ID>CUSTOMER ID</ID>
+          <Name>CUSTOMER ID</Name>
+          <SourceColumnID>CUSTOMER ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="a974b857-595f-4dc2-af10-8b3a67b7f98a">
+          <ID>JOB</ID>
+          <Name>JOB</Name>
+          <SourceColumnID>JOB</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="55521e2d-d0c3-434d-a337-45e55ff31f48">
+          <ID>MARRIAGE</ID>
+          <Name>MARRIAGE</Name>
+          <SourceColumnID>MARRIAGE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7ea76b67-f0e0-4f22-8a09-2f21fc41aa5b">
+          <ID>PARKING TYPE</ID>
+          <Name>PARKING TYPE</Name>
+          <SourceColumnID>PARKING TYPE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8a30905b-f673-4c16-8152-8700ff2d5de1">
+          <ID>REGION</ID>
+          <Name>REGION</Name>
+          <SourceColumnID>REGION</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cdae3483-a569-448e-86ac-f0cb6d2d9b00">
+          <ID>SEX</ID>
+          <Name>SEX</Name>
+          <SourceColumnID>SEX</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="3b527049-f36d-415d-9431-a8a610a7595e">
+      <ID>神經</ID>
+      <Name>神經</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Neural_Network</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="7691ae61-dc9d-48ee-a4aa-43587de51161">
+          <ID>AGE</ID>
+          <Name>AGE</Name>
+          <SourceColumnID>AGE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a65906f6-b739-4224-88af-3d511ade1446">
+          <ID>CAR TYPE</ID>
+          <Name>CAR TYPE</Name>
+          <SourceColumnID>CAR TYPE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ba161f69-549a-4d00-b118-001f13270eba">
+          <ID>CHILD CNT</ID>
+          <Name>CHILD CNT</Name>
+          <SourceColumnID>CHILD CNT</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="384d57d8-718f-41e6-97b5-b7626f841bb6">
+          <ID>CLAIM CNT</ID>
+          <Name>CLAIM CNT</Name>
+          <SourceColumnID>CLAIM CNT</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="c30ca82d-089c-4d8a-86ec-4cc750f61785">
+          <ID>CUSTOMER ID</ID>
+          <Name>CUSTOMER ID</Name>
+          <SourceColumnID>CUSTOMER ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="28ce7bda-ac48-4f56-9340-34ce31d1e218">
+          <ID>JOB</ID>
+          <Name>JOB</Name>
+          <SourceColumnID>JOB</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0dd9e2ca-7934-4d96-807d-e0c0014fb89e">
+          <ID>MARRIAGE</ID>
+          <Name>MARRIAGE</Name>
+          <SourceColumnID>MARRIAGE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7df9378a-c184-4814-bd8c-25faaa5fa3c6">
+          <ID>PARKING TYPE</ID>
+          <Name>PARKING TYPE</Name>
+          <SourceColumnID>PARKING TYPE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ae1f2408-6f09-4602-a792-36b106666192">
+          <ID>REGION</ID>
+          <Name>REGION</Name>
+          <SourceColumnID>REGION</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f826dd5a-6cc9-4881-84bd-04f3a8121e65">
+          <ID>SEX</ID>
+          <Name>SEX</Name>
+          <SourceColumnID>SEX</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>50</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

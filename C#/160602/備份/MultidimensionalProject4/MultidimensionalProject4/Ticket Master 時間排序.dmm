@@ -1,0 +1,188 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ac3f6c71-7dc9-4dc0-a8ee-814d0d9ed12c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ticket Master 時間排序</ID>
+  <Name>Ticket Master 時間排序</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_Ticket_Master</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="df8b1205-9ef6-4985-8512-4468f4e9d0f8">
+    <DataSourceViewID>Data Mining範例</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4faea397-2d2f-4f22-bb5b-43d0969746bf">
+      <ID>SEX</ID>
+      <Name>SEX</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2346aa78-b014-493f-8e75-a5b0c2f61d9e">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fbdf7749-e36c-4ee1-a1ab-23bded364cce">
+            <TableID>dbo_Ticket_Master</TableID>
+            <ColumnID>SEX</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="35882be6-5712-4e06-acb8-988ac2104246">
+      <ID>TRX NO</ID>
+      <Name>TRX NO</Name>
+      <IsKey>true</IsKey>
+      <Type>Text</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="203eb49e-3bce-441b-8738-5bb14a5df42e">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d05ca410-da12-4665-9092-c9dcfc4dae79">
+            <TableID>dbo_Ticket_Master</TableID>
+            <ColumnID>TRX_NO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="TableMiningStructureColumn" dwd:design-time-name="13f13295-2cd0-4647-8991-72a4031b3fcb">
+      <Annotations>
+        <Annotation>
+          <Name>MDXFilterComponent</Name>
+          <Value></Value>
+        </Annotation>
+      </Annotations>
+      <ID>TRX DETAIL</ID>
+      <Name>TRX DETAIL</Name>
+      <ForeignKeyColumns>
+        <ForeignKeyColumn dwd:design-time-name="886a4c94-6671-4ab6-a88e-216bfb70483e">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <NullProcessing>Error</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a4d13f28-b071-4e2c-8c26-373fbfc29332">
+            <TableID>dbo_TRX_DETAIL</TableID>
+            <ColumnID>TRX_NO</ColumnID>
+          </Source>
+        </ForeignKeyColumn>
+      </ForeignKeyColumns>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4b8e8c0b-ebe6-4904-87dc-372efa387d32">
+          <ID>PRODUCT CATEGORY DESC</ID>
+          <Name>PRODUCT CATEGORY DESC</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn dwd:design-time-name="3b362223-7354-474b-913e-feff42529d1a">
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding" dwd:design-time-name="3161bf9c-d1c7-4523-a866-9c44e99b84b6">
+                <TableID>dbo_TRX_DETAIL</TableID>
+                <ColumnID>PRODUCT_CATEGORY_DESC</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="51b0ac52-6581-484d-8c1c-4fdadec9956a">
+          <ID>TRX SEQ</ID>
+          <Name>TRX SEQ</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Content>Key Sequence</Content>
+          <KeyColumns>
+            <KeyColumn dwd:design-time-name="3ec2c0fd-b041-403f-a317-92f3f11488fc">
+              <DataType>BigInt</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding" dwd:design-time-name="aeee0364-5db2-4150-bb30-cf27ecab179b">
+                <TableID>dbo_TRX_DETAIL</TableID>
+                <ColumnID>TRX_SEQ</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+      </Columns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="ff4a471c-7dbd-41c4-871f-cac5ea39e2f4">
+      <ID>Ticket Master 時間排序</ID>
+      <Name>Ticket Master 時間排序</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Sequence_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="b26aaac3-d580-46da-a113-8901d2eea208">
+          <ID>SEX</ID>
+          <Name>SEX</Name>
+          <SourceColumnID>SEX</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f9ca80af-ce51-418d-afe9-bd91fbcb2c3f">
+          <ID>TRX NO</ID>
+          <Name>TRX NO</Name>
+          <SourceColumnID>TRX NO</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="e7666a9a-2273-403c-96fa-8ec4b5f848fd">
+          <ID>TRX DETAIL</ID>
+          <Name>TRX DETAIL</Name>
+          <SourceColumnID>TRX DETAIL</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <Columns>
+            <Column dwd:design-time-name="6be15034-f349-40c1-b17e-ee00678007f9">
+              <ID>PRODUCT CATEGORY DESC</ID>
+              <Name>PRODUCT CATEGORY DESC</Name>
+              <SourceColumnID>PRODUCT CATEGORY DESC</SourceColumnID>
+              <Usage>Predict</Usage>
+            </Column>
+            <Column dwd:design-time-name="f7120526-fcda-4dd2-ae0c-bad7d19052e7">
+              <ID>TRX SEQ</ID>
+              <Name>TRX SEQ</Name>
+              <SourceColumnID>TRX SEQ</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+          </Columns>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>50</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

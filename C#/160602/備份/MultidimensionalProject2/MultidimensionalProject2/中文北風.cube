@@ -1,0 +1,656 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1d2e04f3-ec11-47f6-8ab5-6fd75d9d035d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>中文北風</ID>
+  <Name>中文北風</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6105" scrolltop="-1508" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="24130" y="10372" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001905f0100144d6963726f736f66742053616e73205365726966" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="客戶" left="10820" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_客戶" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="貨運公司" left="16220" top="5337" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3122" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000320c000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_貨運公司" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="員工" left="10820" top="10251" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_員工" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="訂貨明細" left="-295" top="-400" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_訂貨明細" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="產品資料" left="-438" top="5209" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_產品資料" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="供應商" left="5452" top="5042" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_供應商" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="訂貨主檔" left="10820" top="4702" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_訂貨主檔" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11921" top="1803" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[訂貨主檔-客戶]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="7" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12320" y="2302" />
+              <point x="12320" y="4702" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13520" top="5877" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[訂貨主檔-貨運公司]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="7" sourceattachpoint="12" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16220" y="6276" />
+              <point x="13820" y="6276" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11921" top="7551" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[訂貨主檔-員工]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="7" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12320" y="10251" />
+              <point x="12320" y="7851" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2405" top="874" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="8715" height="5802" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[訂貨明細-訂貨主檔]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="4" sourceattachpoint="14" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10820" y="6276" />
+              <point x="9620" y="6276" />
+              <point x="9620" y="1174" />
+              <point x="2705" y="1174" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-437" top="2449" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="842" height="3260" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[訂貨明細-產品資料]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="4" sourceattachpoint="0" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-38" y="5209" />
+              <point x="-38" y="3485" />
+              <point x="105" y="3485" />
+              <point x="105" y="2749" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2262" top="5171" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="3490" height="872" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[產品資料-供應商]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="10" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5452" y="5643" />
+              <point x="3708" y="5643" />
+              <point x="3708" y="5471" />
+              <point x="2562" y="5471" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-6105</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1508</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-438</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-400</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="d0449a87-3452-48b0-9d7c-1e2f5b35a3da">
+      <ID>供應商</ID>
+      <Name>供應商</Name>
+      <DimensionID>供應商</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e4c2014c-4300-49c8-81d2-d2120a958272">
+          <AttributeID>供應商編號</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="201307c4-f143-4ccb-bcf0-f6dcb8d871f4">
+      <ID>客戶</ID>
+      <Name>客戶</Name>
+      <DimensionID>客戶</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e7012f2a-c7ee-4f92-b180-88af71e4f8c9">
+          <AttributeID>客戶編號</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="524b6b68-2093-47aa-a7b1-deee3ca640cc">
+      <ID>訂貨主檔</ID>
+      <Name>訂貨主檔</Name>
+      <DimensionID>訂貨主檔</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="665c38c9-960e-4906-86a1-4a948b1207e4">
+          <AttributeID>訂單號碼</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e42663b8-ec8c-4068-9388-d6909e55e0aa">
+          <AttributeID>員工編號</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a11a1c3-0e1b-4290-80bf-280504a5b94c">
+          <AttributeID>送貨方式</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cdd65d67-17c1-4316-be1c-e89288f0b6a4">
+          <AttributeID>客戶編號</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="455cdcbb-18b0-4f1d-808a-ceb6dc93576f">
+      <ID>員工</ID>
+      <Name>員工</Name>
+      <DimensionID>員工</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="36c55ab0-fa4b-43c0-ad09-f6850902624c">
+          <AttributeID>員工編號</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6fb31fa5-fe45-4272-8fcb-c667868277c6">
+      <ID>產品資料</ID>
+      <Name>產品資料</Name>
+      <DimensionID>產品資料</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="73aae3af-08f3-4bac-a295-743bed282304">
+          <AttributeID>產品編號</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="29586afe-aea1-4aac-a5f5-abf14cd4ebd2">
+          <AttributeID>供應商編號</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c98dd220-48da-428e-ae03-621b0c780f47">
+      <ID>貨運公司</ID>
+      <Name>貨運公司</Name>
+      <DimensionID>貨運公司</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="85dfc8ec-af04-4dd6-a48e-4b7817558f32">
+          <AttributeID>貨運公司編號</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="296567fa-64b3-4f3b-a9a2-c57ad263fec1">
+      <ID>訂貨主檔</ID>
+      <Name>訂貨主檔</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="62c8cb3d-701a-4a0c-9a1d-02f8f49b62ff">
+          <ID>訂貨主檔 計數</ID>
+          <Name>訂貨主檔 計數</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="aafeab8e-a42f-4d32-b6dc-6bccc31bbacf">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="5f06b0c7-8f28-4369-8528-923d35f20570">
+              <TableID>dbo_訂貨主檔</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="0b627c7b-eb39-4081-9777-a51d265f4782">
+          <CubeDimensionID>訂貨主檔</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c98d9db5-9360-46d9-b420-c63613478b39">
+              <AttributeID>訂單號碼</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="933e71ea-49b1-4b0e-821a-3e0b35fd70ee">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c1422e23-faa1-46d0-b057-bdeb04c0871e">
+                    <TableID>dbo_訂貨主檔</TableID>
+                    <ColumnID>訂單號碼</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="98eca256-0531-4e31-bc8f-479d00a29f36">
+          <CubeDimensionID>員工</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4b624211-4aa8-46ca-876a-f407c0f5240a">
+              <AttributeID>員工編號</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3cf99cd7-eeff-4574-823e-674763e9d3be">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="31cae46a-dbfb-4aaf-8bdb-bd14f57fbd2d">
+                    <TableID>dbo_訂貨主檔</TableID>
+                    <ColumnID>員工編號</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9faa861b-656c-4627-8d8f-9824299a0966">
+          <CubeDimensionID>貨運公司</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4f9b9569-67b0-43e6-801d-c27698cfa16c">
+              <AttributeID>貨運公司編號</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e74aede8-0b58-44db-abf5-9235ddb6cda0">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="64137e7d-0f9f-49ca-b5f0-5a5fde230248">
+                    <TableID>dbo_訂貨主檔</TableID>
+                    <ColumnID>送貨方式</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="195458ea-3d98-4d8d-bb20-90a1cfb16ee5">
+          <CubeDimensionID>客戶</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b417c066-aa88-4ffc-af22-33ea769f201e">
+              <AttributeID>客戶編號</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="eef03484-9725-4299-bf7e-a6da86dc93db">
+                  <DataType>WChar</DataType>
+                  <DataSize>5</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5303b484-7c8b-45c9-a455-b8f7ae06fb18">
+                    <TableID>dbo_訂貨主檔</TableID>
+                    <ColumnID>客戶編號</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="1d31bf61-26cf-4654-832c-31a163fdd67f">
+      <ID>訂貨明細</ID>
+      <Name>訂貨明細</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="35ac47b7-4df3-4b4d-afc1-13a5aad264c2">
+          <ID>單價</ID>
+          <Name>單價</Name>
+          <Source dwd:design-time-name="60a08545-c1a3-427a-bac8-de4e1531d31b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0034a0c7-21d7-4935-8842-809d361832f4">
+              <TableID>dbo_訂貨明細</TableID>
+              <ColumnID>單價</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="84f4bf1a-0eff-4953-8f48-46d94b5016fe">
+          <ID>數量</ID>
+          <Name>數量</Name>
+          <Source dwd:design-time-name="03566d49-f405-4b6b-b1db-55b3925724eb">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="26ad6921-281d-4d43-97f6-121d3c0fd770">
+              <TableID>dbo_訂貨明細</TableID>
+              <ColumnID>數量</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e90561dd-973e-4115-9d64-c22f11ea600a">
+          <ID>折扣</ID>
+          <Name>折扣</Name>
+          <Source dwd:design-time-name="85812574-09eb-48e6-9b74-cf30e35a5f8c">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="126af48b-e81b-44d6-9c80-43d974af98c0">
+              <TableID>dbo_訂貨明細</TableID>
+              <ColumnID>折扣</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d9661438-10d8-4d8c-90e6-e3fa7be604ec">
+          <ID>訂貨明細 計數</ID>
+          <Name>訂貨明細 計數</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="e746e2f3-d883-4d17-a372-a27ccc5dc3fa">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="6eaaf514-f174-4a93-b4bb-42b7d3564887">
+              <TableID>dbo_訂貨明細</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="04c70ed2-8a15-429f-b91c-16d54011fb8e">
+          <CubeDimensionID>訂貨主檔</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7987cf67-a4bb-439e-b025-80473de4994d">
+              <AttributeID>訂單號碼</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8178df4f-e65b-4db1-bfcd-7cdebf4f1b37">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8a8a52b2-210a-4672-8bbb-98094916f761">
+                    <TableID>dbo_訂貨明細</TableID>
+                    <ColumnID>訂單號碼</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0b348944-cc11-48d2-b984-ec45a5580dfb">
+          <CubeDimensionID>產品資料</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="110e9e0e-3141-4c86-bcd4-6607d477fb49">
+              <AttributeID>產品編號</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="81f48a97-0aed-4ab1-bca1-85045b4b9a47">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d5f089fe-180a-43aa-8aeb-d33929571d31">
+                    <TableID>dbo_訂貨明細</TableID>
+                    <ColumnID>產品編號</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="99068791-6c8c-444b-98fe-ef527e16364a">
+          <CubeDimensionID>員工</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2a1cd3b2-4a10-43bf-b72e-2c9bac3e160d">
+              <AttributeID>員工編號</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>訂貨主檔</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>員工編號</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="f9367998-c74c-4059-a6a2-686d2256dfed">
+          <CubeDimensionID>貨運公司</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="50f7b802-b56b-47a0-89cd-0ffacdc0a2f9">
+              <AttributeID>貨運公司編號</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>訂貨主檔</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>送貨方式</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="69cdbc70-6d7b-4764-a2fa-a8d62746dbae">
+          <CubeDimensionID>客戶</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="368f177c-c86f-4914-a8fa-d60973993f35">
+              <AttributeID>客戶編號</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>訂貨主檔</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>客戶編號</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="8e61b8b4-69b1-48df-8de7-ffeab1690a17">
+          <CubeDimensionID>供應商</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="05e206ce-8b72-4f36-bb09-33b29906fdbb">
+              <AttributeID>供應商編號</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>產品資料</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>供應商編號</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="96602016-10a0-4cb8-b278-eba144b7d884">
+      <ID>產品資料</ID>
+      <Name>產品資料</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="53507121-fcf4-493b-88ff-647e6c3d860b">
+          <ID>類別名稱</ID>
+          <Name>類別名稱</Name>
+          <Source dwd:design-time-name="b9949ade-5885-4b05-bea1-c7a3cf2a0275">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="17e8d786-7785-4081-bd90-30aa1d840173">
+              <TableID>dbo_產品資料</TableID>
+              <ColumnID>類別名稱</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fa3e497f-3ce8-43de-9a62-4a3b7a4a7dd2">
+          <ID>產品資料 計數</ID>
+          <Name>產品資料 計數</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="0a84dad1-2c07-4dcf-82c6-7a887e8dbd1c">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="b798440c-86f0-432b-9831-1019d0265a78">
+              <TableID>dbo_產品資料</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="5b53fe76-163e-41bf-add4-a67920387e83">
+          <CubeDimensionID>產品資料</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9a22f5e2-d4b5-4c39-99a7-a592ae7e0885">
+              <AttributeID>產品編號</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cfd50df9-f6a1-4c39-8471-42b827964737">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="af3aa4a6-fd91-4fb8-b02b-969b5832346d">
+                    <TableID>dbo_產品資料</TableID>
+                    <ColumnID>產品編號</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6d4dd372-7c04-44f6-a9c8-283b04764684">
+          <CubeDimensionID>供應商</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8d132fdd-6c73-433d-93f4-8dd9b10e0055">
+              <AttributeID>供應商編號</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9f338442-2d51-48cf-90bc-3e422ff46d7d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5da0dab7-16fc-4ba6-8be1-3a8fcdffbd60">
+                    <TableID>dbo_產品資料</TableID>
+                    <ColumnID>供應商編號</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ea0ed4f8-d824-492b-9705-18d05793d741">
+    <DataSourceViewID>中文北風</DataSourceViewID>
+  </Source>
+</Cube>

@@ -1,0 +1,192 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0255cb0c-b153-4e4e-a01b-4d0c0d86539b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Data Mining範例 1</ID>
+  <Name>Data Mining範例 1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Data Mining範例_link</DataSourceID>
+  <Schema>
+    <xs:schema id="Data_x0020_Mining範例_x0020_1" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Data_x0020_Mining範例_x0020_1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="bd73538a-442e-4de4-9815-75745a8e43a5">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_CAR_INSURANCE" msprop:design-time-name="5cdaaeed-5d25-4785-b461-20acd03f63a1" msprop:DbTableName="CAR_INSURANCE" msprop:FriendlyName="CAR_INSURANCE" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CUSTOMER_ID" msprop:design-time-name="eb1bd0ed-c73e-4953-ad0b-a9fa2a13181a" msprop:DbColumnName="CUSTOMER_ID" msprop:FriendlyName="CUSTOMER_ID" type="xs:short" minOccurs="0" />
+                  <xs:element name="SEX" msprop:design-time-name="8eb3e60e-04d9-4d8b-a53e-26e49c36f092" msprop:DbColumnName="SEX" msprop:FriendlyName="SEX" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AGE" msprop:design-time-name="8676c3eb-de8d-4b22-9e10-e1995d0df262" msprop:DbColumnName="AGE" msprop:FriendlyName="AGE" type="xs:short" minOccurs="0" />
+                  <xs:element name="MARRIAGE" msprop:design-time-name="77c2deec-bd88-4744-84ed-8bf33468a938" msprop:DbColumnName="MARRIAGE" msprop:FriendlyName="MARRIAGE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="JOB" msprop:design-time-name="bccdb5b2-a871-431e-96df-3fcda4076863" msprop:DbColumnName="JOB" msprop:FriendlyName="JOB" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INCOME" msprop:design-time-name="e75ac760-b05c-41dd-b191-0505a8abd7bd" msprop:DbColumnName="INCOME" msprop:FriendlyName="INCOME" type="xs:int" minOccurs="0" />
+                  <xs:element name="CHILD_CNT" msprop:design-time-name="1c468e88-e4b4-449e-afc2-f51ecab0372f" msprop:DbColumnName="CHILD_CNT" msprop:FriendlyName="CHILD_CNT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="REGION" msprop:design-time-name="9c6f3305-75ea-4e46-ae15-97951adf60c3" msprop:DbColumnName="REGION" msprop:FriendlyName="REGION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISTANCE" msprop:design-time-name="23adebd1-ce67-42a3-9c12-a6738baac9e4" msprop:DbColumnName="DISTANCE" msprop:FriendlyName="DISTANCE" type="xs:float" minOccurs="0" />
+                  <xs:element name="CAR_TYPE" msprop:design-time-name="15f3ff5b-4edd-4f06-a6e8-5fbfa5959d09" msprop:DbColumnName="CAR_TYPE" msprop:FriendlyName="CAR_TYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="11" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CAR_AGE" msprop:design-time-name="c33327f8-cf44-4a02-bd8d-c6c2acddf95d" msprop:DbColumnName="CAR_AGE" msprop:FriendlyName="CAR_AGE" type="xs:float" minOccurs="0" />
+                  <xs:element name="PARKING_TYPE" msprop:design-time-name="1a6cd52f-03c5-4345-954f-c33bb84f7223" msprop:DbColumnName="PARKING_TYPE" msprop:FriendlyName="PARKING_TYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CLAIM_CNT" msprop:design-time-name="be409ae5-eb51-41d6-b4ed-81d0f50f21bb" msprop:DbColumnName="CLAIM_CNT" msprop:FriendlyName="CLAIM_CNT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_保險表" msprop:design-time-name="e93ab40a-ef1d-4018-8df1-502119cc78ed" msprop:DbTableName="保險表" msprop:FriendlyName="保險表" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CUSTOMER_ID" msprop:design-time-name="b1ef4e70-d110-4a5f-be15-2ae44cde5df1" msprop:DbColumnName="CUSTOMER_ID" msprop:FriendlyName="CUSTOMER_ID" type="xs:short" minOccurs="0" />
+                  <xs:element name="SEX" msprop:design-time-name="17495bdc-0a2e-4933-bc35-b4cb9dee6815" msprop:DbColumnName="SEX" msprop:FriendlyName="SEX" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AGE" msprop:design-time-name="c4225ed9-ff68-44f7-9abc-59a49d5a5eff" msprop:DbColumnName="AGE" msprop:FriendlyName="AGE" type="xs:short" minOccurs="0" />
+                  <xs:element name="MARRIAGE" msprop:design-time-name="bce3ac9f-7be2-46a4-85e6-6ea5ba65373a" msprop:DbColumnName="MARRIAGE" msprop:FriendlyName="MARRIAGE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="JOB" msprop:design-time-name="7cae050b-da5c-430f-8df4-dbef83e76b33" msprop:DbColumnName="JOB" msprop:FriendlyName="JOB" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INCOME" msprop:design-time-name="396345ff-4232-47a5-bb75-960990bde4d1" msprop:DbColumnName="INCOME" msprop:FriendlyName="INCOME" type="xs:int" minOccurs="0" />
+                  <xs:element name="CHILD_CNT" msprop:design-time-name="55215313-26a3-44f0-96ec-1d8b5ab276fd" msprop:DbColumnName="CHILD_CNT" msprop:FriendlyName="CHILD_CNT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="REGION" msprop:design-time-name="4617af73-387f-4131-b3ec-adc6c7010c6a" msprop:DbColumnName="REGION" msprop:FriendlyName="REGION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISTANCE" msprop:design-time-name="e6f5d663-af72-43d8-ab0f-9d676dfa8cde" msprop:DbColumnName="DISTANCE" msprop:FriendlyName="DISTANCE" type="xs:float" minOccurs="0" />
+                  <xs:element name="CAR_TYPE" msprop:design-time-name="0c4fd9f1-d2de-40b8-8bb8-194909fd6de0" msprop:DbColumnName="CAR_TYPE" msprop:FriendlyName="CAR_TYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="11" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CAR_AGE" msprop:design-time-name="5c99fd91-2bdc-42a6-a8b3-3d2faacb206b" msprop:DbColumnName="CAR_AGE" msprop:FriendlyName="CAR_AGE" type="xs:float" minOccurs="0" />
+                  <xs:element name="PARKING_TYPE" msprop:design-time-name="ed0d530e-e35f-4558-a9c4-59367c73693b" msprop:DbColumnName="PARKING_TYPE" msprop:FriendlyName="PARKING_TYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CLAIM_CNT" msprop:design-time-name="5d0b6566-572c-4465-9f8d-cdc2cf6e9228" msprop:DbColumnName="CLAIM_CNT" msprop:FriendlyName="CLAIM_CNT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <Data_x0020_Mining範例_x0020_1 xmlns="" />
+  </Schema>
+</DataSourceView>

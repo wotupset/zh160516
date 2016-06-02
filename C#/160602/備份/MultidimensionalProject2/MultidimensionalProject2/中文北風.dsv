@@ -1,0 +1,442 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="088f85f9-1317-49d3-8014-934458e4b56a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>中文北風</ID>
+  <Name>中文北風</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="15" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="6032" scrolltop="3464" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="24765" y="11748" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="010000009001905f0100144d6963726f736f66742053616e73205365726966" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="供應商" left="12678" top="14888" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000b80b000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_供應商" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="客戶" left="13317" top="1694" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000b80b000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_客戶" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="訂貨主檔" left="19254" top="1764" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3122" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000320c000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_訂貨主檔" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="訂貨明細" left="19357" top="7973" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4305" height="6219" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000d11000004b180000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_訂貨明細" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="員工" left="19586" top="-5504" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3122" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000320c000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_員工" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="產品資料" left="12704" top="7691" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000b80b000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_產品資料" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="貨運公司" left="25385" top="2046" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3122" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000320c0000fe080000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_貨運公司" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="19648" top="-1003" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="1467" height="3067" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[訂貨主檔-員工]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="3" sourceattachpoint="1" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="20047" y="-504" />
+                    <point x="20047" y="242" />
+                    <point x="20815" y="242" />
+                    <point x="20815" y="1764" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="22076" top="2248" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="3609" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[訂貨主檔-貨運公司]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="3" sourceattachpoint="10" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="25385" y="2647" />
+                    <point x="23881" y="2647" />
+                    <point x="23881" y="2614" />
+                    <point x="22376" y="2614" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="16017" top="1595" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3537" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[訂貨主檔-客戶]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="11" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="16317" y="1994" />
+                    <point x="17785" y="1994" />
+                    <point x="17785" y="2064" />
+                    <point x="19254" y="2064" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="19316" top="6265" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="843" height="2008" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[訂貨明細-訂貨主檔]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="1" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="19715" y="6764" />
+                    <point x="19715" y="7368" />
+                    <point x="19859" y="7368" />
+                    <point x="19859" y="7973" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="15404" top="7592" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="4253" height="1040" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[訂貨明細-產品資料]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="11" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="15704" y="7991" />
+                    <point x="18412" y="7991" />
+                    <point x="18412" y="8332" />
+                    <point x="19357" y="8332" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="12679" top="12391" logicalid="14" controlid="14" masterid="0" hint1="0" hint2="0" width="799" height="2997" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[產品資料-供應商]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="6" sourceattachpoint="0" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="13078" y="14888" />
+                    <point x="13078" y="13860" />
+                    <point x="13104" y="13860" />
+                    <point x="13104" y="12691" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>6032</DiagramViewPortLeft>
+            <DiagramViewPortTop>3464</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>75</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>中文北風connect</DataSourceID>
+  <Schema>
+    <xs:schema id="中文北風" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="中文北風" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="43752c01-ebbb-418e-a62a-9608a3d67fec">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_供應商" msprop:design-time-name="87392a9e-1f8f-4609-85ce-f54afac7bbdb" msprop:IsLogical="True" msprop:FriendlyName="供應商" msprop:DbTableName="供應商" msprop:TableType="View" msprop:QueryDefinition="SELECT          供應商編號, 供應商, 城市 AS 縣市&#xD;&#xA;FROM              供應商" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="供應商編號" msprop:design-time-name="355e28d7-8918-48a0-9d94-d6fcde43208e" msprop:DbColumnName="供應商編號" msprop:FriendlyName="供應商編號" type="xs:int" minOccurs="0" />
+                  <xs:element name="供應商" msprop:design-time-name="bbf7ac99-171c-49bf-9aa7-5983f42792af" msprop:DbColumnName="供應商" msprop:FriendlyName="供應商" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="縣市" msprop:design-time-name="8c7cef94-2251-4108-bcdc-d358080fca1c" msprop:DbColumnName="縣市" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_客戶" msprop:design-time-name="3075c47b-857a-49e2-ac11-bb1c096377ee" msprop:IsLogical="True" msprop:FriendlyName="客戶" msprop:DbTableName="客戶" msprop:TableType="View" msprop:QueryDefinition="SELECT          客戶編號, 公司名稱, 城市 AS 縣市&#xD;&#xA;FROM              客戶" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="客戶編號" msprop:design-time-name="1b132a38-8b6c-4bc5-8fac-176ce8bbc2a5" msprop:DbColumnName="客戶編號" msprop:FriendlyName="客戶編號">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="縣市" msprop:design-time-name="a84a2c43-9769-495c-b03e-c3e8d18c3b1e" msprop:DbColumnName="縣市" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="公司名稱" msprop:design-time-name="03d10777-d7da-47dc-a9f8-252bdceccfdc" msprop:DbColumnName="公司名稱" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_訂貨主檔" msprop:design-time-name="4058a008-9681-46b3-a752-7f9d2ee678dd" msprop:IsLogical="True" msprop:FriendlyName="訂貨主檔" msprop:DbTableName="訂貨主檔" msprop:TableType="View" msprop:QueryDefinition="SELECT          訂單號碼, 客戶編號, 員工編號, 訂單日期, 送貨方式&#xD;&#xA;FROM              訂貨主檔" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="訂單號碼" msprop:design-time-name="7aa66b14-9175-4bf8-9385-3d6955dad106" msprop:DbColumnName="訂單號碼" msprop:FriendlyName="訂單號碼" type="xs:int" />
+                  <xs:element name="客戶編號" msprop:design-time-name="c251ff76-8cbe-430e-b9e1-8f8b1a76fd65" msprop:DbColumnName="客戶編號" msprop:FriendlyName="客戶編號" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="員工編號" msprop:design-time-name="5c3a0a5c-361e-49fd-95ed-3e902e4c0cfe" msprop:DbColumnName="員工編號" msprop:FriendlyName="員工編號" type="xs:int" minOccurs="0" />
+                  <xs:element name="訂單日期" msprop:design-time-name="db61722a-2c9f-4d88-a20b-232580f90e59" msprop:DbColumnName="訂單日期" msprop:FriendlyName="訂單日期" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="送貨方式" msprop:design-time-name="a250794e-755c-4288-be4a-93b6b7aeca5d" msprop:DbColumnName="送貨方式" msprop:FriendlyName="送貨方式" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_訂貨明細" msprop:design-time-name="7d6a6475-0466-44e6-8b78-252ce5f6ec31" msprop:FriendlyName="訂貨明細" msprop:DbSchemaName="dbo" msprop:DbTableName="訂貨明細" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="訂單號碼" msprop:design-time-name="c4d13d42-8bce-41b2-b5ee-c3ed968204a0" msprop:DbColumnName="訂單號碼" msprop:FriendlyName="訂單號碼" type="xs:int" />
+                  <xs:element name="產品編號" msprop:design-time-name="3be3f680-98d4-4bf7-ad56-990d18bd1a91" msprop:DbColumnName="產品編號" msprop:FriendlyName="產品編號" type="xs:int" />
+                  <xs:element name="單價" msprop:design-time-name="9eea29c5-9456-48c0-8d38-ce0883e261da" msprop:DbColumnName="單價" msprop:FriendlyName="單價" type="xs:decimal" />
+                  <xs:element name="數量" msprop:design-time-name="eb4279f6-f3bb-4c73-b752-9322cf7ed7cd" msprop:DbColumnName="數量" msprop:FriendlyName="數量" type="xs:short" />
+                  <xs:element name="折扣" msprop:design-time-name="45ba8bf1-0152-4bd8-9c01-b8b184ea2567" msprop:DbColumnName="折扣" msprop:FriendlyName="折扣" type="xs:float" />
+                  <xs:element name="金額" msdata:ReadOnly="true" msprop:design-time-name="c75b42f4-7c1d-4d63-be64-c2459d1e81e6" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="金額" msprop:ComputedColumnExpression="單價*數量*(1-折扣)" type="xs:float" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_員工" msprop:design-time-name="4be66dae-1d2a-49d4-b00f-f05a9bb1e425" msprop:IsLogical="True" msprop:FriendlyName="員工" msprop:DbTableName="員工" msprop:TableType="View" msprop:QueryDefinition="SELECT          員工編號, 姓名, 職稱, 稱呼&#xD;&#xA;FROM              員工" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="員工編號" msprop:design-time-name="c0b5506e-53dc-4b88-be67-278bb87ee3dc" msprop:DbColumnName="員工編號" type="xs:int" />
+                  <xs:element name="姓名" msprop:design-time-name="73c73ad4-e648-41ff-9a57-6b8b20ed33d0" msprop:DbColumnName="姓名" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="職稱" msprop:design-time-name="dddac711-9fd5-499d-be19-534291464c06" msprop:DbColumnName="職稱" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="稱呼" msprop:design-time-name="3a95430b-8694-468b-b919-734f5c56ba7a" msprop:DbColumnName="稱呼" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_產品資料" msprop:design-time-name="8654ed8f-8a31-486f-9618-e7876618b294" msprop:IsLogical="True" msprop:FriendlyName="產品資料" msprop:DbTableName="產品資料" msprop:TableType="View" msprop:QueryDefinition="SELECT          產品編號, 產品, 供應商編號, 類別編號 AS 類別名稱&#xD;&#xA;FROM              產品資料" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="產品編號" msprop:design-time-name="5220f54e-13d2-489d-8130-8a33fc89d5e7" msprop:DbColumnName="產品編號" msprop:FriendlyName="產品編號" type="xs:int" />
+                  <xs:element name="產品" msprop:design-time-name="d1fb1836-1664-4caf-8339-ca6b49622114" msprop:DbColumnName="產品" msprop:FriendlyName="產品" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="供應商編號" msprop:design-time-name="305dc370-a9aa-47aa-b519-4cb52fa8d1fd" msprop:DbColumnName="供應商編號" msprop:FriendlyName="供應商編號" type="xs:int" minOccurs="0" />
+                  <xs:element name="類別名稱" msprop:design-time-name="df3c1909-e149-4c89-ac43-2288395d9116" msprop:DbColumnName="類別名稱" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_貨運公司" msprop:design-time-name="a24c7164-51e6-4d30-b261-6e7e59ec0100" msprop:IsLogical="True" msprop:FriendlyName="貨運公司" msprop:DbTableName="貨運公司" msprop:TableType="View" msprop:QueryDefinition="SELECT          貨運公司編號, 貨運公司名稱&#xD;&#xA;FROM              貨運公司" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="貨運公司編號" msprop:design-time-name="beae4c49-3429-445d-83d3-febc2a40f984" msprop:DbColumnName="貨運公司編號" msprop:FriendlyName="貨運公司編號" type="xs:int" />
+                  <xs:element name="貨運公司名稱" msprop:design-time-name="ddd97c65-0e21-4650-9fa9-c49442495ee9" msprop:DbColumnName="貨運公司名稱" msprop:FriendlyName="貨運公司名稱" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_供應商" />
+          <xs:field xpath="供應商編號" />
+        </xs:unique>
+        <xs:unique name="dbo_客戶_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_客戶" />
+          <xs:field xpath="客戶編號" />
+        </xs:unique>
+        <xs:unique name="dbo_訂貨主檔_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_訂貨主檔" />
+          <xs:field xpath="訂單號碼" />
+        </xs:unique>
+        <xs:unique name="dbo_訂貨明細_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_訂貨明細" />
+          <xs:field xpath="產品編號" />
+        </xs:unique>
+        <xs:unique name="dbo_員工_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_員工" />
+          <xs:field xpath="員工編號" />
+        </xs:unique>
+        <xs:unique name="dbo_產品資料_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_產品資料" />
+          <xs:field xpath="產品編號" />
+        </xs:unique>
+        <xs:unique name="dbo_貨運公司_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_貨運公司" />
+          <xs:field xpath="貨運公司編號" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="訂貨主檔-員工" msdata:parent="dbo_員工" msdata:child="dbo_訂貨主檔" msdata:parentkey="員工編號" msdata:childkey="員工編號" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="訂貨主檔-貨運公司" msdata:parent="dbo_貨運公司" msdata:child="dbo_訂貨主檔" msdata:parentkey="貨運公司編號" msdata:childkey="送貨方式" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="訂貨主檔-客戶" msdata:parent="dbo_客戶" msdata:child="dbo_訂貨主檔" msdata:parentkey="客戶編號" msdata:childkey="客戶編號" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="訂貨明細-訂貨主檔" msdata:parent="dbo_訂貨主檔" msdata:child="dbo_訂貨明細" msdata:parentkey="訂單號碼" msdata:childkey="訂單號碼" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="訂貨明細-產品資料" msdata:parent="dbo_產品資料" msdata:child="dbo_訂貨明細" msdata:parentkey="產品編號" msdata:childkey="產品編號" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="產品資料-供應商" msdata:parent="dbo_供應商" msdata:child="dbo_產品資料" msdata:parentkey="供應商編號" msdata:childkey="供應商編號" msprop:IsLogical="True" msprop:Description="" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <中文北風 xmlns="" />
+  </Schema>
+</DataSourceView>

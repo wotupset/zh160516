@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>MultidimensionalProject2</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>2qcRcgY/s33OnXmJA4JmGmeSvRo=2016/5/9 上午 10:30:422016/5/9 上午 10:11:16</TimeStamp>
+        <ID>
+          <String>中文北風connect</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>3DxRyT1k/TsbZB0VLyCWbbOtPXs=2016/5/9 上午 10:30:202016/5/9 上午 10:11:47</TimeStamp>
+        <ID>
+          <String>中文北風</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>t5OvYmg1tcQT6Pg4FaCExemBSQI=2016/5/9 上午 10:25:262016/5/9 上午 10:25:26</TimeStamp>
+        <ID>
+          <String>供應商</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>MUGrcfTiZTy224bQO/Yir5czn+M=2016/5/9 上午 10:25:262016/5/9 上午 10:25:26</TimeStamp>
+        <ID>
+          <String>客戶</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>lka399LBYRFW4Rx1UJzZijj+t4A=2016/5/9 上午 10:25:262016/5/9 上午 10:25:26</TimeStamp>
+        <ID>
+          <String>員工</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>z5DTFkarwdOR7ZGfb+3Mi0sIls0=2016/5/9 上午 10:25:262016/5/9 上午 10:25:26</TimeStamp>
+        <ID>
+          <String>貨運公司</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>18nAOMmD2247WZX9fc2scK8mqDw=2016/5/9 上午 10:25:262016/5/9 上午 10:25:26</TimeStamp>
+        <ID>
+          <String>訂貨主檔</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ZA11mXdogUq3ArmSM8zhowDlJz4=2016/5/9 上午 10:25:262016/5/9 上午 10:25:26</TimeStamp>
+        <ID>
+          <String>產品資料</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>EC3xRp4oN58BlJpWfcJIns+j7yM=2016/5/9 上午 10:29:192016/5/9 上午 10:25:26ZjBWz0mHN+8HBx/FhnV+nb/3XK4=2016/5/9 上午 10:29:192016/5/9 上午 10:25:26</TimeStamp>
+        <ID>
+          <String>中文北風</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>tQseW/TNwK5P2wwLh8XRP6Ptycw=2016/5/9 上午 10:10:392016/5/9 上午 10:10:39</TimeStamp>
+      <ID>
+        <String>MultidimensionalProject2</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2016-05-09T02:30:46.196667Z</LastDeployed>
+</DeploymentSnapshot>

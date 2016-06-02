@@ -1,0 +1,281 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b534c308-6ed2-4bfc-a3c5-256ffd3c98f5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>HEART</ID>
+  <Name>HEART</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_HEART</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="42b4a5d5-1f79-4175-b13c-f6bda54927ca">
+    <DataSourceViewID>Data Mining heart</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b49c3263-b692-4e08-8880-f95a8c1c753b">
+      <ID>AGE</ID>
+      <Name>AGE</Name>
+      <Type>Long</Type>
+      <Content>Discretized</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0429c552-d408-4d19-8953-a66f74c8173b">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6b95e9c-5217-43fa-a9b0-6b59166b2c42">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>AGE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="138ce98e-1b84-4fc2-9df9-b6c39336a629">
+      <ID>Blood Pressure</ID>
+      <Name>Blood Pressure</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="69c6f5ff-59e4-4802-bca3-8564fe791e71">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="30765129-0883-4ee4-9c30-a68f19a2d136">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>Blood_pressure</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="61a4181a-f391-4365-a709-cc8cedeae37b">
+      <ID>Blood Sugar</ID>
+      <Name>Blood Sugar</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3e3e7bfe-739d-4318-a4e6-48324bbf8741">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1bef4976-0b9b-45d4-ba27-b6fc3a973d23">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>Blood_sugar</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="93e7e834-4a25-49a2-a543-87a5f464e58a">
+      <ID>Chest Pain Type</ID>
+      <Name>Chest Pain Type</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b96676c-8c1f-4034-a687-dabef8f85deb">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f42b1986-1235-43b3-85d9-07f69b1fc4f7">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>Chest_pain_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="44d89787-0bbd-4ca2-9b73-66f98c296f80">
+      <ID>Cholestoral</ID>
+      <Name>Cholestoral</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="907e5f38-0f4b-4763-b6c1-b0e7024d7926">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b0cb2c22-3aa6-444f-a991-daf788d88129">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>Cholestoral</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="51a59378-7c93-4134-94fc-d8805bea6d3f">
+      <ID>Electrocardiographic</ID>
+      <Name>Electrocardiographic</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="326ff9dd-10ec-4f1a-938b-ed72d8b773f9">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d04bf167-d689-4260-85ea-f542ba151e48">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>Electrocardiographic</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4bbb1563-4d6b-4fce-b307-5ddcdcb56a6b">
+      <ID>Exercise Angina</ID>
+      <Name>Exercise Angina</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2d6ceb28-7dd6-43b5-a1b6-67755e76c4c9">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7dfaea84-af87-4c63-a48e-7c422ce7c089">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>Exercise_angina</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9605ddb7-1289-49d6-8433-32789c898b2e">
+      <ID>Max Heart Rate</ID>
+      <Name>Max Heart Rate</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b35db287-2f12-48fe-a895-b0dd729627cb">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9ff9027-ae46-4e42-9dd1-a0602bf8e852">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>Max_heart_rate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="70af0931-0f81-4795-b018-6c9f88d35b22">
+      <ID>PATIENT NO</ID>
+      <Name>PATIENT NO</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bdccdbb0-47a2-4545-8f9a-a8beb3d8f052">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="998addad-4e7b-49f3-9c61-1d955d3f5dd5">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>PATIENT_NO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="be03cca5-db0f-4809-bb1a-e3b0b56d7eaa">
+      <ID>SEX</ID>
+      <Name>SEX</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d43f8acd-4d63-48e0-be0f-034e2cf97924">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="93813dc0-08a2-47f6-993c-bcf09fc697bb">
+            <TableID>dbo_HEART</TableID>
+            <ColumnID>SEX</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="49ea056c-a44e-4fd3-b80a-c90caa13a274">
+      <ID>群組</ID>
+      <Name>群組</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="ce481462-5a19-4379-968f-44bf0b8abdbe">
+          <ID>AGE</ID>
+          <Name>AGE</Name>
+          <SourceColumnID>AGE</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a03752aa-730c-4a75-836d-4b3cb88ea61d">
+          <ID>Blood Pressure</ID>
+          <Name>Blood Pressure</Name>
+          <SourceColumnID>Blood Pressure</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6ec424ff-4393-46e2-b272-19d764e32779">
+          <ID>Blood Sugar</ID>
+          <Name>Blood Sugar</Name>
+          <SourceColumnID>Blood Sugar</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="db41eb7c-f2f9-4262-9f4b-4a1a06f2c53f">
+          <ID>Chest Pain Type</ID>
+          <Name>Chest Pain Type</Name>
+          <SourceColumnID>Chest Pain Type</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="08778189-5461-4f89-93b0-272ee748f52b">
+          <ID>Cholestoral</ID>
+          <Name>Cholestoral</Name>
+          <SourceColumnID>Cholestoral</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="718508f0-7514-4bd9-8785-1d7c63c663f2">
+          <ID>Electrocardiographic</ID>
+          <Name>Electrocardiographic</Name>
+          <SourceColumnID>Electrocardiographic</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="927bf019-998c-4a5c-a394-0b810df630bb">
+          <ID>Exercise Angina</ID>
+          <Name>Exercise Angina</Name>
+          <SourceColumnID>Exercise Angina</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7efb86f5-b8ed-4a1d-9dfb-594051eb02e9">
+          <ID>Max Heart Rate</ID>
+          <Name>Max Heart Rate</Name>
+          <SourceColumnID>Max Heart Rate</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b3d77b7a-bf16-43c7-a154-bef86545c64a">
+          <ID>PATIENT NO</ID>
+          <Name>PATIENT NO</Name>
+          <SourceColumnID>PATIENT NO</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="d70912cc-f68a-4691-87c4-8afb93bf87d6">
+          <ID>SEX</ID>
+          <Name>SEX</Name>
+          <SourceColumnID>SEX</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>50</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>
