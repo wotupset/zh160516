@@ -1,0 +1,10 @@
+C:\Users\study\Documents\Visual Studio 2012\Projects\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\study\Documents\Visual Studio 2012\Projects\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\study\Documents\Visual Studio 2012\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\study\Documents\Visual Studio 2012\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\study\Documents\Visual Studio 2012\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+D:\160607\實作\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\160607\實作\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\160607\實作\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+D:\160607\實作\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\160607\實作\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
