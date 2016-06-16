@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="styles/MyStyle.css" rel="stylesheet" />
+    <style>
+        #div1 {
+            left:100px;
+            width:200px;
+            height:50px;
+            background-color:lightsalmon;
+            font-size:20pt;
+            font-weight:bold;
+            position:absolute;
+
+            /*
+            transform-origin:left top;
+            transform:rotate(135deg);             
+            transform:scale(2,2);   
+            transform:translate(300px,200px);
+            transform:skew(30deg,10deg);
+            */    
+            transition:transform ease-in-out 1s;
+
+        }
+        #div2, #div3 {
+            width:250px;
+            height:150px;
+            position:absolute;
+        }
+        #div2 {
+            left:50px;
+            top:50px;
+            background-color:lightcoral;
+            z-index:3;
+        }
+        #div3 {
+            left:100px;
+            top:100px;
+            background-color:lightgreen;
+            z-index:2;
+        }
+        #div1:hover{                   
+                        
+            transform:rotate(360deg) scale(1.5,1.5);
+
+            /*
+            transition-duration:1s;
+            transition-property:background-color;
+            transition-timing-function:ease-in-out;
+            */
+            transition:transform ease-in-out 1s;
+        }
+        #MaskDiv {
+            width:504px;
+            height:250px;
+            overflow:hidden;            
+        }
+        #PicDiv {
+            width:504px;
+            height:390px;
+            background-image:url("/images/Pic1.jpg");   
+            transition:margin-top ease-in-out 1s;
+        }
+        #PicDiv:hover {
+            margin-top:-150px;
+            transition:margin-top ease-in-out 1s;
+        }     
+        #MyT1 {
+            width:600px;
+            border:5px purple solid; 
+            border-collapse:collapse;
+        }
+        #MyT1 thead td {
+            color:white;
+            font-weight:bold;
+            background-color:#5c1818;
+        }
+        #MyT1 td {
+            border:1px black solid; 
+            padding:10px;
+            text-align:center;            
+        }   
+    </style>
+    <script src="scripts/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#MyT1 tbody tr:even").css("background-color", "lightyellow").hover(
+                function () { $(this).css("background-color", "#64e8f1"); },
+                function () { $(this).css("background-color", "lightyellow");}
+            );
+            $("#MyT1 tbody tr:odd").css("background-color", "lightgreen").hover(
+                function () { $(this).css("background-color", "#64e8f1"); },
+                function () { $(this).css("background-color", "lightgreen"); }
+            );
+        });
+    </script>
+</head>
+<body>
+    <h1>頁面2</h1>
+    <a href="http://tw.yahoo.com">連到Yahoo奇摩！</a><br />
+    <a href="http://www.google.com">連到Google</a><br />
+    <a href="http://www.pchome.com.tw" target="_blank">連到Pchome</a><br />
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="div1">桃園認證中心</div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="div2">
+        <p>這是Div2</p>
+        <p>這是Div2</p>        
+    </div>
+    <div id="div3"><p>這是Div3</p><p>這是Div3</p><p>這是Div3</p><p>這是Div3</p></div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="MaskDiv">
+        <div id="PicDiv"></div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table id="MyT1">
+        <thead>
+            <tr>
+                <td>欄位1</td>
+                <td>欄位2</td>
+                <td>欄位3</td>
+                <td>欄位4</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AAA</td>
+                <td>AAA</td>
+                <td>AAA</td>
+                <td>AAA</td>
+            </tr>
+            <tr>
+                <td>BBB</td>
+                <td>BBB</td>
+                <td>BBB</td>
+                <td>BBB</td>
+            </tr>
+            <tr>
+                <td>CCC</td>
+                <td>CCC</td>
+                <td>CCC</td>
+                <td>CCC</td>
+            </tr>
+            <tr>
+                <td>DDD</td>
+                <td>DDD</td>
+                <td>DDD</td>
+                <td>DDD</td>
+            </tr>
+            <tr>
+                <td>EEE</td>
+                <td>EEE</td>
+                <td>EEE</td>
+                <td>EEE</td>
+            </tr>
+            <tr>
+                <td>FFF</td>
+                <td>FFF</td>
+                <td>FFF</td>
+                <td>FFF</td>
+            </tr>
+            <tr>
+                <td>GGG</td>
+                <td>GGG</td>
+                <td>GGG</td>
+                <td>GGG</td>
+            </tr>
+            <tr>
+                <td>HHH</td>
+                <td>HHH</td>
+                <td>HHH</td>
+                <td>HHH</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>III</td>
+                <td>III</td>
+                <td>III</td>
+            </tr>
+            <tr>
+                <td>JJJ</td>
+                <td>JJJ</td>
+                <td>JJJ</td>
+                <td>JJJ</td>
+            </tr>
+            <tr>
+                <td>KKK</td>
+                <td>KKK</td>
+                <td>KKK</td>
+                <td>KKK</td>
+            </tr>
+            <tr>
+                <td>LLL</td>
+                <td>LLL</td>
+                <td>LLL</td>
+                <td>LLL</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

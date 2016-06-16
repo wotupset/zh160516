@@ -1,0 +1,53 @@
+﻿
+@model List<MyMvcWeb.Models.ProductItem>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>P2</title>
+    <style>
+        #ResultTable {
+            border-collapse:collapse;
+            width:800px;
+            border:2px solid blue;
+        }
+        #ResultTable td {
+            border:1px solid black;
+            padding:10px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>產品資料展示</h1>
+    <table id="ResultTable">
+    <thead>
+        <tr>
+            <td>產品編號</td>
+            <td>產品名</td>
+            <td>供應商編號</td>
+            <td>類別編號</td>
+            <td>單價</td>
+            <td>單位</td>
+            <td>庫存</td>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    { 
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.StoreId</td>
+            <td>@item.TypeId</td>
+            <td>@item.Price</td>
+            <td>@item.Unit</td>
+            <td>@item.Stock</td>
+        </tr>
+    }
+    </tbody>
+    </table>
+</body>
+</html>

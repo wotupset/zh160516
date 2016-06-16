@@ -1,0 +1,10 @@
+﻿a:link,a:visited {
+    color:darkblue;
+    font-size:16pt;
+    text-decoration:none;
+}
+a:hover {
+    color:red;
+    text-decoration:underline;            
+    font-weight:bold;
+}

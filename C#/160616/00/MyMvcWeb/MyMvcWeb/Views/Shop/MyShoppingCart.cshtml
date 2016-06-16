@@ -1,0 +1,94 @@
+﻿
+@model HashSet<MyMvcWeb.Models.CartItem>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>我的購物車</title>
+    <style>
+        #CartList {
+            border-collapse:collapse;
+            width:800px;
+            border:2px solid blue;
+        }
+        #CartList td {
+            border-top:1px solid darkgray;
+            padding:10px;
+            text-align:center;
+        }
+        #CartList thead td {            
+            font-weight:bold;
+            color:white;
+            background-color:#800a0a;            
+            text-align:center;
+        }
+        .OtherTable {
+            width:600px;
+        }
+        .OtherTable td {
+            text-align:center;
+            width:25%;
+        }
+        .OtherTable td input[type=button] {
+            width:100px;
+            height:35px;
+        }
+    </style>
+    <script src="~/scripts/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ContinueBuyBtn").click(function () {
+                //history.back();                
+                document.location = "/MyShop";
+            });
+            $("#ClearCartBtn").click(function () {
+                if(confirm("是否清空購物車？"))
+                    document.location = "/MyShop/ClearCart";
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>我的購物車</h1>
+    <table id="CartList">
+        <thead>
+            <tr>
+                <td>產品編號</td>
+                <td>產品名</td>                
+                <td>單價</td>
+                <td>數量</td>
+                <td>金額</td>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        { 
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+                <td>@item.SubTotal</td>                
+            </tr>
+        }
+        </tbody>
+    </table>
+    <table class="OtherTable">
+        <tr>
+            <td><input type="button" id="ContinueBuyBtn" value="繼續購物" /></td>
+            <td><input type="button" id="UpdateCartBtn" value="更新購物車" /></td>
+            <td><input type="button" id="ClearCartBtn" value="清空購物車" /></td>
+            <td><input type="button" id="CheckOutBtn" value="結帳" /></td>
+        </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    @Html.Partial("PageFooter")
+</body>
+</html>

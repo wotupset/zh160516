@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ASP網站首頁</title>
+    <link href="styles/MyStyle.css" rel="stylesheet" />
+    <style>        
+        h1, h2 {
+            font-size:24pt;
+            font-weight:bold;
+            font-style:italic;
+            color:blue;
+        }
+        #div2 p:nth-child(odd) {
+          font-size:14pt;
+          color:darkorange;
+        }       
+        #div1 span {
+            color:red;
+            font-weight:bold;
+        }
+        #div1, #div2 {
+            width:300px;
+            height:250px;            
+        }
+        #div1 {
+            background-color:lightgreen;
+        }
+        #div2 {
+            background-color:lightblue;
+        }
+        #div3 {
+            width:150px;
+            height:60px;            
+            border:5px blue solid;            
+            font-size:16pt;
+            background-color:lightcyan;
+            border-radius:20px;
+            box-shadow:rgba(80,80,80,0.8) 10px 10px;
+        }
+        #div4 {            
+            color:brown;            
+            font-size:18pt;                        
+            font-weight:bold;
+            text-shadow:10px 10px 10px black;
+        }
+
+        #MyT1 {
+            width:600px;
+            border:5px purple solid; 
+            border-collapse:collapse;
+        }
+        #MyT1 thead td {
+            color:white;
+            font-weight:bold;
+            background-color:#5c1818;
+        }
+        #MyT1 td {
+            border:1px black solid; 
+            padding:10px;
+            text-align:center;            
+        }
+        #MyT1 tbody tr:nth-child(odd) {
+            background-color:lightyellow;
+        }
+        #MyT1 tbody tr:nth-child(even) {
+            background-color:lightgreen;
+        }
+        #MyT1 tbody tr:hover {
+            background-color:#64e8f1;
+        }
+
+        .MyFontStyle {
+            color:red;
+            font-size:18pt;
+            font-style:italic;
+        }
+        #PicDiv {
+            width:400px;
+            height:316px;
+            background-image:url("/images/rooms/room19.jpg");
+        }
+        #PicDiv:hover {            
+            background-image:url("/images/rooms/room20.jpg");
+        }
+    </style>
+    <script src="scripts/jquery-1.12.4.min.js"></script>
+    <script src="scripts/LightBox.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            
+            $("#Btn1").click(function () {
+                $("#p2").css("font-size", "20pt").css("color", "pink").css("font-weight", "bold");
+            });
+            $("#Btn2").click(function () {
+                $("#p2").css({ "font-size": "12pt", "color": "black", "font-weight": "normal" });
+            });
+            $("#Btn3").click(function () {
+                //$("#p3").hide();
+                $("#p3").slideUp("fast", function () {
+                    alert("收起來了喔！");
+                });
+            });
+            $("#Btn4").click(function () {
+                //$("#p3").show();
+                $("#p3").slideDown("slow", function () {
+                    alert("秀出來了喔！");
+                });
+            });
+            $("#Btn5").click(function () {                
+                $("#p3").slideToggle();
+            });
+            
+            $("#Btn6").click(ShowLightBox);
+
+            $("#RoomImg").hover(
+                function () {$(this).attr("src", "/images/rooms/room20.jpg");},
+                function () {$(this).attr("src", "/images/rooms/room19.jpg");}
+            );            
+
+        });
+
+    </script>
+
+</head>
+<body>
+    <h1>ASP網站&nbsp;&nbsp;&#9827;&nbsp;&nbsp;&nbsp;&nbsp;首頁</h1>
+    <h2>ASP網站首頁</h2>
+    <p>這是第一段這是第一段這是第一段這是第一段這是第一段<span class="MyFontStyle">這是第一段這是第一段</span>這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段</p>
+    <p id="p2">這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段<span class="MyFontStyle">這是第二段這是第二段</span>這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段<span>這是第二段這是第二段</span>這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段</p>
+    <p id="p3" class="MyFontStyle">這是第三段這是第三段<span>這是第三段這是第三段</span>這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段<span>這是第三段這是第三段</span>這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段<span>這是第三段這是第三段</span>這是第三段這是第三段這是第三段這是第三段</p>
+    <p><input id="Btn1" type="button" value="變換樣式" />&nbsp;
+        <input id="Btn2" type="button" value="變回來樣式" />&nbsp;
+        <input id="Btn3" type="button" value="藏起來" />&nbsp;
+        <input id="Btn4" type="button" value="秀出來" />&nbsp;
+        <input id="Btn5" type="button" value="顯示切換" />&nbsp;
+    </p>
+    <p><input id="Btn6" type="button" value="燈箱效果" /></p>
+    <a href="http://tw.yahoo.com">連到Yahoo奇摩！</a><br />
+    <a href="http://www.google.com">連到Google</a>
+    <p>&nbsp;</p>
+    <p><img id="RoomImg" src="/images/rooms/room19.jpg" title="臥室" /></p>
+    <div id="PicDiv"></div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>    
+    <p>&nbsp;</p>
+    <div id="div1">
+        <p>這是Div1</p>
+        <p>這是Div1</p>
+        <p>這是<span>這是第一段這是第一段</span>Div1</p>
+    </div>
+    <div id="div2"><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p></div>
+    <div id="div3">巨匠電腦</div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="div4">桃園認證中心</div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table id="MyT1">
+        <thead>
+            <tr>
+                <td>欄位1</td>
+                <td>欄位2</td>
+                <td>欄位3</td>
+                <td>欄位4</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AAA</td>
+                <td>AAA</td>
+                <td>AAA</td>
+                <td>AAA</td>
+            </tr>
+            <tr>
+                <td>BBB</td>
+                <td>BBB</td>
+                <td>BBB</td>
+                <td>BBB</td>
+            </tr>
+            <tr>
+                <td>CCC</td>
+                <td>CCC</td>
+                <td>CCC</td>
+                <td>CCC</td>
+            </tr>
+            <tr>
+                <td>DDD</td>
+                <td>DDD</td>
+                <td>DDD</td>
+                <td>DDD</td>
+            </tr>
+            <tr>
+                <td>EEE</td>
+                <td>EEE</td>
+                <td>EEE</td>
+                <td>EEE</td>
+            </tr>
+            <tr>
+                <td>FFF</td>
+                <td>FFF</td>
+                <td>FFF</td>
+                <td>FFF</td>
+            </tr>
+            <tr>
+                <td>GGG</td>
+                <td>GGG</td>
+                <td>GGG</td>
+                <td>GGG</td>
+            </tr>
+            <tr>
+                <td>HHH</td>
+                <td>HHH</td>
+                <td>HHH</td>
+                <td>HHH</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>III</td>
+                <td>III</td>
+                <td>III</td>
+            </tr>
+            <tr>
+                <td>JJJ</td>
+                <td>JJJ</td>
+                <td>JJJ</td>
+                <td>JJJ</td>
+            </tr>
+            <tr>
+                <td>KKK</td>
+                <td>KKK</td>
+                <td>KKK</td>
+                <td>KKK</td>
+            </tr>
+            <tr>
+                <td>LLL</td>
+                <td>LLL</td>
+                <td>LLL</td>
+                <td>LLL</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

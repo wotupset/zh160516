@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="scripts/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Form1").submit(CheckForm);
+        });
+
+        function CheckForm()
+        {
+            var msg="";
+            if ($("#Account").val().length == 0)
+                msg += "* 請務必輸入帳號！\n";
+
+            var reg = /^[A-Z][12]\d{8}$/;
+            if ($("#ID").val().length == 0)
+                msg += "* 請務必輸入身份證字號！\n";
+            else if (!reg.test($("#ID").val()))
+                msg += "* 請輸入正確的身份證字號！\n";
+
+            if (msg != "") {
+                alert(msg);
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>加入會員</h1>    
+    <form id="Form1" action="F2.aspx" method="post">
+        <p>帳號：<input type="text" id="Account" name="Account" value="" placeholder="請在此輸入帳號" title="帳號" /></p>
+        <p>密碼：<input type="password" id="Password" name="Password" /></p>
+        <p>身份證字號：<input type="text" id="ID" name="ID" title="身分證字號" placeholder="身分證字號" /></p>
+        <p>生日：<input type="date" id="Birth" name="Birth" /></p>
+        <p>電子郵件：<input type="text" id="EMail" name="EMail" /></p>
+        <p><input type="submit" value="登入" />&nbsp;<input type="reset" value="重置" /></p>
+    </form>
+</body>
+</html>

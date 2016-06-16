@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ajax頁面展示</title>
+    <style>
+        #ResultDiv {
+            width:600px;
+        }
+    </style>
+    <script src="../scripts/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#News1Btn").click(function () {
+                $("#ResultDiv").load("/TT/News1.txt", null, function () {
+                    //alert("Ajax讀取新聞1完畢！");
+                    $("#ResultDiv").css("background-color", "lightblue");
+                });
+            });
+            $("#News2Btn").click(function () {
+                $("#ResultDiv").load("/TT/News2.txt", null, function () {
+                    //alert("Ajax讀取新聞2完畢！");
+                    $("#ResultDiv").css("background-color", "lightpink");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Ajax頁面展示</h1>
+    <p><input type="button" id="News1Btn" value="新聞1" />&nbsp;&nbsp;
+        <input type="button" id="News2Btn" value="新聞2" />
+    </p>
+    <div id="ResultDiv"></div>
+</body>
+</html>

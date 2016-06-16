@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ASP網站首頁</title>
+    <style>        
+        h1, h2 {
+            font-size:24pt;
+            font-weight:bold;
+            font-style:italic;
+            color:blue;
+        }
+        #div2 p:nth-child(odd) {
+          font-size:14pt;
+          color:darkorange;
+        }
+        a:link,a:visited {
+            color:darkblue;
+            font-size:16pt;
+            text-decoration:none;
+        }
+        a:hover {
+            color:red;
+            text-decoration:underline;            
+            font-weight:bold;
+        }
+        #div1 span {
+            color:red;
+            font-weight:bold;
+        }
+        #div1, #div2 {
+            width:300px;
+            height:250px;            
+        }
+        #div1 {
+            background-color:lightgreen;
+        }
+        #div2 {
+            background-color:lightblue;
+        }
+        #div3 {
+            width:150px;
+            height:60px;            
+            border:5px blue solid;            
+            font-size:16pt;
+            background-color:lightcyan;
+            border-radius:20px;
+            box-shadow:rgba(80,80,80,0.8) 10px 10px;
+        }
+        #div4 {            
+            color:brown;            
+            font-size:18pt;                        
+            font-weight:bold;
+            text-shadow:10px 10px 10px black;
+        }
+
+        #MyT1 {
+            width:600px;
+            border:5px purple solid; 
+            border-collapse:collapse;
+        }
+        #MyT1 thead td {
+            color:white;
+            font-weight:bold;
+            background-color:#5c1818;
+        }
+        #MyT1 td {
+            border:1px black solid; 
+            padding:10px;
+            text-align:center;            
+        }
+        #MyT1 tbody tr:nth-child(odd) {
+            background-color:lightyellow;
+        }
+        #MyT1 tbody tr:nth-child(even) {
+            background-color:lightgreen;
+        }
+
+        .MyFontStyle {
+            color:red;
+            font-size:18pt;
+            font-style:italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>ASP網站&nbsp;&nbsp;&#9827;&nbsp;&nbsp;&nbsp;&nbsp;首頁</h1>
+    <h2>ASP網站首頁</h2>
+    <p>這是第一段這是第一段這是第一段這是第一段這是第一段<span class="MyFontStyle">這是第一段這是第一段</span>這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段這是第一段</p>
+    <p id="p2">這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段<span class="MyFontStyle">這是第二段這是第二段</span>這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段<span>這是第二段這是第二段</span>這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段這是第二段</p>
+    <p id="p3" class="MyFontStyle">這是第三段這是第三段<span>這是第三段這是第三段</span>這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段<span>這是第三段這是第三段</span>這是第三段這是第三段這是第三段這是第三段這是第三段這是第三段<span>這是第三段這是第三段</span>這是第三段這是第三段這是第三段這是第三段</p>
+    <a href="http://tw.yahoo.com">連到Yahoo奇摩！</a><br />
+    <a href="http://www.google.com">連到Google</a>
+    <p>&nbsp;</p>
+    <p><img src="/images/rooms/room20.jpg" /></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>    
+    <p>&nbsp;</p>
+    <div id="div1">
+        <p>這是Div1</p>
+        <p>這是Div1</p>
+        <p>這是<span>這是第一段這是第一段</span>Div1</p>
+    </div>
+    <div id="div2"><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p><p>這是Div2</p></div>
+    <div id="div3">巨匠電腦</div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="div4">桃園認證中心</div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table id="MyT1">
+        <thead>
+            <tr>
+                <td>欄位1</td>
+                <td>欄位2</td>
+                <td>欄位3</td>
+                <td>欄位4</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AAA</td>
+                <td>AAA</td>
+                <td>AAA</td>
+                <td>AAA</td>
+            </tr>
+            <tr>
+                <td>BBB</td>
+                <td>BBB</td>
+                <td>BBB</td>
+                <td>BBB</td>
+            </tr>
+            <tr>
+                <td>CCC</td>
+                <td>CCC</td>
+                <td>CCC</td>
+                <td>CCC</td>
+            </tr>
+            <tr>
+                <td>DDD</td>
+                <td>DDD</td>
+                <td>DDD</td>
+                <td>DDD</td>
+            </tr>
+            <tr>
+                <td>EEE</td>
+                <td>EEE</td>
+                <td>EEE</td>
+                <td>EEE</td>
+            </tr>
+            <tr>
+                <td>FFF</td>
+                <td>FFF</td>
+                <td>FFF</td>
+                <td>FFF</td>
+            </tr>
+            <tr>
+                <td>GGG</td>
+                <td>GGG</td>
+                <td>GGG</td>
+                <td>GGG</td>
+            </tr>
+            <tr>
+                <td>HHH</td>
+                <td>HHH</td>
+                <td>HHH</td>
+                <td>HHH</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>III</td>
+                <td>III</td>
+                <td>III</td>
+            </tr>
+            <tr>
+                <td>JJJ</td>
+                <td>JJJ</td>
+                <td>JJJ</td>
+                <td>JJJ</td>
+            </tr>
+            <tr>
+                <td>KKK</td>
+                <td>KKK</td>
+                <td>KKK</td>
+                <td>KKK</td>
+            </tr>
+            <tr>
+                <td>LLL</td>
+                <td>LLL</td>
+                <td>LLL</td>
+                <td>LLL</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

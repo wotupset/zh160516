@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>頁面4</title>
+</head>
+<body>
+    <h1>@ViewData["PageName"]</h1>
+    <p>VV1的值：@ViewData["VV1"]</p>
+    <p>VV2的值：@ViewData["VV2"]</p>
+    <p>@if((int)ViewData["VV1"]>1000)
+       {
+           <span style="font-weight:bold;color:blue">@ViewData["VV1"]</span><span>的值達標</span>
+       }
+       else
+       {
+            <span style="font-weight:bold;color:red">@ViewData["VV1"]</span><span>的值未達標</span>
+       }                                                                    
+    </p>
+    <table style="width:600px;border:1px solid blue;">
+        @for (int i = 1; i <= 9; i++)
+        {
+            <tr>
+            @for (int j = 1; j <= 9; j++)
+            {
+                <td style="border:1px solid blue;padding:10px;">@i*@j=@(i*j)</td>
+            }
+            </tr>
+        }    
+    </table>
+    <p>
+        @for (int i = 1; i <= 10; i++)
+        { 
+            @i@:.&nbsp;巨匠電腦_@i<br />
+        }
+    </p>
+    @Html.Raw(ViewData["VV3"])
+    @Html.Raw(ViewData["VV4"])
+    @Html.Raw(ViewData["VV5"])
+</body>
+</html>

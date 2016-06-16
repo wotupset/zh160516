@@ -1,0 +1,5 @@
+c:\users\study\documents\visual studio 2012\Projects\MyWeb\MyWeb\bin\MyWeb.dll
+c:\users\study\documents\visual studio 2012\Projects\MyWeb\MyWeb\bin\MyWeb.pdb
+c:\users\study\documents\visual studio 2012\Projects\MyWeb\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+c:\users\study\documents\visual studio 2012\Projects\MyWeb\MyWeb\obj\Debug\MyWeb.dll
+c:\users\study\documents\visual studio 2012\Projects\MyWeb\MyWeb\obj\Debug\MyWeb.pdb

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        #LodingSpan {
+            display:none;
+        }
+    </style>
+    <script src="../scripts/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#SearchBtn").click(function () {
+                //var pp = $.param({ "cn": vv, "aa": 100, "bb": "Mickey" });
+
+                $("#SearchBtn").attr("disabled", "disabled");
+                $("#LodingSpan").show();
+                
+                var vv = $("#InputText").val();
+                var pp = $.param({ "cn": vv });
+                $("#ResultDiv").load("/Data/Data7.aspx", pp, function () {
+                    $("#SearchBtn").removeAttr("disabled");
+                    $("#LodingSpan").hide();
+                });
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Ajax客戶搜尋</h1>
+    <table>
+        <tr>
+            <td>請輸入客戶名稱：<input type="text" id="InputText" />&nbsp;
+                    <input type="button" id="SearchBtn" value="搜尋" /></td>
+            <td>
+                <span id="LodingSpan">
+                    <img src="../images/Loading1.gif" />
+                    查詢中，請稍候.......
+                </span>
+            </td>
+        </tr>
+    </table>
+    <div id="ResultDiv"></div>
+    <p>&nbsp;</p>
+    
+</body>
+</html>

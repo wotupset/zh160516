@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="jquery-2.2.4.min.js"></script>
+    <title></title>
+    <script>
+        $(document).ready(function () {
+            //
+            poi();
+        });
+        function poi(){
+            $("button").click(function () {
+                var params = { width: 1900, height: 1200 };
+                var str = $.param(params);
+                $("#ddd").text(str);
+            });
+        }
+    </script>
+
+</head>
+<body>
+<button>序列化对象</button>
+<div id="ddd">1</div>
+</body>
+</html>

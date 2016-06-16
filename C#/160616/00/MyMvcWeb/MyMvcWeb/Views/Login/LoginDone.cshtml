@@ -1,0 +1,22 @@
+﻿@{
+    //弱型別資料模型用法
+    //MyMvcWeb.Models.LoginInfo LL = Model as MyMvcWeb.Models.LoginInfo;
+}
+
+@* 強型別資料模型用法 *@
+@model MyMvcWeb.Models.LoginInfo
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginDone</title>
+</head>
+<body>
+    <h1>填寫資料如下</h1>
+    <p>帳號：@Model.Account</p>
+    <p>密碼：@Model.Password</p>
+</body>
+</html>
