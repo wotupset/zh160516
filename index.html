@@ -35,11 +35,27 @@ div#text {
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" language="javascript">
 $(document).ready(function() {
-	//全域變數
+	//全域變數//global
 	time = new Date();
+	gginin=[];ggobj={};
 	//
+	gginin.url="1.txt";
 	poi();
 });
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.open("GET", "http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp", true);
+  xhttp.send();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+
+}
+
 function poi(){
 	$.get('1.txt', function(data) { //讀取文字檔
 		var str=tmp='';
