@@ -52,7 +52,7 @@ function loadDoc() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-		//document.getElementById("ddd").innerHTML = this.responseText;
+		document.getElementById("ddd").innerHTML = this.responseText;
 		poi2();
 		}
 	};
@@ -80,7 +80,7 @@ function poi2(){
 		//data.replace(/\r/g, "");//失敗
 		str = data.split("\n");//切割
 		//alert(str.length);//陣列長度
-		for(i=0;i<str.length;i++){
+		for(i=0;i<str.trim().length;i++){
 			//document.getElementById("ddd").innerHTML="沒了";
 			//data=decodeURIComponent(data);
 			//query=encodeURIComponent(query);
@@ -124,7 +124,7 @@ function poi(){
 			//data=decodeURIComponent(data);
 			//query=encodeURIComponent(query);
 			//str[i]=str[i].trim();
-			if(str[i].length>0){
+			if(str[i].trim().length>0){
 				tmp='./'+encodeURIComponent(str[i]);
 				$("#ddd").append('<a href="'+tmp+'">'+tmp+'</a><br/>');
 			}
