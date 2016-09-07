@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>#illyadance</title>
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
+#overlay {
+    font-family: 'Advent Pro', sans-serif;
+	font-size: 7em;
+	color: rgba(255, 255, 255, 1);
+	z-index: 10;
+	margin: .2em .5em;
+	position: fixed; 
+	left: 100; 
+	top: 0;
+}
+video#bgvid { 
+	position: fixed; 
+	left: 100; 
+	top: 0;
+	width: auto; 
+	height: 600; 
+	z-index: 5;
+	background-size: cover;
+	background-image: url("http://i.imgur.com/9FagndK.jpg");
+}
+div#text {
+	position: fixed; 
+	left: 0; 
+	top: 0;
+	z-index: 1;
+}
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+	//全域變數
+
+
+	time = new Date();
+	//
+
+
+	poi();
+});
+function poi(){
+	$.get('1.txt', function(data) { //讀取文字檔
+
+		var str=tmp='';
+		//alert(data);//原始資料
+
+
+		str = data.split("\n");//切割
+
+		//alert(str.length);//陣列長度
+
+
+		for(i=0;i<str.length;i++){
+			//document.getElementById("ddd").innerHTML="沒了";
+
+
+			//query=encodeURIComponent(query);
+
+
+			if(str[i].length>0){
+				tmp='./'+encodeURIComponent(str[i]);
+				$("#ddd").append('<a href="'+tmp+'">'+tmp+'</a><br/>');
+			}
+			
+		}
+	});
+	//
+
+
+	myVid=document.getElementById("bgvid");
+	myVid.volume=0.41;//一半的音量
+
+}
+</script>
+</head> 
+<body>
+<video controls autoplay loop id="bgvid">
+您的浏览器不支持 video 标签。
+<source src="http://ia802300.us.archive.org/26/items/illya_201409/illya.mp4" type="video/mp4">
+<source src="http://userscloud.com/vidembed-1d7jaj4b3vr7" type="video/mp4">
+</video>
+<div id="overlay">#illyadance</div>
+<div id="ddd"></div>
+</body></html>
