@@ -59,7 +59,23 @@ function loadDoc() {
 	xhttp.open("GET", gginin.url);
 	xhttp.send();
 }
-
+function poi2(){
+	$.ajax({
+	url: gginin.url,
+	type: "GET",
+	contentType: "text/plain",
+	async: true
+	})
+	.done(function() {
+	alert( "success" );
+	})
+	.fail(function() {
+	alert( "error" );
+	})
+	.always(function() {
+	alert( "complete" );
+	});
+}
 function poi(){
 	$.get('1.txt', function(data) { //讀取文字檔
 		var str=tmp='';
