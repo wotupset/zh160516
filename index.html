@@ -67,16 +67,46 @@ function poi2(){
 	contentType: "text/plain",
 	async: true
 	})
-	.done(function() {
-	alert( "success" );
+	.done(function(data, textStatus, jqXHR) {
+	//alert( "success" );
+
+		var str=tmp='';
+		//alert(data);//原始資料
+		data = data.split("\r").join("");
+		//data.replace(/\r/g, "");//失敗
+		str = data.split("\n");//切割
+		//alert(str.length);//陣列長度
+		for(i=0;i<str.length;i++){
+			//document.getElementById("ddd").innerHTML="沒了";
+			//data=decodeURIComponent(data);
+			//query=encodeURIComponent(query);
+			//str[i]=str[i].trim();
+			if(str[i].length>0){
+				tmp='./'+encodeURIComponent(str[i]);
+				$("#ddd").append('<a href="'+tmp+'">'+tmp+'</a><br/>');
+			}
+			
+		}
+
+
+
 	})
-	.fail(function() {
+	.fail(function(jqXHR, textStatus, errorThrown) {
 	alert( "error" );
 	})
-	.always(function() {
-	alert( "complete" );
+	.always(function(data, textStatus, jqXHR) {
+	//alert( "complete" );
 	});
 }
+
+
+
+
+
+
+
+
+
 function poi(){
 	$.get('1.txt', function(data) { //讀取文字檔
 		var str=tmp='';
