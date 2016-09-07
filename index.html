@@ -44,12 +44,15 @@ function poi(){
 	$.get('1.txt', function(data) { //讀取文字檔
 		var str=tmp='';
 		//alert(data);//原始資料
-		data.replace(/\r/g, "");
+		data = data.split("\r").join("");
+		//data.replace(/\r/g, "");//失敗
 		str = data.split("\n");//切割
 		//alert(str.length);//陣列長度
 		for(i=0;i<str.length;i++){
 			//document.getElementById("ddd").innerHTML="沒了";
+			//data=decodeURIComponent(data);
 			//query=encodeURIComponent(query);
+			//str[i]=str[i].trim();
 			if(str[i].length>0){
 				tmp='./'+encodeURIComponent(str[i]);
 				$("#ddd").append('<a href="'+tmp+'">'+tmp+'</a><br/>');
