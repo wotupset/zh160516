@@ -44,7 +44,7 @@ function poi(){
 	$.get('1.txt', function(data) { //讀取文字檔
 		var str=tmp='';
 		//alert(data);//原始資料
-		data.replace(/\r/, "");
+		data.replace(/\r/g, "");
 		str = data.split("\n");//切割
 		//alert(str.length);//陣列長度
 		for(i=0;i<str.length;i++){
