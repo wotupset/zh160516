@@ -67,10 +67,10 @@ function videoListener(){
 		//console.log("video end1");
 		cc2++;
 	});
-	video.onended = function(e){
+	video.onended = function(e){ //onended
 		//console.log("video end2");
 	};
-	$("#bgvid").bind("onended", function() {
+	$("#bgvid").bind("ended", function() {
 		//console.log("video end3");
 	});
 	
@@ -78,7 +78,7 @@ function videoListener(){
 		source.setAttribute('src', gginin.video.s01 );//
 		video.play();
 		//
-		console.log("cc="cc);
+		console.log("cc="+cc);
 		console.log("cc2="cc2);
 		cc++;	
 		if(cc>10){break;}
