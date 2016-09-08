@@ -39,8 +39,7 @@ $(document).ready(function() {
 	time = new Date();
 	gginin=[];ggobj={};
 	//
-	gginin.url="1.txt";
-	ggobj.url="1.txt";
+	gginin.url=ggobj.url="1.txt";
 	//
 	//console.log(gginin);
 	//console.log(ggobj);
@@ -52,8 +51,10 @@ function loadDoc() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-		document.getElementById("ddd").innerHTML = this.responseText;
-		poi2();
+			document.getElementById("ddd").innerHTML = this.responseText;
+			poi2();
+		}else{
+			document.getElementById("ddd").innerHTML = this.status;
 		}
 	};
 	
