@@ -39,10 +39,10 @@ $(document).ready(function() {
 	time = new Date();
 	gginin=[];ggobj={};
 	//
-	gginin.url="1.txt";
-	ggobj.url01='https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4';
+	gginin.url.file="1.txt";
+	ggobj.url.v01='https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4';
 	//
-	//console.log(gginin);
+	console.log(gginin);
 	console.log(ggobj);
 	
 	loadDoc();
@@ -53,7 +53,7 @@ $(document).ready(function() {
 function videoListener(){
 	var video = document.getElementById('bgvid');
 	var source = document.createElement('source');
-	source.setAttribute('src', ggobj['url'][0]);
+	source.setAttribute('src', ggobj.url.v01);
 	video.appendChild(source);
 	video.play();
 
@@ -78,7 +78,7 @@ function loadDoc() {
 		}
 	};
 	
-	xhttp.open("GET", gginin.url);
+	xhttp.open("GET", gginin.url.file);
 	xhttp.send();
 }
 function poi2(){
