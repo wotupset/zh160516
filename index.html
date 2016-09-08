@@ -68,6 +68,9 @@ function videoListener(){
 	document.getElementById('bgvid').addEventListener('ended', function(e){
 		//console.log("video end1");
 		gginin.cc[0]++;
+		if(typeof gginin.video[gginin.cc[0]] != "undefined"){
+			videoPlaylist();
+		}
 	});
 	video.onended = function(e){ //onended
 		//console.log("video end2");
@@ -86,7 +89,7 @@ function videoPlaylist(){
 	//var source = document.getElementById('bgvid').src;
 	video.setAttribute('src', gginin.video[gginin.cc[0]] );//
 	console.log(video.src);
-	//video.play();
+	video.play();
 	//
 	console.log("cc="+gginin.cc[0]);
 }
