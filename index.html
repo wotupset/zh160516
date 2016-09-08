@@ -56,7 +56,12 @@ function videoListener(){
 	video.appendChild(source);
 	video.play();
 
-	document.getElementById('bgvid').addEventListener('ended', function(e){});
+	document.getElementById('bgvid').addEventListener('ended', function(e){
+		console.log("video end1");
+	});
+	video.onended = function(e){
+		console.log("video end2");
+	};
 }
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
