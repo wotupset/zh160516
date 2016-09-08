@@ -56,6 +56,7 @@ $(document).ready(function() {
 });
 
 function videoListener(){
+	var cc=cc2=0;
 	var video = document.getElementById('bgvid');
 	var source = document.createElement('source');
 	source.setAttribute('src', "");//ggobj.url.v01
@@ -63,22 +64,24 @@ function videoListener(){
 	//video.play();
 
 	document.getElementById('bgvid').addEventListener('ended', function(e){
-		console.log("video end1");
+		//console.log("video end1");
+		cc2++;
 	});
 	video.onended = function(e){
-		console.log("video end2");
+		//console.log("video end2");
 	};
 	$("#bgvid").bind("onended", function() {
-		console.log("video end3");
+		//console.log("video end3");
 	});
 	
-	var cc=0;
 	while(cc<5){
 		source.setAttribute('src', gginin.video.s01 );//
 		video.play();
 		//
-		console.log(cc);
+		console.log("cc="cc);
+		console.log("cc2="cc2);
 		cc++;	
+		if(cc>10){break;}
 	}
 }
 function loadDoc() {
