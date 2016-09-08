@@ -39,12 +39,13 @@ $(document).ready(function() {
 	time = new Date();
 	gginin=[];ggobj={};
 	//
-	gginin.url=[];
-	gginin.url.file="1.txt";
+	gginin.index=[];
+	gginin.index.s01="1.txt";
+	gginin.video=[];
+	gginin.video.s01='https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4';
+	gginin.video.s02='https://video.twimg.com/ext_tw_video/769837180248203266/pu/vid/1280x720/bUseY743xyh9g83F.mp4';
+	gginin.video.s03='https://video.twimg.com/ext_tw_video/767245366508924928/pu/vid/1280x720/lwYb7ePKCEdMegsk.mp4';
 	ggobj.url={};
-	ggobj.url.v01='https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4';
-	ggobj.url.v02='https://video.twimg.com/ext_tw_video/769837180248203266/pu/vid/1280x720/bUseY743xyh9g83F.mp4';
-	ggobj.url.v03='https://video.twimg.com/ext_tw_video/767245366508924928/pu/vid/1280x720/lwYb7ePKCEdMegsk.mp4';
 	//
 	//console.log(gginin);
 	//console.log(ggobj);
@@ -73,7 +74,7 @@ function videoListener(){
 	
 	var cc=0;
 	while(cc<5){
-		source.setAttribute('src', ggobj.url.key(0) );//
+		source.setAttribute('src', gginin.video.s01 );//
 		video.play();
 		//
 		console.log(cc);
@@ -91,7 +92,7 @@ function loadDoc() {
 		}
 	};
 	
-	xhttp.open("GET", gginin.url.file);
+	xhttp.open("GET", gginin.index.s01);
 	xhttp.send();
 }
 function poi2(){
@@ -99,7 +100,7 @@ function poi2(){
 	$("#ddd").html("");// (inner HTML)。
 	
 	var request=$.ajax({
-	url: gginin.url.file,
+	url: gginin.index.s01,
 	type: "GET",
 	contentType: "text/plain",
 	dataType:"text",
