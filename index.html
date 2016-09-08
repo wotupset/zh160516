@@ -46,7 +46,21 @@ $(document).ready(function() {
 	
 	loadDoc();
 	//poi();
+	videoListener();
 });
+
+function videoListener(){
+	var video = document.getElementById('bgvid');
+	var source = document.createElement('source');
+	source.setAttribute('src', 'https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4');
+	video.appendChild(source);
+	video.play();
+
+	document.getElementById('bgvid').addEventListener('ended', function(e) {
+		//document.getElementById('bgvid').
+
+	}
+}
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -142,13 +156,12 @@ function poi(){
 </script>
 </head> 
 <body>
-<video controls autoplay loop id="bgvid">
+<video controls id="bgvid">
 您的浏览器不支持 video 标签。
-<source src="https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4" type="video/mp4">
+
 </video>
 
-<source src="http://ia802300.us.archive.org/26/items/illya_201409/illya.mp4" type="video/mp4">
-<source src="http://userscloud.com/vidembed-1d7jaj4b3vr7" type="video/mp4">
+
 
 
 <div id="overlay">#illyadance</div>
