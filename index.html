@@ -43,7 +43,7 @@ $(document).ready(function() {
 	ggobj.url.key(0)='https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4';
 	//
 	//console.log(gginin);
-	//console.log(ggobj);
+	console.log(ggobj);
 	
 	loadDoc();
 	//poi();
@@ -53,7 +53,7 @@ $(document).ready(function() {
 function videoListener(){
 	var video = document.getElementById('bgvid');
 	var source = document.createElement('source');
-	source.setAttribute('src', ggobj.url.0);
+	source.setAttribute('src', ggobj.url.key(0));
 	video.appendChild(source);
 	video.play();
 
