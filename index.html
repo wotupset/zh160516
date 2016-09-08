@@ -67,7 +67,7 @@ function videoListener(){
 	video.onended = function(e){
 		console.log("video end2");
 	};
-	video.bind("onended", function() {
+	$("#bgvid").bind("onended", function() {
 		console.log("video end3");
 	});
 }
