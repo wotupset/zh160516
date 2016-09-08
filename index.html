@@ -43,6 +43,8 @@ $(document).ready(function() {
 	gginin.url.file="1.txt";
 	ggobj.url={};
 	ggobj.url.v01='https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4';
+	ggobj.url.v02='https://video.twimg.com/ext_tw_video/769837180248203266/pu/vid/1280x720/bUseY743xyh9g83F.mp4';
+	ggobj.url.v03='https://video.twimg.com/ext_tw_video/767245366508924928/pu/vid/1280x720/lwYb7ePKCEdMegsk.mp4';
 	//
 	//console.log(gginin);
 	//console.log(ggobj);
@@ -65,7 +67,7 @@ function videoListener(){
 	video.onended = function(e){
 		console.log("video end2");
 	};
-	video.bind("ended", function() {
+	video.bind("onended", function() {
 		console.log("video end3");
 	});
 }
