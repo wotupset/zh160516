@@ -59,9 +59,9 @@ $(document).ready(function() {
 
 function videoListener(){
 	var video = document.getElementById('bgvid');
-	var source = document.createElement('source');
-	source.setAttribute('src', "");//ggobj.url.v01
-	video.appendChild(source);
+	video.setAttribute('src', "");//ggobj.url.v01
+	//var source = document.createElement('source');
+	//video.appendChild(source);
 	//video.play();
 
 	document.getElementById('bgvid').addEventListener('ended', function(e){
@@ -82,7 +82,7 @@ function videoListener(){
 function videoPlaylist(){
 	console.log("video playlist");
 	var video = document.getElementById('bgvid');
-	var source = document.getElementById('bgvid').source;
+	var source = document.getElementById('bgvid').src;
 	console.log(source);
 	
 	//source.setAttribute('src', gginin.video[0] );//
