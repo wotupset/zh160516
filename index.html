@@ -70,6 +70,9 @@ function videoListener(){
 		gginin.cc[0]++;
 		if(typeof gginin.video[gginin.cc[0]] != "undefined"){
 			videoPlaylist();
+		}else{
+			gginin.cc[0]=0;
+			videoPlaylist();
 		}
 	});
 	video.onended = function(e){ //onended
