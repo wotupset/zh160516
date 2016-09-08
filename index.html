@@ -44,8 +44,8 @@ $(document).ready(function() {
 	ggobj.url={};
 	ggobj.url.v01='https://video.twimg.com/ext_tw_video/771913728681844736/pu/vid/1280x720/LgFb_pTF8iVeFNYd.mp4';
 	//
-	console.log(gginin);
-	console.log(ggobj);
+	//console.log(gginin);
+	//console.log(ggobj);
 	
 	loadDoc();
 	//poi();
@@ -88,7 +88,7 @@ function poi2(){
 	$("#ddd").html("");// (inner HTML)。
 	
 	var request=$.ajax({
-	url: gginin.url,
+	url: gginin.url.file,
 	type: "GET",
 	contentType: "text/plain",
 	dataType:"text",
