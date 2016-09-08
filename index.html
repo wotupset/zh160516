@@ -63,6 +63,9 @@ function videoListener(){
 	video.onended = function(e){
 		console.log("video end2");
 	};
+	video.bind("ended", function() {
+		console.log("video end3");
+	});
 }
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
