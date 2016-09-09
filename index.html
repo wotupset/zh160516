@@ -64,8 +64,10 @@ $(document).ready(function() {
 	//console.log(ggobj);
 	
 	loadDoc();
+	loadDoc2range();
 	//poi();
 	videoListener();
+	
 });
 
 function videoListener(){
@@ -123,6 +125,26 @@ function loadDoc() {
 	xhttp.open("GET", gginin.index[0]);
 	xhttp.send();
 }
+function loadDoc2range() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("ddd").innerHTML = this.responseText;
+			poi2();
+		}else{
+			document.getElementById("ddd").innerHTML = this.status;
+		}
+	};
+	
+	xhttp.open("GET", "http://rss.disp.cc/terievv.xml");
+	xhttp.setRequestHeader("Range", "bytes=0-200");
+	xhttp.send();
+	
+	console.info(xhttp); //--> returns only the partial content
+
+}
+
+
 function poi2(){
 	
 	$("#ddd").html("");// (inner HTML)。
