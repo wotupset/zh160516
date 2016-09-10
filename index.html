@@ -84,10 +84,14 @@ $(document).ready(function() {
 	videoListener();
 	
 });
-function* getarrayvalue(){
-    var cc = 0;
-    yield gginin.video[cc++];
+
+function* idMaker(){
+	var index = 0;
+	while(true){
+		yield gginin.video[index++];
+	}
 }
+
 
 function videoListener(){
 	var video = document.getElementById('bgvid');
@@ -99,10 +103,10 @@ function videoListener(){
 
 	document.getElementById('bgvid').addEventListener('ended', function(e){
 		//console.log("video end1");
-		gginin.cc[0]++;
-		
+		//gginin.cc[0]++;
+		var gen = idMaker();
 		//if(typeof gginin.video[gginin.cc[0]] != "undefined"){
-		FFF=getarrayvalue().next().value;
+		FFF=gen.next().value;
 		//FFF=gginin.values().next().value;
 		console.log("video end1"+FFF);
 		if(typeof FFF != "undefined"){
