@@ -91,7 +91,7 @@ function* idMaker(){
 		yield gginin.video[index++];
 	}
 }
-
+gen = idMaker();
 
 function videoListener(){
 	var video = document.getElementById('bgvid');
@@ -100,15 +100,14 @@ function videoListener(){
 	//var source = document.createElement('source');
 	//video.appendChild(source);
 	//video.play();
-
+	
 	document.getElementById('bgvid').addEventListener('ended', function(e){
 		//console.log("video end1");
 		//gginin.cc[0]++;
-		var gen = idMaker();
 		//if(typeof gginin.video[gginin.cc[0]] != "undefined"){
-		FFF=gen.next().value;
+		gginin.tmp[0]=gen.next().value;
 		//FFF=gginin.values().next().value;
-		console.log("video end1"+FFF);
+		console.log("video end1"+gginin.tmp[0]);
 		if(typeof FFF != "undefined"){
 			document.getElementById("ddd").innerHTML = FFF;
 			videoPlaylist();
@@ -132,7 +131,7 @@ function videoPlaylist(){
 	//console.log("video playlist");
 	var video = document.getElementById('bgvid');
 	//var source = document.getElementById('bgvid').src;
-	video.setAttribute('src', gginin.video[gginin.cc[0]] );//
+	video.setAttribute('src', gginin.tmp[0] );//gginin.video[gginin.cc[0]]
 	//console.log(video.src);
 	video.play();
 	//
