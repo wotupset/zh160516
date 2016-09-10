@@ -95,7 +95,8 @@ function loadDoc(x) {
 		console.log(xhttp);
 	};
 	xhttp.timeout = 4000; // Set timeout to 4 seconds (4000 milliseconds)
-	xhttp.open("POST", x);
+	//xhttp.open("POST", x);//405 (Method Not Allowed)
+	xhttp.open("GET", x);
 	xhttp.send("k=xx&v=yy");
 
 }
