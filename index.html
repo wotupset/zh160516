@@ -43,7 +43,7 @@ div#text {
 $(document).ready(function() {
 	//全域變數//global
 	time = new Date();
-	gginin=[];ggobj={};
+	gginin=[];ggobj={};FFF="";
 	//
 	gginin.index=[];
 	gginin.index[0]="1.txt";
@@ -57,6 +57,8 @@ $(document).ready(function() {
 	
 	gginin.cc=[];
 	gginin.cc[0]=0;
+	gginin.tmp=[];
+	gginin.tmp[0]="";
 	//gginin.video[0]='xxxxxxxx';
 	ggobj.url={};
 	//
@@ -81,7 +83,12 @@ function videoListener(){
 	document.getElementById('bgvid').addEventListener('ended', function(e){
 		//console.log("video end1");
 		gginin.cc[0]++;
-		if(typeof gginin.video[gginin.cc[0]] != "undefined"){
+		
+		//if(typeof gginin.video[gginin.cc[0]] != "undefined"){
+		FFF=gginin.next().value;
+		console.log("video end1"+FFF);
+		if(typeof FFF != "undefined"){
+			document.getElementById("ddd").innerHTML = FFF;
 			videoPlaylist();
 		}else{
 			gginin.cc[0]=0;
