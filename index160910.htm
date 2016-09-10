@@ -91,12 +91,12 @@ function loadDoc(x) {
 	//xhttp.open("GET", x);
 	//xhttp.send();
 	xhr.timeout = 4000; // Set timeout to 4 seconds (4000 milliseconds)
-	xhr.ontimeout = function () { 
-		console.log(xhr.ontimeout);//alert("Timed out!!!"); 
+	xhr.ontimeout = function (e) { 
+		console.log("xhr.ontimeout");//alert("Timed out!!!"); 
 	}
 	//xhttp.open("POST", x);//405 (Method Not Allowed)
 	xhr.open("GET", x);
-	xhr.onload = function(){
+	xhr.onload = function(e){
 		console.log("xhr.onload");
 		console.log(xhr);
 	};
