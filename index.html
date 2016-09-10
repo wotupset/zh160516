@@ -93,22 +93,20 @@ function videoListener(){
 	//var source = document.createElement('source');
 	//video.appendChild(source);
 	//video.play();
-	
-	eArr = gginin.video.entries();
 	document.getElementById('bgvid').addEventListener('ended', function(e){
 		//console.log("video end1");
-		//gginin.cc[0]++;
+		gginin.cc[0]++;
 		//if(typeof gginin.video[gginin.cc[0]] != "undefined"){
 		//FFF=gginin.values().next().value;
-		if(typeof eArr.next().value[1] != "undefined"){
-			document.getElementById("ddd").innerHTML = FFF;
-			FFF=eArr.next().value[1];
+		console.log("video end1"+FFF);
+		if(typeof gginin.video[gginin.cc[0]] != "undefined"){
+			//document.getElementById("ddd").innerHTML = FFF;
+			FFF=gginin.video[gginin.cc[0];
 			console.log("video end1"+FFF);
 			videoPlaylist(FFF);
 		}else{
-			//gginin.cc[0]=0;
-			eArr = gginin.video.entries();
-			FFF=eArr.next().value[1];
+			gginin.cc[0]=0;
+			FFF=gginin.video[gginin.cc[0];
 			console.log("video end1"+FFF);
 			videoPlaylist(FFF);
 		}
@@ -124,11 +122,11 @@ function videoListener(){
 	//
 	
 }
-function videoPlaylist(){
+function videoPlaylist(x1){
 	//console.log("video playlist");
 	var video = document.getElementById('bgvid');
 	//var source = document.getElementById('bgvid').src;
-	video.setAttribute('src', gginin.video[0] );//gginin.video[gginin.cc[0]]
+	video.setAttribute('src', x1 );//gginin.video[gginin.cc[0]]
 	//console.log(video.src);
 	video.play();
 	//
