@@ -99,17 +99,17 @@ function videoListener(){
 		//console.log("video end1");
 		//gginin.cc[0]++;
 		//if(typeof gginin.video[gginin.cc[0]] != "undefined"){
-		gginin.FFF[0]=eArr.next().value[1];
+		FFF=eArr.next().value[1];
 		//FFF=gginin.values().next().value;
 		console.log("video end1"+gginin.tmp[0]);
-		if(typeof gginin.FFF[0] != "undefined"){
+		if(typeof FFF != "undefined"){
 			document.getElementById("ddd").innerHTML = FFF;
-			videoPlaylist(gginin.FFF[0]);
+			videoPlaylist(FFF);
 		}else{
 			//gginin.cc[0]=0;
 			eArr = gginin.video.entries();
-			gginin.tmp[0]=eArr.next().value[1];
-			videoPlaylist(gginin.FFF[0]);
+			FFF=eArr.next().value[1];
+			videoPlaylist(FFF);
 		}
 	});
 	video.onended = function(e){ //onended
