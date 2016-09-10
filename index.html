@@ -89,14 +89,14 @@ function videoListener(){
 		gginin.cc[0]++;
 		
 		//if(typeof gginin.video[gginin.cc[0]] != "undefined"){
-		FFF=getarrayvalue().next();
+		FFF=getarrayvalue().next().value;
 		//FFF=gginin.values().next().value;
 		console.log("video end1"+FFF);
 		if(typeof FFF != "undefined"){
 			document.getElementById("ddd").innerHTML = FFF;
 			videoPlaylist();
 		}else{
-			gginin.cc[0]=0;
+			//gginin.cc[0]=0;
 			videoPlaylist();
 		}
 	});
