@@ -88,13 +88,15 @@ function loadDoc(x) {
 				break;
 		}//switch//
 	};//onreadystatechange//
-	xhttp.timeout = 4000; // Set timeout to 4 seconds (4000 milliseconds)
 	//xhttp.open("GET", x);
 	//xhttp.send();
-	xhttp.onload = function(){};
+	xhttp.onload = function(){
+		console.log("xhttp.onload");
+		console.log(xhttp);
+	};
+	xhttp.timeout = 4000; // Set timeout to 4 seconds (4000 milliseconds)
 	xhttp.open("POST", x);
 	xhttp.send("k=xx&v=yy");
-	console.log(xhttp);
 
 }
 </script>
