@@ -85,13 +85,6 @@ $(document).ready(function() {
 	
 });
 
-function* idMaker(){
-	var index = 0;
-	while(true){
-		yield gginin.video[index++];
-	}
-}
-gen = idMaker();
 
 function videoListener(){
 	var video = document.getElementById('bgvid');
@@ -101,19 +94,22 @@ function videoListener(){
 	//video.appendChild(source);
 	//video.play();
 	
+	eArr = gginin.video.entries();
 	document.getElementById('bgvid').addEventListener('ended', function(e){
 		//console.log("video end1");
 		//gginin.cc[0]++;
 		//if(typeof gginin.video[gginin.cc[0]] != "undefined"){
-		gginin.tmp[0]=gen.next().value;
+		gginin.tmp[0]=eArr.next().value[1];
 		//FFF=gginin.values().next().value;
 		console.log("video end1"+gginin.tmp[0]);
-		if(typeof FFF != "undefined"){
+		if(typeof gginin.tmp[0] != "undefined"){
 			document.getElementById("ddd").innerHTML = FFF;
-			videoPlaylist();
+			videoPlaylist(gginin.tmp[0]);
 		}else{
 			//gginin.cc[0]=0;
-			videoPlaylist();
+			eArr = gginin.video.entries();
+			gginin.tmp[0]=eArr.next().value[1];
+			videoPlaylist(gginin.tmp[0]);
 		}
 	});
 	video.onended = function(e){ //onended
@@ -127,11 +123,11 @@ function videoListener(){
 	//
 	
 }
-function videoPlaylist(){
+function videoPlaylist(x1){
 	//console.log("video playlist");
 	var video = document.getElementById('bgvid');
 	//var source = document.getElementById('bgvid').src;
-	video.setAttribute('src', gginin.video[gginin.cc[0]] );//
+	video.setAttribute('src', x1 );//
 	//console.log(video.src);
 	video.play();
 	//
