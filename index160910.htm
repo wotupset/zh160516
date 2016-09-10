@@ -1,0 +1,102 @@
+<html><head>
+<title>怎么就是FC不了，怎么又是那个熟悉的nice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META http-equiv="Content-Style-Type" content="text/css">
+
+<meta name="Robots" content="noindex,follow">
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script>
+  var query = location.search.replace("?", "");
+  var a = new Array();
+  a = query.split("!");
+  //QUERY = new Object();
+  var QUERY = new Object();
+  for (i=0; i<a.length; i++) {
+    var b = new Array();
+    b = a[i].split('~')
+    QUERY[b[0]] = unescape(b[1]);
+  }
+  
+  var door= QUERY['door'];
+</script>
+
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+	$("#ddd").append( '=>'+query+'<br/>' );
+	//
+    loadDoc( QUERY['door'] );
+    //poi();
+
+	//
+});
+
+
+
+function poi(x) {
+    $.get( x , function(data) { //讀取文字檔
+		var str='';
+		var tmp='';
+		//alert(data);//原始資料
+        data = data.split("\r").join("");
+		str = data.split("\n");//切割
+		//alert(str.length);//陣列長度
+		for(i=0;i<str.length;i++){
+			//document.getElementById("ddd").innerHTML="沒了";
+			//query=encodeURIComponent(query);
+			if(str[i].trim().length>0){
+				tmp='./'+encodeURIComponent(str[i]);
+				$("#ddd").append( str[i] +'<br/><video controls autoplay preload="metadata" src="'+tmp+'">[video]</video><br/>');
+			}
+		}
+	});
+}
+
+
+function loadDoc(x) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+
+        console.log(this.status );
+        console.log(this.readyState);
+        switch( this.readyState ){
+            case 0:
+                console.log("0: 请求未初始化");
+                break;
+            case 1:
+                console.log("1: 服务器连接已建立");
+                break;
+            case 2:
+                console.log("2: 请求已接收");
+                break;
+            case 3:
+                console.log("3: 请求处理中");
+                break;
+            case 4:
+                console.log("4: 请求已完成，且响应已就绪");
+                //
+                if ( this.status == 200) {
+                    //document.getElementById("ddd").innerHTML = this.responseText;
+                	poi(x);
+                }else{
+                	document.getElementById("ddd").innerHTML = this.status;
+                }
+                //
+                
+                break;
+            default:
+                console.log("default");
+                break;
+        }
+
+
+    };
+	xhttp.open("GET", x);
+	xhttp.send();
+}
+</script>
+</head>
+<body bgcolor="#FFFFEE" text="#800000" link="#0000EE" vlink="#0000EE">
+<div id='ddd'></div>
+
+</body></html>
