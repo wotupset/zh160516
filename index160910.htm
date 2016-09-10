@@ -53,9 +53,9 @@ function poi(x) {
 
 
 function loadDoc(x) {
-	var xhttp = new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
 	
-	xhttp.onreadystatechange = function() {
+	xhr.onreadystatechange = function() {
 		console.log(this.status );
 		console.log(this.readyState);
 		//
@@ -90,14 +90,17 @@ function loadDoc(x) {
 	};//onreadystatechange//
 	//xhttp.open("GET", x);
 	//xhttp.send();
-	xhttp.onload = function(){
-		console.log("xhttp.onload");
-		console.log(xhttp);
-	};
-	xhttp.timeout = 4000; // Set timeout to 4 seconds (4000 milliseconds)
+	xhr.timeout = 4000; // Set timeout to 4 seconds (4000 milliseconds)
+	xhr.ontimeout = function () { 
+		console.log(xhr.ontimeout);//alert("Timed out!!!"); 
+	}
 	//xhttp.open("POST", x);//405 (Method Not Allowed)
-	xhttp.open("GET", x);
-	xhttp.send("k=xx&v=yy");
+	xhr.open("GET", x);
+	xhr.onload = function(){
+		console.log("xhr.onload");
+		console.log(xhr);
+	};
+	xhr.send("k=xx&v=yy");
 
 }
 </script>
