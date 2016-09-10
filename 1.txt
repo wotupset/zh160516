@@ -1,6 +1,6 @@
 index.htm
 index2.htm
-index160910.htm?door~./2016/09/10/readme
+index160910.htm
 
 readme.txt
 
