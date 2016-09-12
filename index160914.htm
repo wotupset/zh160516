@@ -48,7 +48,8 @@ function poi() {
 		
 		img_e[i].addEventListener('load', function(){
 			console.log(img_id+"ok");
-			img_e[i].insertAdjacentHTML("afterEnd","讀取完成");
+			var t = document.createTextNode("讀取完成");
+			img_e[i].insertAdjacentHTML("afterEnd",t);
 			//img_e[i].parentNode.insertBefore("讀取完成", img_e[i].nextSibling);
 		});
 		//crt_e=null;	
