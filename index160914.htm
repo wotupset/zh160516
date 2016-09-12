@@ -45,10 +45,10 @@ function poi() {
 		crt_e.setAttribute("id",img_id[i]);
 		crt_e.setAttribute("src",a[i]);
 		document.body.appendChild(crt_e);// Append <button> to <body>
-		crt_e=null;	
+		//crt_e=null;	
 		var crt_e = document.createElement("br");// Create element
 		document.body.appendChild(crt_e);// Append <button> to <body>
-		crt_e=null;
+		//crt_e=null;
 		//
 		document.getElementById(img_id[i]).addEventListener('load', function(){
 			console.log(img_id+"ok");
