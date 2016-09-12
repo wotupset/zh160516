@@ -38,14 +38,21 @@ function poi() {
 		console.log(a[i]);
 		//
 		var crt_e = document.createElement("img");// Create element
-		crt_e.setAttribute("id","id160913"+"_"+i);
+		var img_id="id160913"+"_"+i;
+		crt_e.setAttribute("id",img_id);
 		crt_e.setAttribute("src",a[i]);
 		document.body.appendChild(crt_e);// Append <button> to <body>
 		crt_e=null;	
 		var crt_e = document.createElement("br");// Create element
 		document.body.appendChild(crt_e);// Append <button> to <body>
-		crt_e=null;	
-		
+		crt_e=null;
+		//
+		var img_id="id160913"+"_"+i;
+		var img_e=document.getElementById(img_id);
+		img_e.addEventListener('load', function(){
+			console.log(img_id+"ok");
+		});
+
 	}
 	//
 	
