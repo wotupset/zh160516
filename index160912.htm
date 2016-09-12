@@ -27,6 +27,8 @@ $(document).ready(function() {
 	FFF="";
 	//$("#ddd").append( '=>'+query+'<br/>' );
 	poi();
+	FFF="http://crossorigin.me/https://www.youtube.com/watch?v=UVgoCTHvNJk";
+	xhr_test(FFF);
 	//
 });
 function poi() {
@@ -47,7 +49,18 @@ function poi() {
 	//$("#ddd").html("");
 	$("#ddd").append( '=>'+query+'<br/>' );
 }
-
+function xhr_test(x){
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function(){
+		if ( this.status == 200 && this.readyState == 4 ) {
+			console.log(xhr);
+		}else{
+			console.log(xhr);
+		}
+	};//xhr.onreadystatechange//
+	xhr.open("GET", x);
+	xhr.send();
+}
 
 </script>
 </head>
