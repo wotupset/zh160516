@@ -36,6 +36,7 @@ function poi() {
 	a = QUERY['arg0'].split(",");
 	
 	var img_id=[];
+	var img_e=[];
 	for (i=0; i<a.length; i++) {
 		console.log(a[i]);
 		//
@@ -49,10 +50,10 @@ function poi() {
 		document.body.appendChild(crt_e);// Append <button> to <body>
 		crt_e=null;
 		//
-		var img_e=document.getElementById(img_id[i]);
-		img_e.addEventListener('load', function(){
+		img_e[i]=document.getElementById(img_id[i]);
+		img_e[i].addEventListener('load', function(){
 			console.log(img_id+"ok");
-			img_e.insertAdjacentHTML("afterEnd","讀取完成");
+			img_e[i].insertAdjacentHTML("afterEnd","讀取完成");
 		});
 
 	}
