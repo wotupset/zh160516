@@ -42,7 +42,9 @@ function poi() {
 		crt_e.setAttribute("src",FFF);//UVgoCTHvNJk
 		document.body.appendChild(crt_e);// Append <button> to <body>
 	}
-	$("#ddd").html("");
+	
+	document.getElementById("ddd").innerHTML='';
+	//$("#ddd").html("");
 	$("#ddd").append( '=>'+query+'<br/>' );
 }
 
