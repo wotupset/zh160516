@@ -49,7 +49,8 @@ function poi() {
 		var video = document.getElementById("id160913");
 		video.addEventListener('error', function(e){
 			//alert('video error');
-			console.log('[video error]'+JSON.parse(e));
+			console.log('[video error]');
+			console.log(e);
 			//var obj = jQuery.parseJSON( '{ "name": "John" }' );
 			//JSON.parse(text [, reviver])
 		});
