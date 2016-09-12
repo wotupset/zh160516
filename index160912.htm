@@ -78,6 +78,10 @@ function loadDoc(x) {
 				chk=1;
 				chk2=JSON.parse(this.responseText);
 				//console.log(chk2);
+				var chk_=[]
+				chk_['chk']=chk;
+				chk_['chk2']=chk2;
+				return chk_;
 			}else{
 				//document.getElementById("ddd").innerHTML = this.status;
 				console.log(this.status);
@@ -92,10 +96,6 @@ function loadDoc(x) {
 	xhr.open("GET", x);
 	xhr.send();
 	//
-	var chk_=[]
-	chk_['chk']=chk;
-	chk_['chk2']=chk2;
-	return chk_;
 }
 </script>
 </head>
