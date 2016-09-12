@@ -34,11 +34,13 @@ $(document).ready(function() {
 function poi() {
 	var a = new Array();
 	a = QUERY['arg0'].split(",");
+	
+	var img_id=[];
 	for (i=0; i<a.length; i++) {
 		console.log(a[i]);
 		//
 		var crt_e = document.createElement("img");// Create element
-		var img_id="id160913"+"_"+i;
+		img_id[i]="id160913"+"_"+i;
 		crt_e.setAttribute("id",img_id);
 		crt_e.setAttribute("src",a[i]);
 		document.body.appendChild(crt_e);// Append <button> to <body>
@@ -47,8 +49,7 @@ function poi() {
 		document.body.appendChild(crt_e);// Append <button> to <body>
 		crt_e=null;
 		//
-		var img_id="id160913"+"_"+i;
-		var img_e=document.getElementById(img_id);
+		var img_e=document.getElementById(img_id[i]);
 		img_e.addEventListener('load', function(){
 			console.log(img_id+"ok");
 		});
