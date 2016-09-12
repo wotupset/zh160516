@@ -31,10 +31,8 @@ $(document).ready(function() {
 });
 function poi() {
 	FFF="https://www.youtube.com/embed/"+door;
-	FFF2="https://www.googleapis.com/youtube/v3/videos?part=status&id=hgIfZz8STLk&key=AIzaSyCfxV3fH8uJujua6EtG5xtyQbCEjd_Z8ns";
-	FFF3=loadDoc(FFF2);
-	console.log(FFF3);
-	if(0 ==1){
+
+	if(1 ==1){
 		var crt_e = document.createElement("iframe");// Create element
 		crt_e.setAttribute("id","id160912");
 		crt_e.setAttribute("width","800");
@@ -47,56 +45,7 @@ function poi() {
 	$("#ddd").append( '=>'+query+'<br/>' );
 }
 
-function loadDoc(x) {
-	var chk=0;
-	var chk2='';
-	//
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-		console.log(this.status );
-		console.log(this.readyState);
-		//
-		switch( this.readyState ){
-		case 0:
-			console.log("0: 请求未初始化");
-			break;
-		case 1:
-			console.log("1: 服务器连接已建立");
-			break;
-		case 2:
-			console.log("2: 请求已接收");
-			break;
-		case 3:
-			console.log("3: 请求处理中");
-			break;
-		case 4:
-			console.log("4: 请求已完成，且响应已就绪");
-			//
-			if ( this.status == 200) {
-				//document.getElementById("ddd").innerHTML = this.responseText;
-				//poi(x);
-				chk=1;
-				chk2=JSON.parse(this.responseText);
-				//console.log(chk2);
-				var chk_=[]
-				chk_['chk']=chk;
-				chk_['chk2']=chk2;
-				return chk_;
-			}else{
-				//document.getElementById("ddd").innerHTML = this.status;
-				console.log(this.status);
-			}
-			//
-			break;
-		default:
-			console.log("default");
-			break;
-		}//switch//
-	};//xhr.onreadystatechange//
-	xhr.open("GET", x);
-	xhr.send();
-	//
-}
+
 </script>
 </head>
 <body>
