@@ -31,7 +31,7 @@ $(document).ready(function() {
 });
 function poi() {
 	FFF="https://www.youtube.com/embed/"+door;
-	FFF2="http://i1.ytimg.com/vi/"+door+"/maxresdefault.jpg";
+	FFF2="https://www.googleapis.com/youtube/v3/videos?part=status&id=hgIfZz8STLk&key=AIzaSyCfxV3fH8uJujua6EtG5xtyQbCEjd_Z8ns";
 	if(loadDoc(FFF2) ==1){
 		var crt_e = document.createElement("iframe");// Create element
 		crt_e.setAttribute("id","id160912");
@@ -73,6 +73,7 @@ function loadDoc(x) {
 				//document.getElementById("ddd").innerHTML = this.responseText;
 				//poi(x);
 				chk=1;
+				console.log(this.responseText);
 			}else{
 				//document.getElementById("ddd").innerHTML = this.status;
 				console.log(this.status);
