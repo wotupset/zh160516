@@ -43,7 +43,7 @@ function poi() {
 		crt_e.setAttribute("src",FFF);//
 		crt_e.setAttribute("preload", "metadata");//
 		crt_e.setAttribute("controls", "1");//
-		crt_e.setAttribute("loop", "1");//
+		//crt_e.setAttribute("loop", "1");//
 		//crt_e.setAttribute("autoplay", "1");//
 		
 		var video = document.getElementById("id160913");
@@ -55,6 +55,20 @@ function poi() {
 			//JSON.parse(text [, reviver])
 		});
 		//
+		video.addEventListener('ended', function(e){
+			console.log('[video ended]');
+			console.log(e);
+			//
+			video.play();            
+		});//ended//
+	
+	        
+	        video.addEventListener("playing", function(e){
+	            console.log('[video playing]');
+	    		console.log(e);
+	        });//playing//
+
+
 		video.play();
 		//
 	}
