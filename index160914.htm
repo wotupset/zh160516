@@ -27,18 +27,18 @@ $(document).ready(function() {
 	FFF=""+door;
 	//$("#ddd").append( '=>'+query+'<br/>' );
 	//
-	if(typeof  QUERY['arg0'] !== "undefined" ){
+	if(typeof QUERY['arg0'] !== "undefined" ){
 	poi();
 	}
 });
 function poi() {
 	var a = new Array();
-	a = arg0.split(",");
+	a = QUERY['arg0'].split(",");
 	for (i=0; i<a.length; i++) {
 		console.log(a[i]);
 		//
 		var crt_e = document.createElement("img");// Create element
-		crt_e.setAttribute("id","id160913");
+		crt_e.setAttribute("id","id160913"+"_"+i);
 		crt_e.setAttribute("src",a[i]);
 		document.body.appendChild(crt_e);// Append <button> to <body>
 		crt_e=null;	
