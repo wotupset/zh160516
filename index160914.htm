@@ -40,13 +40,14 @@ function poi() {
 	for (i=0; i<a.length; i++) {
 		console.log(a[i]);
 		//
-		var crt_e = document.createElement("img");// Create element
+		var img_e[i] = document.createElement("img");// Create element
 		img_id[i]="id160913"+"_"+i;
-		crt_e.setAttribute("id",img_id[i]);
-		crt_e.setAttribute("src",a[i]);
-		crt_e.addEventListener('load', function(){
+		img_e[i].setAttribute("id",img_id[i]);
+		img_e[i].setAttribute("src",a[i]);
+		img_e[i].addEventListener('load', function(){
 			console.log(img_id+"ok");
-			crt_e.insertAdjacentHTML("afterEnd","讀取完成");
+			img_e[i].insertAdjacentHTML("afterEnd","讀取完成");
+			//img_e[i].parentNode.insertBefore("讀取完成", img_e[i].nextSibling);
 		});
 		document.body.appendChild(crt_e);// Append <button> to <body>
 		//crt_e=null;	
