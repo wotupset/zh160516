@@ -44,16 +44,16 @@ function poi() {
 		img_id[i]="id160913"+"_"+i;
 		crt_e.setAttribute("id",img_id[i]);
 		crt_e.setAttribute("src",a[i]);
+		crt_e.addEventListener('load', function(){
+			console.log(img_id+"ok");
+			crt_e.insertAdjacentHTML("afterEnd","讀取完成");
+		});
 		document.body.appendChild(crt_e);// Append <button> to <body>
 		//crt_e=null;	
 		var crt_e = document.createElement("br");// Create element
 		document.body.appendChild(crt_e);// Append <button> to <body>
 		//crt_e=null;
 		//
-		document.getElementById(img_id[i]).addEventListener('load', function(){
-			console.log(img_id+"ok");
-			document.getElementById(img_id[i]).insertAdjacentHTML("afterEnd","讀取完成");
-		});
 
 	}
 	//
