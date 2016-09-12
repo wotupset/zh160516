@@ -23,8 +23,9 @@ var door= QUERY['door'];
 
 <script type="text/javascript" language="javascript">
 $(document).ready(function() {
+	//全域變數
+	FFF="";
 	//$("#ddd").append( '=>'+query+'<br/>' );
-	//
 	poi();
 	//
 });
@@ -37,56 +38,51 @@ function poi() {
 		crt_e.setAttribute("height","450");
 		crt_e.setAttribute("frameborder","1");
 		crt_e.setAttribute("allowfullscreen","1");
-		crt_e.setAttribute("src",);//UVgoCTHvNJk
-	
-		document.body.appendChild(crt_e);                    // Append <button> to <body>
+		crt_e.setAttribute("src",FFF);//UVgoCTHvNJk
+		document.body.appendChild(crt_e);// Append <button> to <body>
 	}
-	
-	
-	
 	$("#ddd").append( '=>'+query+'<br/>' );
-
-
 }
 
 function loadDoc(x) {
 	var chk=0;
 	//
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        console.log(this.status );
-        console.log(this.readyState);
-        //
-        switch( this.readyState ){
-            case 0:
-                console.log("0: 请求未初始化");
-                break;
-            case 1:
-                console.log("1: 服务器连接已建立");
-                break;
-            case 2:
-                console.log("2: 请求已接收");
-                break;
-            case 3:
-                console.log("3: 请求处理中");
-                break;
-            case 4:
-                console.log("4: 请求已完成，且响应已就绪");
-                //
-                if ( this.status == 200) {
-			//document.getElementById("ddd").innerHTML = this.responseText;
-			//poi(x);
-			chk=1;
-                }else{
-                	document.getElementById("ddd").innerHTML = this.status;
-                }
-                //
-                break;
-            default:
-                console.log("default");
-                break;
-        }//switch//
-    };//xhr.onreadystatechange//
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+		console.log(this.status );
+		console.log(this.readyState);
+		//
+		switch( this.readyState ){
+		case 0:
+			console.log("0: 请求未初始化");
+			break;
+		case 1:
+			console.log("1: 服务器连接已建立");
+			break;
+		case 2:
+			console.log("2: 请求已接收");
+			break;
+		case 3:
+			console.log("3: 请求处理中");
+			break;
+		case 4:
+			console.log("4: 请求已完成，且响应已就绪");
+			//
+			if ( this.status == 200) {
+				//document.getElementById("ddd").innerHTML = this.responseText;
+				//poi(x);
+				chk=1;
+			}else{
+				//document.getElementById("ddd").innerHTML = this.status;
+				console.log(this.status);
+			}
+			//
+			break;
+		default:
+			console.log("default");
+			break;
+		}//switch//
+	};//xhr.onreadystatechange//
 	xhr.open("GET", x);
 	xhr.send();
 	//
