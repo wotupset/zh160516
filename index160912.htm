@@ -32,7 +32,9 @@ $(document).ready(function() {
 function poi() {
 	FFF="https://www.youtube.com/embed/"+door;
 	FFF2="https://www.googleapis.com/youtube/v3/videos?part=status&id=hgIfZz8STLk&key=AIzaSyCfxV3fH8uJujua6EtG5xtyQbCEjd_Z8ns";
-	if(loadDoc(FFF2) ==1){
+	FFF3=loadDoc(FFF2);
+	console.log(FFF3);
+	if(0 ==1){
 		var crt_e = document.createElement("iframe");// Create element
 		crt_e.setAttribute("id","id160912");
 		crt_e.setAttribute("width","800");
@@ -75,7 +77,7 @@ function loadDoc(x) {
 				//poi(x);
 				chk=1;
 				chk2=JSON.parse(this.responseText);
-				console.log(chk2);
+				//console.log(chk2);
 			}else{
 				//document.getElementById("ddd").innerHTML = this.status;
 				console.log(this.status);
