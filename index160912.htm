@@ -47,6 +47,7 @@ function poi() {
 
 function loadDoc(x) {
 	var chk=0;
+	var chk2='';
 	//
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
@@ -73,7 +74,8 @@ function loadDoc(x) {
 				//document.getElementById("ddd").innerHTML = this.responseText;
 				//poi(x);
 				chk=1;
-				console.log(this.responseText);
+				chk2=JSON.parse(this.responseText);
+				console.log(chk2);
 			}else{
 				//document.getElementById("ddd").innerHTML = this.status;
 				console.log(this.status);
@@ -88,7 +90,10 @@ function loadDoc(x) {
 	xhr.open("GET", x);
 	xhr.send();
 	//
-	return chk;
+	var chk_=[]
+	chk_['chk']=chk;
+	chk_['chk2']=chk2;
+	return chk_;
 }
 </script>
 </head>
