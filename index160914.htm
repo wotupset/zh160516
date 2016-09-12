@@ -26,15 +26,25 @@ $(document).ready(function() {
 	//全域變數
 	FFF=""+door;
 	//$("#ddd").append( '=>'+query+'<br/>' );
-	poi();
 	//
+	if(typeof  QUERY['arg0'] !== "undefined" ){
+	poi();
+	}
 });
 function poi() {
 	var a = new Array();
 	a = arg0.split(",");
 	for (i=0; i<a.length; i++) {
 		console.log(a[i]);
+		//
+		var crt_e = document.createElement("img");// Create element
+		crt_e.setAttribute("id","id160913");
+		crt_e.setAttribute("src",a[i]);
+		document.body.appendChild(crt_e);// Append <button> to <body>
+		crt_e=null;	
 	}
+	//
+	
 }
 
 </script>
