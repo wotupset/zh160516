@@ -49,7 +49,7 @@ function poi() {
 		document.getElementById("ddd").innerHTML+=img_e[i].outerHTML;
 		
 		img_e[i].addEventListener('load', function(){
-			console.log(img_id+"ok");
+			console.log(img_id[i]+"ok");
 			//img_e[i].parentNode.insertBefore("讀取完成", img_e[i].nextSibling);
 			//var t = document.createTextNode("讀取完成");//t.outerHTML
 			//img_e[i].insertAdjacentHTML("afterEnd","<span>讀取完成</span>");
