@@ -49,7 +49,7 @@ function poi() {
 		//document.getElementById("ddd").appendChild(img_e[i]);//
 		document.getElementById("ddd").innerHTML+=img_e[i].outerHTML;
 		
-		img_e[i].addEventListener('load', function(){
+		img_e[i].addEventListener('load', function(){//ㄐ變數傳不進去??
 			//console.log(img_id[i]+"ok");
 			console.log(this.id);
 			//img_e[i].parentNode.insertBefore("讀取完成", img_e[i].nextSibling);
@@ -63,7 +63,7 @@ function poi() {
 			//parentDiv.insertBefore(newElement, img_e[i].nextSibling);
 			parentDiv.insertAdjacentHTML('afterEnd', newElement.outerHTML);
 			var dddce = document.getElementById("newElement_"+this.id);
-			dddce.innerHTML="aaaaaaa";
+			dddce.innerHTML="讀取完成";
 		});
 		//crt_e=null;	
 		var crt_e = document.createElement("br");// Create element
