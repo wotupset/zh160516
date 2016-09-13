@@ -46,7 +46,7 @@ function poi() {
 		img_e[i].setAttribute("src",a[i]);
 		//document.body.appendChild(img_e[i]);// Append <button> to <body>
 		//document.getElementById("ddd").appendChild(img_e[i]);//
-		document.getElementById("ddd").innerHTML+=img_e[i];
+		document.getElementById("ddd").innerHTML+=img_e[i].outerHTML;
 		
 		img_e[i].addEventListener('load', function(){
 			console.log(img_id+"ok");
