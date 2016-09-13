@@ -50,19 +50,19 @@ function poi() {
 		document.getElementById("ddd").innerHTML+=img_e[i].outerHTML;
 		
 		img_e[i].addEventListener('load', function(){
-			console.log(img_id[i]+"ok");
+			//console.log(img_id[i]+"ok");
 			console.log(this.id);
 			//img_e[i].parentNode.insertBefore("讀取完成", img_e[i].nextSibling);
 			//var t = document.createTextNode("讀取完成");//t.outerHTML
 			//img_e[i].insertAdjacentHTML("afterEnd","<span>讀取完成</span>");
 			//img_e[i].parentNode.insertBefore("讀取完成", img_e[i].nextSibling);
 			//var parentDiv = document.getElementById("ddd");
-			var parentDiv = document.getElementById(img_id[i]);
+			var parentDiv = document.getElementById(this.id);
 			var newElement = document.createElement("span");
-			newElement.setAttribute("id","newElement_"+i);
+			newElement.setAttribute("id","newElement_"+this.id);
 			//parentDiv.insertBefore(newElement, img_e[i].nextSibling);
 			parentDiv.insertAdjacentHTML('afterEnd', newElement.outerHTML);
-			var dddce = document.getElementById("newElement_"+i);
+			var dddce = document.getElementById("newElement_"+this.id);
 			dddce.innerHTML="aaaaaaa";
 		});
 		//crt_e=null;	
