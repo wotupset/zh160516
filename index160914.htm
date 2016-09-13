@@ -57,7 +57,10 @@ function poi() {
 			var parentDiv = document.getElementById("ddd");
 			var newElement = document.createElement("span");
 			newElement.setAttribute("id","newElement_"+i);
-			parentDiv.insertBefore(newElement, img_e[i].nextSibling);
+			//parentDiv.insertBefore(newElement, img_e[i].nextSibling);
+			parentDiv.insertAdjacentHTML('afterEnd', newElement.outerHTML);
+			var dddce = document.getElementById("newElement_"+i);
+			dddce.innerHTML="aaaaaaa";
 		});
 		//crt_e=null;	
 		var crt_e = document.createElement("br");// Create element
