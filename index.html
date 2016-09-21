@@ -193,7 +193,8 @@ function poi2(){
 			//query=encodeURIComponent(query);
 			//str[i]=str[i].trim();
 			if(str[i].trim().length>0){
-				tmp='./'+encodeURIComponent(str[i]);
+				//tmp='./'+encodeURIComponent(str[i]);
+				tmp='./'+encodeURI(str[i]);
 				$("#ddd").append('<a href="'+tmp+'">'+tmp+'</a><br/>');
 			}
 			
@@ -232,7 +233,8 @@ function poi(){
 			//query=encodeURIComponent(query);
 			//str[i]=str[i].trim();
 			if(str[i].trim().length>0){
-				tmp='./'+encodeURIComponent(str[i]);
+				//tmp='./'+encodeURIComponent(str[i]);
+				tmp='./'+encodeURI(str[i]);
 				$("#ddd").append('<a href="'+tmp+'">'+tmp+'</a><br/>');
 			}
 			
