@@ -1,15 +1,93 @@
+
 <html lang="zh-tw">
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 <title>怎么就是FC不了，怎么又是那个熟悉的nice</title>
+<script>
+document.addEventListener("DOMContentLoaded", function(event){
+console.log("DOM loaded");
+console.log(event);
+//屬性
+var vid = document.getElementById("myVideo");
+vid.playbackRate = 1.0;//播放速度
+vid.volume = 1.0;//音量
+vid.loop = 0;//循環
+vid.controls = 1;//顯示播放面板
+vid.autoplay = 1;//自動撥放
+vid.preload = "auto";//預先讀取
+vid.muted = 0;//是否靜音
+vid.defaultMuted = 0;
+vid.defaultPlaybackRate = 1.0;
+
+vid.src="https://video.twimg.com/ext_tw_video/778161485273071616/pu/vid/1280x720/tU8K8ksSfTbfYvhx.mp4";
+
+
+//監聽-事件-讀取
+vid.addEventListener('loadstart', function(event){console.log("video loadstart");});
+vid.addEventListener('durationchange', function(event){console.log("video durationchange");});
+vid.addEventListener('loadedmetadata', function(event){console.log("video loadedmetadata");});
+vid.addEventListener('loadeddata', function(event){console.log("video loadeddata");});
+//progress
+vid.addEventListener('canplay', function(event){console.log("video canplay");});
+vid.addEventListener('canplaythrough', function(event){console.log("video canplaythrough");});
+
+//監聽-事件-控制
+vid.addEventListener('ended', function(event){console.log("video ended");});
+vid.addEventListener('pause', function(event){console.log("video paused");});
+vid.addEventListener("play", function(event){
+	console.log("video play");
+	console.log(vid.currentSrc);//檔案來源str.toString();
+	console.log(vid.duration);//檔案長度
+	console.log(vid.currentTime);//目前播放位置
+	console.log(vid.readyState);
+	console.log(vid.networkState);
+	
+});
+vid.addEventListener("playing", function(event){
+	console.log("video playing");
+	if(vid.buffered.length>0){	console.log(	"buffered"+"Start: " + vid.buffered.start(0)+ " End: " + vid.buffered.end(0)	);	}
+	if(vid.played.length>0){	console.log(	"played"+"Start: " + vid.played.start(0) + " End: " + vid.played.end(0)	);	}
+	if(vid.seekable.length>0){	console.log(	"seekable"+"Start: " + vid.seekable.start(0) + " End: " + vid.seekable.end(0)	);	}
+});
+
+vid.addEventListener("volumechange", function(event){console.log("video volumechange");});
+vid.addEventListener("ratechange", function(event){console.log("video ratechange");});
+vid.addEventListener("seeked", function(event){console.log("video seeked");});
+vid.addEventListener("seeking", function(event){console.log("video seeking");});
+vid.addEventListener("waiting", function(event){console.log("video waiting");});
+//監聽-事件-錯誤
+vid.addEventListener("abort", function(event){console.log("video abort");});
+vid.addEventListener("error", function(event){console.log("video error");});
+vid.addEventListener("suspend", function(event){console.log("video suspend");});
+vid.addEventListener("stalled", function(event){console.log("video stalled");});
+//
+
+
+if(false){//更新頻率高
+
+vid.addEventListener("progress", function(event){
+	console.log("video progress");
+	//console.log(event);
+});
+
+vid.addEventListener("timeupdate", function(event){
+	console.log("video timeupdate");
+	//console.log(event);
+	console.log(vid.currentTime);
+});
+
+}
+
+});//DOMContentLoaded//
+</script>
+
 </head>
 <body>
 
-<video controls loop autoplay id="bgvid" preload="metadata" width="640" height="360">
+<video id="myVideo" preload="metadata" width="640" height="360">
 https://twitter.com/Aya_tobi/status/778163471955423237
-<source src="https://video.twimg.com/ext_tw_video/778161485273071616/pu/vid/1280x720/tU8K8ksSfTbfYvhx.mp4" type="video/webm">
 </video>
 
 
