@@ -27,7 +27,7 @@ $(document).ready(function() {
 	FFF="";
 	//$("#ddd").append( '=>'+query+'<br/>' );
 	poi();
-	FFF="http://crossorigin.me/https://www.youtube.com/watch?v=UVgoCTHvNJk";
+	FFF="https://www.youtube.com/watch?v=KiT4YE7FR0E";
 	xhr_test(FFF);
 	//
 });
@@ -38,7 +38,7 @@ function poi() {
 		var crt_e = document.createElement("iframe");// Create element
 		crt_e.setAttribute("id","id160912");
 		crt_e.setAttribute("width","100%");//800
-		crt_e.setAttribute("height","auto");//450
+		crt_e.setAttribute("height","100%");//450
 		crt_e.setAttribute("frameborder","1");
 		crt_e.setAttribute("allowfullscreen","1");
 		crt_e.setAttribute("src",FFF);//UVgoCTHvNJk
@@ -47,7 +47,7 @@ function poi() {
 	
 	document.getElementById("ddd").innerHTML='';
 	//$("#ddd").html("");
-	$("#ddd").append( '=>'+query+'<br/>' );
+	//$("#ddd").append( '=>'+query+'<br/>' );
 }
 function xhr_test(x){
 	var xhr = new XMLHttpRequest();
